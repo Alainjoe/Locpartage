@@ -28,16 +28,11 @@ import { AnnonceCardComponent } from '../../shared/annonce-card.component';
           <div>
             <h1>{{ annonce()!.titre }}</h1>
             <p>
-              <span class="rating"><span class="material-symbols-outlined filled">star</span> {{ rating(annonce()!.id) }}</span>
-              <span>({{ 18 + annonce()!.id }} avis)</span>
+              <span>{{ annonce()!.categorieNom }}</span>
               <span>•</span>
-              <span>{{ annonce()!.ville || 'Montréal' }}, QC</span>
+              <span>{{ annonce()!.ville || 'Québec' }}</span>
             </p>
           </div>
-          <button class="btn btn-outline" type="button">
-            <span class="material-symbols-outlined">favorite</span>
-            Favori
-          </button>
         </header>
 
         <div class="gallery-grid">
@@ -64,27 +59,11 @@ import { AnnonceCardComponent } from '../../shared/annonce-card.component';
               <p class="description">{{ annonce()!.description }}</p>
             </section>
 
-            <section class="spec-card">
-              <h2>Caractéristiques techniques</h2>
-              <div class="spec-grid">
-                @for (spec of specs; track spec.label) {
-                  <div class="spec">
-                    <span class="material-symbols-outlined">{{ spec.icon }}</span>
-                    <div>
-                      <small>{{ spec.label }}</small>
-                      <strong>{{ spec.value }}</strong>
-                    </div>
-                  </div>
-                }
-              </div>
-            </section>
-
             <section class="owner-card">
               <div class="owner-avatar">{{ ownerInitials() }}</div>
               <div>
                 <h2>{{ annonce()!.proprietaireNom }}</h2>
-                <p>Membre de confiance Loc'Partage • Répond en moins d'une heure</p>
-                <span class="rating"><span class="material-symbols-outlined filled">star</span> 5.0 (48 locations)</span>
+                <p>Propriétaire sur Loc'Partage</p>
               </div>
               @if (!isOwner()) {
                 <button class="btn btn-outline" type="button" (click)="contacterProprietaire()">
@@ -93,18 +72,17 @@ import { AnnonceCardComponent } from '../../shared/annonce-card.component';
                 </button>
               }
             </section>
-
-            <blockquote class="review">
-              <p>Superbe expérience. L'objet était propre, performant et la communication très fluide pour la récupération.</p>
-              <footer>Sophie L. • il y a 2 semaines</footer>
-            </blockquote>
           </main>
 
           <aside class="booking-card">
             <div class="booking-price">
               <strong>{{ annonce()!.prixJour | number:'1.0-0' }}$</strong>
               <span>/ jour</span>
-              <em>Disponible</em>
+              @if (annonce()!.disponible) {
+                <em>Disponible</em>
+              } @else {
+                <em class="off">Indisponible</em>
+              }
             </div>
 
             @if (msg()) {
@@ -123,19 +101,6 @@ import { AnnonceCardComponent } from '../../shared/annonce-card.component';
                 <span>Au</span>
                 <input class="input" type="date" [(ngModel)]="dateFin" [min]="dateDebut || today">
               </label>
-            </div>
-
-            <div class="mini-calendar" aria-label="Calendrier de disponibilité">
-              <div class="calendar-head">
-                <button type="button"><span class="material-symbols-outlined">chevron_left</span></button>
-                <strong>Octobre 2024</strong>
-                <button type="button"><span class="material-symbols-outlined">chevron_right</span></button>
-              </div>
-              <div class="calendar-grid">
-                @for (d of calendarDays; track d.label) {
-                  <span [class.selected]="d.selected" [class.soft]="d.soft">{{ d.label }}</span>
-                }
-              </div>
             </div>
 
             <label class="message-field">
@@ -162,11 +127,7 @@ import { AnnonceCardComponent } from '../../shared/annonce-card.component';
               <div class="alert alert-info">C'est votre annonce.</div>
             }
 
-            <p class="booking-note">Vous ne serez débité qu'après validation.</p>
-            <ul>
-              <li><span class="material-symbols-outlined">verified_user</span> Assurance incluse jusqu'à 500$</li>
-              <li><span class="material-symbols-outlined">schedule</span> Annulation gratuite jusqu'à 48h avant</li>
-            </ul>
+            <p class="booking-note">Vous ne serez débité qu'après confirmation du propriétaire.</p>
           </aside>
         </div>
 
@@ -603,19 +564,6 @@ export class AnnonceDetailComponent implements OnInit {
   msg = signal<string | null>(null);
   success = signal(false);
 
-  specs = [
-    { icon: 'bolt', label: 'Tension', value: '18 Volts' },
-    { icon: 'settings', label: 'Moteur', value: 'Brushless' },
-    { icon: 'construction', label: 'Couple max.', value: '55 Nm' },
-    { icon: 'inventory_2', label: 'Inclus', value: 'Coffret + accessoires' }
-  ];
-
-  calendarDays = [
-    { label: 'L' }, { label: 'M' }, { label: 'M' }, { label: 'J' }, { label: 'V' }, { label: 'S' }, { label: 'D' },
-    { label: '28' }, { label: '29' }, { label: '30' }, { label: '1' }, { label: '2' }, { label: '3', selected: true }, { label: '4', soft: true },
-    { label: '5', selected: true }, { label: '6' }, { label: '7' }, { label: '8' }, { label: '9' }, { label: '10' }, { label: '11' }
-  ];
-
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,
@@ -649,10 +597,6 @@ export class AnnonceDetailComponent implements OnInit {
   gallerySide(): string[] {
     const photos = this.annonce()?.photos || [];
     return photos.slice(1, 4);
-  }
-
-  rating(id: number): string {
-    return (4.7 + (id % 3) / 10).toFixed(1);
   }
 
   ownerInitials(): string {

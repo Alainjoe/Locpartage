@@ -23,82 +23,26 @@ import { Annonce, Categorie } from '../../core/models';
         <header class="admin-head">
           <div>
             <h1>Tableau de bord</h1>
-            <p>Dernière mise à jour : il y a 2 minutes</p>
+            <p>Modération de la plateforme.</p>
           </div>
-          <button class="btn btn-primary" type="button">
-            <span class="material-symbols-outlined">add</span>
-            Générer rapport
-          </button>
         </header>
 
         <div class="admin-stats">
           <article>
-            <span class="material-symbols-outlined">person_add</span>
-            <small>Nouveaux inscrits</small>
-            <strong>1,248</strong>
-            <em>+12.5%</em>
-          </article>
-          <article>
             <span class="material-symbols-outlined">inventory_2</span>
-            <small>Annonces actives</small>
+            <small>Annonces totales</small>
             <strong>{{ total() }}</strong>
-            <em>+8.2%</em>
-          </article>
-          <article class="warn">
-            <span class="material-symbols-outlined">warning</span>
-            <small>Litiges ouverts</small>
-            <strong>24</strong>
-            <em>8 en attente</em>
           </article>
           <article>
-            <span class="material-symbols-outlined">savings</span>
-            <small>Revenu brut (MTD)</small>
-            <strong>124,500$</strong>
-            <em>+15.7%</em>
+            <span class="material-symbols-outlined">check_circle</span>
+            <small>Annonces disponibles</small>
+            <strong>{{ disponibles() }}</strong>
           </article>
-        </div>
-
-        <div class="admin-grid">
-          <section class="chart-card">
-            <div class="section-row">
-              <div>
-                <h2>Croissance de la plateforme</h2>
-                <p>Évolution des locations confirmées sur les 6 derniers mois</p>
-              </div>
-              <select [(ngModel)]="period">
-                <option>Derniers 6 mois</option>
-                <option>Année courante</option>
-              </select>
-            </div>
-            <div class="bars">
-              @for (bar of bars; track bar.month) {
-                <div>
-                  <span [style.height.%]="bar.value" [class.active]="bar.active"></span>
-                  <small>{{ bar.month }}</small>
-                </div>
-              }
-            </div>
-          </section>
-
-          <aside class="alerts-card">
-            <h2>Alertes modération</h2>
-            <article>
-              <span class="material-symbols-outlined">report</span>
-              <div>
-                <strong>Annonce suspecte #4920</strong>
-                <p>Signalée pour contenu inapproprié par 3 utilisateurs.</p>
-                <button type="button">Bloquer</button>
-                <button type="button">Voir</button>
-              </div>
-            </article>
-            <article class="soft">
-              <span class="material-symbols-outlined">shield</span>
-              <div>
-                <strong>Vérification ID</strong>
-                <p>Sophie L. attend une validation.</p>
-              </div>
-            </article>
-          </aside>
+          <article>
+            <span class="material-symbols-outlined">category</span>
+            <small>Catégories</small>
+            <strong>{{ categories().length }}</strong>
+          </article>
         </div>
 
         <section class="table-card">
@@ -132,7 +76,7 @@ import { Annonce, Categorie } from '../../core/models';
                 </tr>
               </thead>
               <tbody>
-                @for (a of filtered().slice(0, 6); track a.id) {
+                @for (a of filtered(); track a.id) {
                   <tr>
                     <td>
                       @if (a.photos.length) { <img [src]="a.photos[0]" [alt]="a.titre"> }
@@ -141,12 +85,17 @@ import { Annonce, Categorie } from '../../core/models';
                     <td>{{ a.proprietaireNom }}</td>
                     <td>{{ a.categorieNom }}</td>
                     <td><strong class="price">{{ a.prixJour | number:'1.0-0' }}$ / jour</strong></td>
-                    <td><span class="badge badge-success">Approuvé</span></td>
+                    <td>
+                      <span class="badge" [class.badge-success]="a.disponible" [class.badge-muted]="!a.disponible">
+                        {{ a.disponible ? 'Disponible' : 'Indisponible' }}
+                      </span>
+                    </td>
                     <td class="actions">
-                      <button type="button" aria-label="Masquer"><span class="material-symbols-outlined">visibility_off</span></button>
-                      <button type="button" aria-label="Supprimer"><span class="material-symbols-outlined">delete</span></button>
+                      <button type="button" aria-label="Supprimer" (click)="supprimer(a.id)"><span class="material-symbols-outlined">delete</span></button>
                     </td>
                   </tr>
+                } @empty {
+                  <tr><td colspan="7" class="empty-row">Aucune annonce.</td></tr>
                 }
               </tbody>
             </table>
@@ -470,27 +419,23 @@ export class AdminDashboardComponent implements OnInit {
   annonces = signal<Annonce[]>([]);
   categories = signal<Categorie[]>([]);
   total = signal(0);
-  period = 'Derniers 6 mois';
   q = '';
   categorieId: number | null = null;
 
-  bars = [
-    { month: 'JAN', value: 28 },
-    { month: 'FEV', value: 44 },
-    { month: 'MAR', value: 54 },
-    { month: 'AVR', value: 66 },
-    { month: 'MAI', value: 82 },
-    { month: 'JUIN', value: 100, active: true }
-  ];
-
   constructor(private api: ApiService) {}
 
-  ngOnInit() {
+  ngOnInit() { this.load(); }
+
+  load() {
     this.api.categories().subscribe(c => this.categories.set(c));
-    this.api.searchAnnonces({ size: 50 }).subscribe(p => {
+    this.api.searchAnnonces({ size: 200 }).subscribe(p => {
       this.annonces.set(p.content);
       this.total.set(p.totalElements);
     });
+  }
+
+  disponibles(): number {
+    return this.annonces().filter(a => a.disponible).length;
   }
 
   filtered(): Annonce[] {
@@ -500,5 +445,10 @@ export class AdminDashboardComponent implements OnInit {
       const matchesCat = this.categorieId === null || a.categorieId === this.categorieId;
       return matchesQ && matchesCat;
     });
+  }
+
+  supprimer(id: number) {
+    if (!confirm('Supprimer cette annonce ?')) return;
+    this.api.deleteAnnonce(id).subscribe(() => this.load());
   }
 }

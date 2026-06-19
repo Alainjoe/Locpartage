@@ -56,11 +56,6 @@ interface Conv {
             </button>
             <div>
               <h1>{{ currentPeerName() }}</h1>
-              <p><span></span> En ligne</p>
-            </div>
-            <div class="thread-actions">
-              <button type="button" aria-label="Appeler"><span class="material-symbols-outlined">call</span></button>
-              <button type="button" aria-label="Infos"><span class="material-symbols-outlined">info</span></button>
             </div>
           </header>
 
@@ -95,27 +90,6 @@ interface Conv {
         }
       </main>
 
-      <aside class="rental-context">
-        <h2>Contexte de location</h2>
-        <article class="context-card">
-          <div class="context-image">
-            <span class="badge badge-success">Disponible</span>
-            <span class="material-symbols-outlined">construction</span>
-          </div>
-          <div class="context-body">
-            <h3>Réservation Loc'Partage</h3>
-            <p>Retrouvez les dates, la caution et le lieu de remise directement dans le tableau de bord.</p>
-            <ul>
-              <li><span class="material-symbols-outlined">calendar_month</span> Samedi, journée complète</li>
-              <li><span class="material-symbols-outlined">payments</span> Paiement sécurisé</li>
-              <li><span class="material-symbols-outlined">location_on</span> Remise locale</li>
-            </ul>
-          </div>
-        </article>
-        <button class="btn btn-secondary btn-block" type="button">Approuver la demande</button>
-        <button class="btn btn-ghost btn-block" type="button">Modifier les dates</button>
-        <p class="security-note">Le paiement est sécurisé par Loc'Partage. Ne payez jamais en dehors de la plateforme.</p>
-      </aside>
     </section>
   `,
   styles: [`

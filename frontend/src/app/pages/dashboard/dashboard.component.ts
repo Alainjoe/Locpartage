@@ -100,18 +100,9 @@ type DashboardTab = 'overview' | 'annonces' | 'reservations' | 'recues';
             </section>
 
             <aside class="side-panels">
-              <article class="performance">
-                <h2><span class="material-symbols-outlined">monitoring</span> Performance</h2>
-                <div><span>Taux de réponse</span><strong>98%</strong></div>
-                <progress max="100" value="98"></progress>
-                <div><span>Évaluation moyenne</span><strong>4.9 ★</strong></div>
-                <progress max="100" value="92"></progress>
-              </article>
-
               <article class="messages-card">
-                <h2>Messages récents</h2>
-                <p><strong>Sophie T.</strong><br>Est-ce que l'équipement est disponible ?</p>
-                <p><strong>Marc-André L.</strong><br>Merci beaucoup pour la location.</p>
+                <h2>Messagerie</h2>
+                <p>Consultez vos discussions avec les propriétaires et locataires.</p>
                 <a routerLink="/messages">Ouvrir la messagerie</a>
               </article>
             </aside>

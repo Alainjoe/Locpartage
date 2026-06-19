@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { ApiService } from '../../core/api.service';
+import { Annonce, Categorie } from '../../core/models';
 
 @Component({
   selector: 'app-home',
@@ -38,8 +40,8 @@ import { Router, RouterLink } from '@angular/router';
           }
           <div class="impact-card">
             <span class="material-symbols-outlined">eco</span>
-            <strong>12.4kg de CO2</strong>
-            <small>Économisés ce mois-ci</small>
+            <strong>Économie circulaire</strong>
+            <small>Louer plutôt qu'acheter</small>
           </div>
         </div>
       </div>
@@ -55,12 +57,15 @@ import { Router, RouterLink } from '@angular/router';
       </div>
 
       <div class="categories-grid">
-        @for (c of landingCategories; track c.title) {
-          <a class="category-card" [routerLink]="['/annonces']">
-            <img [src]="c.image" [alt]="c.title" loading="lazy">
+        @for (c of categories(); track c.id) {
+          <a class="category-card" [routerLink]="['/annonces']" [queryParams]="{ categorieId: c.id }">
+            @if (c.icone) {
+              <img [src]="c.icone" [alt]="c.nom" loading="lazy">
+            } @else {
+              <div class="cat-fallback"><span class="material-symbols-outlined">category</span></div>
+            }
             <div class="label">
-              <h3>{{ c.title }}</h3>
-              <p>{{ c.count }} articles disponibles</p>
+              <h3>{{ c.nom }}</h3>
             </div>
           </a>
         }
@@ -81,28 +86,30 @@ import { Router, RouterLink } from '@angular/router';
       </div>
 
       <div class="featured-grid">
-        @for (card of featuredCards; track card.title) {
+        @for (a of featured(); track a.id) {
           <article class="featured-card">
-            <div class="featured-image">
-              <img [src]="card.image" [alt]="card.title" loading="lazy">
-              <button type="button" aria-label="Ajouter aux favoris">
-                <span class="material-symbols-outlined">favorite</span>
-              </button>
-              <span class="availability" [class.waiting]="card.status !== 'Disponible'">{{ card.status }}</span>
-            </div>
+            <a class="featured-image" [routerLink]="['/annonces', a.id]">
+              @if (a.photos?.length) {
+                <img [src]="a.photos[0]" [alt]="a.titre" loading="lazy">
+              } @else {
+                <div class="cat-fallback"><span class="material-symbols-outlined">image</span></div>
+              }
+              <span class="availability" [class.waiting]="!a.disponible">{{ a.disponible ? 'Disponible' : 'Indisponible' }}</span>
+            </a>
 
             <div class="featured-body">
-              <p class="featured-meta">{{ card.category }} • {{ card.city }}</p>
-              <a class="featured-title" routerLink="/annonces">{{ card.title }}</a>
+              <p class="featured-meta">{{ a.categorieNom }} • {{ a.ville || 'Québec' }}</p>
+              <a class="featured-title" [routerLink]="['/annonces', a.id]">{{ a.titre }}</a>
               <div class="featured-footer">
                 <div class="featured-owner">
-                  <img [src]="card.avatar" [alt]="card.owner" loading="lazy">
-                  <span>{{ card.owner }}</span>
+                  <span>{{ a.proprietaireNom }}</span>
                 </div>
-                <p class="featured-price"><strong>{{ card.price }}$</strong><span>/jour</span></p>
+                <p class="featured-price"><strong>{{ a.prixJour | number:'1.2-2' }}$</strong><span>/jour</span></p>
               </div>
             </div>
           </article>
+        } @empty {
+          <p class="featured-empty">Aucune annonce pour l'instant.</p>
         }
       </div>
       <div class="center-action">
@@ -126,30 +133,6 @@ import { Router, RouterLink } from '@angular/router';
       </div>
     </section>
 
-    <section class="section trust-section">
-      <div class="section-title-center">
-        <h2>Ils nous font confiance</h2>
-        <div class="stars" aria-label="Note moyenne 5 sur 5">
-          <span class="material-symbols-outlined filled">star</span>
-          <span class="material-symbols-outlined filled">star</span>
-          <span class="material-symbols-outlined filled">star</span>
-          <span class="material-symbols-outlined filled">star</span>
-          <span class="material-symbols-outlined filled">star</span>
-        </div>
-        <p>Plus de 5 000 locations réussies au Québec.</p>
-      </div>
-
-      <div class="testimonials">
-        <blockquote>
-          <p>Grâce à Loc'Partage, j'ai pu louer une tondeuse professionnelle pour un week-end. Le propriétaire était charmant et l'outil en parfait état.</p>
-          <footer>Jean-Philippe R. <span>Membre depuis 2023</span></footer>
-        </blockquote>
-        <blockquote>
-          <p>Je rentabilise enfin mon outillage qui dormait au garage. La plateforme est intuitive et l'assurance incluse me rassure énormément.</p>
-          <footer>Mélanie G. <span>Membre depuis 2022</span></footer>
-        </blockquote>
-      </div>
-    </section>
   `,
   styles: [`
     .landing-hero {
@@ -610,9 +593,11 @@ import { Router, RouterLink } from '@angular/router';
     }
   `]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   q = '';
   ville = '';
+  categories = signal<Categorie[]>([]);
+  featured = signal<Annonce[]>([]);
 
   steps = [
     { icon: 'search', title: '1. Recherchez', text: 'Trouvez l’objet dont vous avez besoin près de chez vous grâce aux filtres avancés.' },
@@ -620,70 +605,14 @@ export class HomeComponent {
     { icon: 'handshake', title: '3. Récupérez', text: 'Rencontrez le propriétaire, validez l’état de l’objet et profitez de votre location.' }
   ];
 
-  landingCategories = [
-    {
-      title: 'Bricolage',
-      count: '450+',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBDRxxomZjlWsXhWyn0rko2UqZfG7hQbETaCcfKW2rPoxiwzq04lJ7Vu71y0e2XkbSpzd9IgcObnbWhmyzjyNBr2nXXCmAgFhfGvfWSs_PZj5lo_ZTJGik7JuOJblN0ZWNiv1Kci6v1DSLvv6UyDshT6y9r38LQ9RSg0Z6-aIFfHVtDtVw8WERx4B1hbwloUbZAYyHouWFqa5EcLAnPs5MDwyB5zGpmso5zsJsb0pI2LdyvyfTHi6ir7rf-KkNplwUAEZRNbYbM_vo1'
-    },
-    {
-      title: 'Jardinage',
-      count: '280+',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCLiYTjg0t16VZXwe5wA05vRzF_14tRsJgPG7D53Vxdzz0c9_LyZtfrtc8-bLOORDXZNkck3jcIil_hScx8hxF1HNqcKl6KoYihVtSDZjYGaU-tokMlP-tUTO3jJYPygXQM1tVzmP1eDj27pGRcLuxgjQri9e_Gv7E1Bb6qe516IJXyl6X2LqMuF5pzpmMpv4My8knkVk81m446zqO69CQY8CQQbuU_kdheuBG5YpsLp8RrGvWx5UpUdD2E40cgyNjQbIgzBTInBuE-'
-    },
-    {
-      title: 'Électronique',
-      count: '120+',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2HWavojSfOAqeUMFICd7uTlAqmDlhw3glW8o-p6sGDcHiOgW8QL2u4I62kk98nJacrkEn4oax5tbWRpls5BR_h-tEHHot96WnX7ORpubjykghsZA19jC-h_paatGCnATIvvVYD3JGHJGgiuYYNDTAPALnVTin9vaZdwXM3LH2PuAsQRsTuu_VzlQgtxeDaz5KMQixJW73aE3rkYHcjE-uHOLoST4jhejKU1hmSpOQnafyQEjRgAenWM2ju3H3Tflqu3Nowd5SncRW'
-    }
-  ];
-
-  featuredCards = [
-    {
-      category: 'Bricolage',
-      city: 'Montréal',
-      title: 'Perceuse à percussion Pro',
-      owner: 'Marc A.',
-      price: 15,
-      status: 'Disponible',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBYCxo8wgzh-WNn1GcJdgmClgeABsHcsOPMIL_SDZy6Pj8GVHYq_aJ-Cbf5lNBi8zI9Mw7N54VIwjvGkhgc3kQDWfFHYvqdKK58tOcfYy4e5tl2_joBSrihTOYV7nknZ0rjNyV5-YfxpBLL8ZZihCSg44pBnsu2PcGb6wFPGn3ycp9PqxdG1ZE_UJi4xzNFt2mJX4Y3Kv5bf7RLu-crfu_vJDLS1fVN_8egBU1m59FNwPbLrPYr_DaU2_AZY6Pkw9UDRtK0hgziDuuX',
-      avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjugnEOKvf-RHHXDAORAfttdc_n-nBRAzpTJLRGe5XV3XfVrMhcYvwpSkaQo10R8qMudH8qqcogoWF7gS--VKhbIOA4SH32HROVI6VScQLmsyoT6syoI0HN8rq93hlhF3yFqCRgCTO7O5VDEDSuBHy4vlQDNQg-ACXi34HkGg21dX8CMHbIkq58VFKO5G9If5X42GXKBQTRSeSTDux9coltr1j88y2lswqodRlHEfWu-8Eoa975oESG_fro5xUumilX4_WjjYZaFf5'
-    },
-    {
-      category: 'Électronique',
-      city: 'Québec',
-      title: 'Vidéoprojecteur 4K Cinéma',
-      owner: 'Julie L.',
-      price: 25,
-      status: 'Disponible',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDmFIVQMLKJrujQHAKdxflq-OU0yvwRmtEbOXWc6yFY58Eieu4tDTQOv3CXvTRT55hZW-2LfSm7gzSCbLblZuahqBARUh0zg4Yy5r_D_BaL7j_bp0DEUtX641cVdO3XGMvtwP-PQXwajHFnwYJeK8-gCap3ce-jZOc-9vMSTasCf1EGDDUt_R2zj7bVIiufZUOUV-YxknPbSnG_5Pg7UbLbzpHFARMJs5Oc-wPVtMLHGmyvqmOXaaM-PnuW9e7jIZnoQ8GEcQcINx1',
-      avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDF9cHCqx0Q_9CRFVe6Hc5cw6zcItNxVkgT9tq4agbFRaazlMWCEF_bOXDD7_63_7jCUvCB7mF_sc_d2GkqyQz_21ZKWPnZsNOa34ev2JB4pQqXO6rk2dTn8FRLrYTjdUeNHF5mIcw1wKYMWHRJeoVFmeLWwUjgQt98Bwr-E_Y3nzLrTbG-r6Bogcq2u2RWHmCRPnXU4FK7JVvVhXYUuidWJfeoz33OGlBX3aHOrFgj7STxiKutnW3b2ahNg9Zm_Xz7gpulleyd2zF6'
-    },
-    {
-      category: 'Cuisine',
-      city: 'Laval',
-      title: 'Robot pâtissier KitchenAid',
-      owner: 'Thomas D.',
-      price: 12,
-      status: 'En attente',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBsNWMZXTrwylOWVosClmZO3jAg7Bv0JCM1cq0LWEStqi3CZ4PZeXidp9a1i5JUu1rgoY0yKczwPuSUx6a8HTACnl2SGEiRpv9bqSrMGIQck_kde4gkH5yW1Nva9hNodA4g_z8h7Q_k24ZgJWZHUWA_JLdvOEO3Q_yDGifRGi4BUxKgtHEUU4RmaARH1Tq8Zydmp2Us_kKxDZHZtmFjEHfqACWxBVnw-rqLrvMPgmECiutWY8oRK6YkbIDez7_mQK9PzQSvXUbE5xvZ',
-      avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCkkyYgLt9jL2p0FPt_6u5jrlDLx5qqGA0US4hD1riVlsjeOGgkG_ocr2uesujk5nnbiSlwj5sa3QdSlUEum_QSNwl0ttvRIV5nci8PcOQYaRMnUU7CLxucxQLb4UWnvWPxLYsFMUCpQvSfnTh97jalNf4E0u7pARJSJXLaZlxIaDp1bn4MuW4WBT7mr7JGlHpMwrE8bzk3Qd0Ij9CtNetmX-CR2Hs1bb9PkQIlr3KeMDF6JI2aVFwC-lBtKrxn-5gCijr6eGxxn3l3'
-    },
-    {
-      category: 'Entretien',
-      city: 'Longueuil',
-      title: 'Nettoyeur vapeur Kärcher',
-      owner: 'Sophie B.',
-      price: 20,
-      status: 'Disponible',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCgKGASNt3WwUvPzh8poVo81G3L6rTkJ1GnjzffHWCEnMc6IdzGGWJ_xGu1VVrmUtLcU1V2eZATKQvulNiWkBn76ZpzQeoYflVn9pY_WmOteF2yhBQ7zf5DQViuGbRSlP7KUgECgPjvgCD0yMTrF7RL0q6_I6U2n49QfypW8UtwibXxEsP-mKjTb7_QujjWQree4X3Y2FoFjpjJO2kxAWLrgrA2-P5QjKkpMsX9GOJoPb4U_yquWpt4ygIu_hOBmC0mOj6CjBQiAe80',
-      avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAGRfnV5z7NWG2gCfeTCGnXrDxPecGDpNUTV2SNFGjNzxL0SXyi25NlVNn1U1xv8ldEwuY4dqjZGLtFD9fdyTClTvyiKID7DaSHZe2PRDMBwCNWE2wVxpFX9SCWR3AFsU4en3N21inHinqVkuM9qXbo14ZCPeSW--qlj7ZkA3396uq60_OGF31zWObIXJ143914newD7MvTM0snLTIHXNbBYaU0flFcFLzfLGKiEEFGuQbEKI1NBDBJp5XfUgehGTk5-G2-a6CUSsY-'
-    }
-  ];
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private api: ApiService) {}
 
   private readonly stitchHeroImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDeChDcUBengZv4ULsfijfzSAB_QEIPNeZpgbUorCrJrKwwEQtleHxmFHP2ZavNuY6mK5_O8b6rHtDCkZd-qebHkcVUNMV0q95sCxN95Wv1p6p-CTCDTXweaDyMmx4Ka1rxcKltDn5GM6s_xb48_FcV5DL5up9xkmaAUm1QpYV8ESUxLfPS7YXgfMt-vHNr2xjYkyeuyTrUiMzEWzhe2mT_wlwZPHLH6Ds-zPPyldVofZxZj8XmJWuAiK6wTWCuuZ70WZ1RNxvtB4Bj';
+
+  ngOnInit() {
+    this.api.categories().subscribe(c => this.categories.set(c.slice(0, 6)));
+    this.api.searchAnnonces({ size: 4 }).subscribe(p => this.featured.set(p.content));
+  }
 
   search() {
     this.router.navigate(['/annonces'], { queryParams: { q: this.q || null, ville: this.ville || null } });
