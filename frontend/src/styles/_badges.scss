@@ -1,0 +1,42 @@
+/* Badges statut alignés Stitch (label-bold + uppercase + tracking) */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--c-primary-fixed);
+  color: var(--c-primary);
+}
+
+.badge-success {
+  background: var(--c-secondary-container);
+  color: var(--c-on-secondary-container);
+}
+.badge-warn {
+  background: #fef3c7;
+  color: #b45309;
+}
+.badge-danger {
+  background: var(--c-error-container);
+  color: var(--c-on-error-container);
+}
+.badge-muted {
+  background: var(--c-surface-container);
+  color: var(--c-text-muted);
+}
+.badge-info {
+  background: var(--c-primary-fixed);
+  color: var(--c-primary);
+}
+
+/* Chip éco — utilisé dans hero (Stitch) */
+.badge-eco {
+  background: var(--c-secondary-container);
+  color: var(--c-on-secondary-container);
+}

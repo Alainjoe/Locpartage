@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Loc'Partage - Mobile</title>
+<script type='text/javascript' nonce='33zYLYPIO95hdZ4nKMkFRQ==' src='https://contribution.usercontent.google.com/3mfPM6EeaoSvN7PwKRfiwOyrUD-NeCyqo8lHmAPO9cESYBPY98tj5XaYqa3HIUIbEdjty3DAIshekMx-OySmsBvsoA7FZA5rN8PFHlVNJVydSQEQstrKRqcQ3VsDSlLpU3kalWE4UmmJt_l578hqJsX9C7DOkbFYKoK7TBfJuhxZ2BOFKXcZ7y73SJmjg0EsnZRJPwNGdt9KW06jJB7kyD7FkppHI3YSwWm-Iiq8FKNtNyWveFB38ZHgveYC3HzBvcqRXEEYU4XbI5ZyNy5fgMldEBqUecW5RobwPquri4ufd0jZOD5uPJgtX_OzVfzAN1skRtakv-fbNKNxbRqT_pgdN8gkO99YuwOD7DJx6FGPYLMZ9rOVO_Kom5zXGCYbcaEpiUCLOlcz5A8jROv9z13TbiaYS5uogqdFxoaU7z5ZHmhGT1ROKQFIT4AkeM6QnVfWMwNvvLe1rEdwVmNKPpXtahTAcwyBmm_d7HjQuRb6rfT-b6OsbEsJjio1mltRF2FBzNHMk1DyuJMXT3r03QXKuczezuoCfhXdQ3HW2kAykQTSvwqvaleV5SFF9Fw5l788oe1NBEXF1FdqDtnUhhJEugaxYc6xPbzC0w5IHOOx2FVaqSgEG7ibX1g2PjrM0XKC63bBZsv-oEQwO3sqRFkmLNqpby_zw6-FPNBcIVnrKcRG--W0HXXfVqRWpClcHj3jMTXUUUg8D_Z3EipkKU2UmSNh1B2FhDBoX7ewaCL3tcaxUxenHGujkJmKh8Sqdpjlv8TxsoKQXtO1kWzfuwOKQ4LcMlHBSeaZAGdt'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        /* Hide scrollbars but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#9ed75b",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-container": "#b9f474",
+                    "status-error": "#DC2626",
+                    "on-tertiary-container": "#f7a165",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#444651",
+                    "inverse-primary": "#b1c6ff",
+                    "primary-fixed-dim": "#b1c6ff",
+                    "on-secondary-container": "#437000",
+                    "primary": "#002d70",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-container": "#723600",
+                    "text-muted": "#6B7280",
+                    "tertiary-fixed-dim": "#ffb787",
+                    "primary-container": "#224489",
+                    "surface-tint": "#3d5ca2",
+                    "on-primary-container": "#97b4ff",
+                    "surface-container-highest": "#e1e3e4",
+                    "outline": "#747782",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d9dadb",
+                    "primary-fixed": "#d9e2ff",
+                    "on-primary-fixed": "#001946",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#2e4f00",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#311300",
+                    "on-secondary-fixed": "#0f2000",
+                    "surface-card": "#FFFFFF",
+                    "background": "#f8f9fa",
+                    "tertiary": "#502400",
+                    "status-success-alt": "#16A34A",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#191c1d",
+                    "border-subtle": "#E9ECEF",
+                    "status-warning": "#F59E0B",
+                    "tertiary-fixed": "#ffdcc7",
+                    "on-surface": "#191c1d",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-fixed-variant": "#224489",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "secondary-fixed": "#b9f474",
+                    "surface": "#f8f9fa",
+                    "outline-variant": "#c4c6d2",
+                    "secondary": "#3e6a00",
+                    "text-main": "#1F2937",
+                    "surface-container": "#edeeef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max-width": "1280px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "button": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface flex flex-col min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-border-subtle shadow-sm flex items-center justify-between px-margin-mobile h-16">
+<div class="flex items-center gap-3">
+<span class="text-headline-md font-headline-md font-bold text-primary">Loc'Partage</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-text-main">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-status-error rounded-full border-2 border-white"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-border-subtle">
+<img alt="Photo de profil utilisateur" class="w-full h-full object-cover" data-alt="A professional headshot of a friendly man in his 30s with a warm smile, set against a blurred outdoor Montreal background. The lighting is soft and natural, emphasizing a high-trust community leader aesthetic. The overall image has a clean, professional look with sharp focus and vibrant yet natural skin tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvlTbiv7ZhFyrmI56YUjHsDpZ2EKqamGR-C7BTJ5CGN4o7IdD9woJLUj5iS6fvyT4zCxWQOfHxrTMWo9pKvhKhktGMGImQaVXwhB280FE6tcHIC8wMkpHWnaPeaDJReaD8QF1rSRsZMIAdFc1TBISMqH3r14Sa32LrxkpLNg6b0fMVVaP6suskZIa_d0PcPNGPQoNfBvCZ7xa0bliQrK4_SIcg5RPEMqI19U9S38smLKEb8291Hm7VcEg2sEyf0PzOPBvXg7Fxo5nD"/>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 mt-16 mb-20 px-margin-mobile py-6 overflow-x-hidden">
+<!-- Header Greeting -->
+<section class="mb-8">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-1">Bonjour, Marc !</h1>
+<p class="font-body-md text-body-md text-text-muted">Voici l'aperçu de votre activité aujourd'hui.</p>
+</section>
+<!-- Stats Bento Grid (Mobile Stacked) -->
+<section class="grid grid-cols-2 gap-4 mb-8">
+<div class="col-span-2 p-6 rounded-xl bg-white border border-border-subtle shadow-sm flex items-center justify-between overflow-hidden relative">
+<div class="z-10">
+<p class="font-label-bold text-label-bold text-text-muted mb-2">REVENUS TOTAUX</p>
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-primary">1 240,00 $</p>
+<div class="flex items-center gap-1 mt-2 text-status-success-alt">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span class="text-xs font-bold">+12% ce mois</span>
+</div>
+</div>
+<div class="opacity-10 absolute -right-4 -bottom-4">
+<span class="material-symbols-outlined text-8xl" data-icon="payments">payments</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-white border border-border-subtle shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+</div>
+<p class="font-label-bold text-label-bold text-text-muted">RESERVATIONS</p>
+<p class="font-headline-md text-headline-md text-text-main">24</p>
+</div>
+<div class="p-4 rounded-xl bg-white border border-border-subtle shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary mb-3">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+</div>
+<p class="font-label-bold text-label-bold text-text-muted">NOTE</p>
+<p class="font-headline-md text-headline-md text-text-main">4.9/5</p>
+</div>
+</section>
+<!-- Quick Access / Pending Actions -->
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md text-text-main">À traiter</h2>
+<button class="text-primary font-label-bold text-label-bold">Voir tout</button>
+</div>
+<div class="space-y-4">
+<!-- Reservation Card -->
+<div class="bg-white rounded-xl border border-border-subtle p-4 shadow-sm active:scale-[0.98] transition-transform">
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Perceuse professionnelle" class="w-full h-full object-cover" data-alt="A high-quality professional power drill placed on a clean wooden workbench. The lighting is dramatic but clear, with soft shadows and a focused depth of field. The style is modern, professional, and product-focused, fitting for a premium rental marketplace in Quebec. The color palette features metallic greys and rich wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyScnltcCEFmIcFdN--cP2EHFZLwBFV9nil4JPU276qN2qBLo_fk9VAY9po2onY-M5ykP8TgCiLuwvvOjEY8-v3HaPsLZ-RiS9d9evYsq2dxyGhK9wQDuQ3myFOXfBJLpmzTjKAHs9Atr34JTfn7VCojzCWXjJ5GMRppLAzf1Qg3YSiVpsV8zgOZfkcwIouNirdmZrtkU9l8ZjOzFlFwQj6hQM0P9J0dnorG3lcyMiqxYH95mvGPaXTD_e6jhnWjgjsLOBL2fHFc0"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<span class="px-2 py-0.5 rounded-full bg-status-warning/10 text-status-warning text-[10px] font-bold uppercase tracking-wider">En attente</span>
+<span class="text-text-muted text-[12px]">Il y a 2h</span>
+</div>
+<p class="font-label-bold text-label-bold text-text-main truncate">Perceuse à percussion Makita</p>
+<p class="text-body-sm text-body-sm text-text-muted">Par Sophie Tremblay</p>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 py-2 rounded-lg bg-primary text-white font-label-bold text-label-bold active:scale-95 transition-transform">Confirmer</button>
+<button class="flex-1 py-2 rounded-lg border border-border-subtle text-text-main font-label-bold text-label-bold active:scale-95 transition-transform">Refuser</button>
+</div>
+</div>
+<!-- Message Card -->
+<div class="bg-white rounded-xl border border-border-subtle p-4 shadow-sm flex items-center gap-4 active:scale-[0.98] transition-transform">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border border-border-subtle">
+<img alt="Photo de Julie" class="w-full h-full object-cover" data-alt="A portrait of a cheerful young woman with curly hair, smiling warmly. The background is a soft-focus urban park setting in Montreal during golden hour. The lighting is warm and glowing, creating an inviting and trustworthy community atmosphere. The image is clean, professional, and modern, following the brand&#39;s high-trust aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU7iE41sqDW8N3bYEruyhr-kAOFHme_vpRkXZsm89MKf1y-IgDh965b8L5ra_PUU7p1KsOKk1uS3g2OMWTVOU-qPqmB7cc-e8CMFCvzjBBcZ1hCbMT6eBFLvQSBb71-cQ0L8NB07E9NkY3hiobMi8n2Ma9r8qvFyDiM4n52kyT5dEa_egxK36REOHH6y93MNbMoKeiEydrHeR-aUABEcN0Cae5v6C5Nt_Xw_fdBtORxPczJ23TimebBZMa4eSaaHUMdrBSqC6LRD90"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-bold text-label-bold text-text-main">Julie R.</p>
+<p class="text-body-sm text-body-sm text-text-muted truncate">"Est-ce que l'échelle est disponible samedi prochain ?"</p>
+</div>
+<div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Your Listings Summary -->
+<section class="mb-4">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md text-text-main">Mes objets</h2>
+<button class="flex items-center gap-1 text-primary font-label-bold text-label-bold">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>Nouveau</span>
+</button>
+</div>
+<div class="flex overflow-x-auto gap-4 no-scrollbar -mx-margin-mobile px-margin-mobile">
+<!-- Item 1 -->
+<div class="w-48 flex-shrink-0 bg-white rounded-xl border border-border-subtle overflow-hidden shadow-sm">
+<div class="h-32 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A professional aluminum telescopic ladder leaning against a modern brick wall. The shot is taken during a bright, clear day with crisp lighting and sharp details. The style is clean and architectural, highlighting the equipment&#39;s reliability. The color palette features metallic silver and deep red bricks, fitting the professional Quebec rental marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpWwTU1_T2AuvNgLAKtenNi9k95U_KmU5Fb_bb_w4exDdeULD2iYfdg6nRDL53lfr-6YGo2E-3gDTj1bxUdU4FPxhmUipihKigDnD_gpekxvZBb34lTjbZCZc355E7q_2Qo0cJt5cKAJsvo-sdlI6Iz-E1goaWVPxfKlrzXJjbN_9BBVKreSB6lUNprbDSyfZPcYx6jHuTyPaxDzN-FdKUIQnx0fmuGu6Laj5VfilFIy1zTuUANmhJ4OcxAawR_EZDwbqokLa8pcrZ"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-white/90 backdrop-blur rounded-full text-[10px] font-bold text-status-success-alt">DISPONIBLE</div>
+</div>
+<div class="p-3">
+<p class="font-label-bold text-label-bold text-text-main truncate">Échelle télescopique 4m</p>
+<p class="text-primary font-bold mt-1 text-label-bold">15,00 $ / jour</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="w-48 flex-shrink-0 bg-white rounded-xl border border-border-subtle overflow-hidden shadow-sm">
+<div class="h-32 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A modern industrial pressure washer machine on a paved driveway. The lighting is bright mid-day sun, creating sharp, clean highlights on the equipment&#39;s plastic and metal surfaces. The scene is tidy and professional, conveying a sense of high-end tool maintenance and readiness. Soft architectural depth in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRiGph2fanRsKfge5pHdBNcgpznDGswsHaqtf3qE7qarUnsBvbacaYlG_D-q_V0ZuDVS3SE3kWtClVDhfDOXMPubMc3eU0LLuKCcS1r5B8A5eXjdNkswr_jdHfEaXXk-rZevJoh3QriumDHiRek0C88uVneFYEiDtyO6OEQkGW6d13Fm7IHCwC8PJXx8d07gAO0pHjEHkvtfTkSQ2VAxB1JfR-evwmECgCjthOCNAAnhHosrJj4NJ0GkPUTdPc8RPvCoc4SpUoEAwT"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-white/90 backdrop-blur rounded-full text-[10px] font-bold text-primary">LOUÉ</div>
+</div>
+<div class="p-3">
+<p class="font-label-bold text-label-bold text-text-main truncate">Nettoyeur haute pression</p>
+<p class="text-primary font-bold mt-1 text-label-bold">45,00 $ / jour</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-secondary rounded-full shadow-lg flex items-center justify-center text-white active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full h-20 bg-surface-container-lowest border-t border-border-subtle flex items-center justify-around px-2 z-50">
+<!-- Dashboard (Active) -->
+<a class="flex flex-col items-center gap-1 active-tab text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view" data-weight="fill" style="font-variation-settings: &#39;FILL&#39; 1;">grid_view</span>
+<span class="font-label-bold text-[11px] uppercase tracking-tighter">Tableau</span>
+</a>
+<!-- Réservations -->
+<a class="flex flex-col items-center gap-1 text-text-muted hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-bold text-[11px] uppercase tracking-tighter">Réservations</span>
+</a>
+<!-- Publier (Middle Placeholder) -->
+<div class="w-10"></div>
+<!-- Messages -->
+<a class="flex flex-col items-center gap-1 text-text-muted hover:text-primary transition-colors duration-200 relative" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-label-bold text-[11px] uppercase tracking-tighter">Messages</span>
+<span class="absolute top-0 right-1 w-2 h-2 bg-status-error rounded-full"></span>
+</a>
+<!-- Profil -->
+<a class="flex flex-col items-center gap-1 text-text-muted hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-[11px] uppercase tracking-tighter">Profil</span>
+</a>
+</nav>
+<script>
+        // Simple haptic feedback simulation on interactions
+        document.querySelectorAll('button, a').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if ('vibrate' in navigator) {
+                    navigator.vibrate(10);
+                }
+            });
+        });
+
+        // Sticky header background shift on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

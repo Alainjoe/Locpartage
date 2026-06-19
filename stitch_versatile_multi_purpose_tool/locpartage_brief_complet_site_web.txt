@@ -1,0 +1,230 @@
+LOC'PARTAGE
+Brief complet - Design Site Web Responsive
+Maquette UI/UX web haute fidelite pour IA de design
+But du fichier : Donner a une IA de design un brief complet pour generer uniquement une maquette UI/UX, sans coder le site.
+Important : Le resultat attendu est un design haute fidelite, moderne, responsive et coherent, pas une application fonctionnelle.
+Prompt court a copier dans une IA de design
+Cree une maquette web responsive haute fidelite pour Loc'Partage, plateforme quebecoise de location de materiel entre particuliers. Ne genere pas de code ni de site fonctionnel. Cree uniquement un design UI/UX moderne, harmonieux et responsive pour mobile, tablette et desktop, avec landing page, recherche, detail annonce, publication, reservation, messagerie, dashboard utilisateur, dashboard administrateur, design system et composants reutilisables.
+1. Identite et direction artistique
+Identite
+Nom : Loc'Partage
+Concept : location de materiel entre particuliers au Quebec
+Positionnement : economique, ecologique, local et communautaire
+Ton visuel : moderne, clair, rassurant, premium mais accessible
+Inspiration : Airbnb, Leboncoin, FatLama, Facebook Marketplace, Linear, Notion
+Palette
+Bleu principal #224489 pour navigation, boutons primaires, liens importants
+Vert doux #8BC34A pour succes, validation, disponibilite, actions positives
+Fond #F8F9FA, cartes #FFFFFF, bordures #E9ECEF
+Texte principal #1F2937, texte secondaire #6B7280
+Erreur #DC2626, avertissement #F59E0B, succes #16A34A
+Typo
+Roboto, Open Sans ou Inter
+Titres bold, lisibles et hierarchises
+Texte courant 14-16px mobile, 16px desktop
+Boutons avec labels courts et clairs
+Composants
+Boutons primaires, secondaires, outline, ghost, danger, disabled
+Champs : recherche, email, mot de passe, select, date picker, prix, textarea, upload photo
+Cartes : annonce, categorie, utilisateur, reservation, message, statistique
+Badges : Disponible, Reserve, En attente, Annule, Termine, Litige
+Modals : confirmation, suppression, filtres, paiement simule
+Calendrier de disponibilite, slider prix, barre de progression multi-etapes
+Navigation : bottom bar mobile, header desktop, sidebar dashboard
+Regles
+Utiliser une grille de 8px
+Coins arrondis 16-20px
+Ombres legeres et realistes
+Boutons faciles a toucher sur mobile
+Contraste suffisant
+Interface aerée avec beaucoup d'espaces blancs
+Micro-interactions legeres : hover, focus, active, transition 250ms
+2. Breakpoints responsive
+3. Pages web a generer
+Landing page
+Header desktop avec logo, recherche, categories, publier, messages, profil
+Hero : Louez du materiel pres de chez vous
+Sous-titre economie circulaire
+Barre recherche premium
+Categories populaires
+Annonces recommandees
+Comment ca marche en 3 etapes
+Pourquoi choisir Loc'Partage
+Temoignages
+Footer complet
+Accueil connecte
+Message Bonjour Alain
+Recherche rapide
+Recommandations personnalisees
+Reservations en cours
+Annonces proches
+Resultats recherche
+Sidebar filtres
+Grille annonces
+Tri prix/distance/pertinence
+Carte optionnelle
+Pagination ou infinite scroll
+Detail annonce
+Galerie photo en grille
+Bloc reservation sticky a droite
+Description
+Calendrier
+Profil proprietaire
+Avis
+Annonces similaires
+Publication annonce
+Formulaire multi-etapes desktop
+Upload photos drag & drop
+Infos principales
+Prix
+Localisation
+Disponibilites
+Apercu avant publication
+Reservation
+Selection dates
+Resume prix
+Caution
+Paiement simule
+Confirmation
+Messagerie
+Conversations a gauche
+Chat a droite
+Detail reservation associee
+Pieces jointes
+Dashboard utilisateur
+Sidebar
+Vue d'ensemble
+Mes annonces
+Mes reservations
+Messages
+Favoris
+Paiements
+Evaluations
+Parametres
+Cartes statistiques
+Dashboard admin
+Sidebar admin
+Stats globales
+Graphiques
+Dernieres activites
+Alertes litiges
+Moderation
+Gestion utilisateurs admin
+Table utilisateurs
+Recherche
+Filtres
+Statut actif/suspendu
+Actions voir, modifier, suspendre
+Gestion annonces admin
+Liste annonces
+Statut
+Proprietaire
+Categorie
+Prix
+Actions approuver, masquer, supprimer
+Gestion reservations admin
+Reservations en cours
+Annulees
+Terminees
+Filtres
+Details
+Litiges admin
+Liste litiges
+Priorite
+Pieces jointes
+Statut
+Action resoudre
+Parametres
+Profil
+Securite
+Notifications
+Confidentialite
+Paiements simules
+Pages legales
+FAQ
+Contact
+Conditions d'utilisation
+Politique de confidentialite
+4. Structure navigation web
+Header : logo, recherche, categories, publier, mes reservations, messages, profil
+Dashboard utilisateur : sidebar gauche
+Dashboard administrateur : sidebar admin
+Footer : FAQ, Contact, Conditions, Confidentialite, reseaux sociaux
+Breadcrumb sur pages detail et dashboards
+5. Fonctionnalites obligatoires
+Authentification
+Gestion annonces
+Recherche avec filtres
+Reservation
+Annulation
+Messagerie interne
+Dashboard utilisateur
+Back-office admin
+Responsive mobile/tablette/desktop
+Calendrier de disponibilite
+6. Fonctionnalites bonus a integrer visuellement
+Paiement simule
+Geolocalisation
+Avis et notes
+Litiges
+Export PDF reservations
+Notifications
+Favoris
+Statistiques admin
+7. Parcours utilisateur web
+Parcours locataire
+Arrive sur landing
+Recherche materiel
+Applique filtres
+Ouvre detail annonce
+Choisit dates
+Reserve
+Paiement simule
+Confirmation
+Messagerie
+Evaluation
+Parcours proprietaire
+Connexion
+Dashboard
+Publier annonce
+Gerer disponibilites
+Recevoir demande
+Messagerie
+Suivre reservations
+Parcours administrateur
+Connexion back-office
+Voir statistiques
+Gerer utilisateurs
+Moderer annonces
+Suivre reservations
+Traiter litiges
+Consulter signalements
+8. Design system web
+Boutons
+Inputs
+Cartes annonces
+Tables admin
+Graphiques
+Modals
+Sidebar
+Header
+Footer
+Badges
+Pagination
+Tabs
+Dropdowns
+Calendrier
+9. Donnees exemples
+10. Etats UI
+11. Interactions et animations
+Hover cards
+Transition 250ms
+Dropdown fluide
+Sidebar active state
+Loading skeleton
+Toast notifications
+Modal confirmation
+Effet zoom leger images
+Responsive auto-layout
+12. Consigne finale pour IA
+Generer une maquette web responsive complete et premium. Chaque page doit avoir un role clair. Le site ne doit pas etre une simple vitrine : il doit montrer une plateforme complete avec recherche, reservation, dashboards, messagerie et admin. Ne pas coder : design uniquement.

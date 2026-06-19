@@ -1,0 +1,11 @@
+target/
+data/
+uploads/
+*.iml
+.idea/
+.vscode/
+*.log
+HELP.md
+application-local.properties
+.env
+.env.local

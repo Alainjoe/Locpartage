@@ -1,0 +1,13 @@
+/* Alertes contextuelles alignées palette Stitch */
+
+.alert {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  border-left: 4px solid;
+  font-size: var(--fs-body-md);
+}
+.alert-error   { background: var(--c-error-container); border-color: var(--c-error);  color: var(--c-on-error-container); }
+.alert-success { background: var(--c-secondary-container); border-color: var(--c-secondary); color: var(--c-on-secondary-container); }
+.alert-warn    { background: #fffbeb; border-color: var(--c-status-warning); color: #92400e; }
+.alert-info    { background: var(--c-primary-fixed); border-color: var(--c-primary); color: var(--c-primary); }

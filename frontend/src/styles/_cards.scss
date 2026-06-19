@@ -1,0 +1,74 @@
+/* Cartes Stitch : surface-card + premium-shadow + grand radius */
+
+.card {
+  background: var(--c-surface-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-premium);
+  padding: var(--space-5);
+  border: 1px solid var(--c-border-subtle);
+}
+
+.card-flat {
+  background: var(--c-surface-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--c-border-subtle);
+  padding: var(--space-5);
+}
+
+.card-elevated {
+  background: var(--c-surface-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-5);
+}
+
+.card-hover {
+  transition: transform var(--t), box-shadow var(--t);
+  cursor: pointer;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Carte catégorie immersive (Stitch — image plein cadre + gradient) */
+.category-card {
+  position: relative;
+  height: 320px;
+  border-radius: var(--radius-3xl);
+  overflow: hidden;
+  cursor: pointer;
+}
+.category-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms ease;
+}
+.category-card:hover img { transform: scale(1.1); }
+.category-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1) 60%, transparent);
+}
+.category-card .label {
+  position: absolute;
+  bottom: var(--space-5);
+  left: var(--space-5);
+  color: #fff;
+  z-index: 1;
+}
+.category-card .label h3 {
+  color: #fff;
+  font-size: var(--fs-headline-md);
+  font-weight: 600;
+  margin: 0 0 var(--space-1);
+}
+.category-card .label p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--fs-body-sm);
+  margin: 0;
+}

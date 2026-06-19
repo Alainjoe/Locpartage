@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type='text/javascript' nonce='ORG2p87g/10PEqg3A96TlQ==' src='https://contribution.usercontent.google.com/BHJDv93p0NqgaWzck-gOwJfk5GYHA2hZde3pccorL3bx-ZgkHfmY86-sZU4JcRfwvSNLUxK6f-alK8yQM3QOwCJPSQJTZEgEWJwX8dwl_5_bQY20CF9sQQEt11EP8b0E6JJIvaXMRuarfXKnG4K-zSIV74zcH9lKXlOSPj7zBP4nlt49Iv5cNTC8t01-1dt-ZC084vdr3HmZ3ghV_eSzNIxwzR4TyvgdmktxAnuXoe-lFiywSy7vj1XPYl9VbaD-TKlbP3KKquOnO3EG26GYE-MIBpFx4lXoIGeQCrF4BkWSUed_xS6d_Lc38PWjUtLBazTQFbfNMqhqBMGVq0I04bWJkvQRguOhmtetU-CqWfjgAYLgIXHqh1rdhjoPlHLesO22NUMREONC_lLOsg-lKp2jNYjR2SZJlZhTTd9pxA_jS1BHEMZzWNT-Gp-I3s0JvTgICaBt3Ca_9rwHWhKimo5rqm2EmmDbRq4i6Sn3uEaTrUaudXwqYhwP6MIdokKBANb2XjJgu_poL5e4rMP1AZFi6Pq1tYI4mA4BX5ANEu44XFPdGo-zGLh2DkECb99-AoBI-LRZ0KWNJ6iQXNO2YY-Zs9epcsGnVYCyIaPYg6hVFQcbrpsg3xE3vvNBmb2e4__n0CbhFYs2M_n8j3yv-opVwXVlnWRTMSpY9vH0FVWziJWyuFCQNazQkMszewLfXWdH9QBW1FZp3CkgcqmHoLL_EjtPDBi9dYmdylzyNz4yfd9b7wNxoiEQYr6fnp3pVLwYnmpyV4pDP1wGG885jVyEitGkQo02Vc0BbbF_'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .drawer-open {
+            transform: translateY(0%);
+        }
+        .drawer-closed {
+            transform: translateY(100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#9ed75b",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-container": "#b9f474",
+                        "status-error": "#DC2626",
+                        "on-tertiary-container": "#f7a165",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#444651",
+                        "inverse-primary": "#b1c6ff",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "on-secondary-container": "#437000",
+                        "primary": "#002d70",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-container": "#723600",
+                        "text-muted": "#6B7280",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "primary-container": "#224489",
+                        "surface-tint": "#3d5ca2",
+                        "on-primary-container": "#97b4ff",
+                        "surface-container-highest": "#e1e3e4",
+                        "outline": "#747782",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#d9e2ff",
+                        "on-primary-fixed": "#001946",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#2e4f00",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#311300",
+                        "on-secondary-fixed": "#0f2000",
+                        "surface-card": "#FFFFFF",
+                        "background": "#f8f9fa",
+                        "tertiary": "#502400",
+                        "status-success-alt": "#16A34A",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1d",
+                        "border-subtle": "#E9ECEF",
+                        "status-warning": "#F59E0B",
+                        "tertiary-fixed": "#ffdcc7",
+                        "on-surface": "#191c1d",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed-variant": "#224489",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "secondary-fixed": "#b9f474",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#c4c6d2",
+                        "secondary": "#3e6a00",
+                        "text-main": "#1F2937",
+                        "surface-container": "#edeeef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "button": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-text-main min-h-screen flex flex-col">
+<!-- Header / Search Bar -->
+<header class="fixed top-0 w-full z-40 bg-surface-container-lowest dark:bg-surface-dim shadow-sm px-4 pt-4 pb-2 border-b border-border-subtle">
+<div class="flex items-center gap-3 bg-white border border-border-subtle rounded-full px-4 py-3 shadow-sm active:scale-95 transition-transform" onclick="toggleSearchFocus()">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+<div class="flex-1 overflow-hidden">
+<p class="font-label-bold text-label-bold truncate">Matériel de jardinage · Montréal</p>
+<p class="font-body-sm text-body-sm text-text-muted truncate">Dates · 1 personne</p>
+</div>
+<div class="p-2 border border-border-subtle rounded-full">
+<span class="material-symbols-outlined text-text-main text-xl" data-icon="tune">tune</span>
+</div>
+</div>
+<!-- Category Filter Chips (Horizontal Scroll) -->
+<div class="flex gap-4 overflow-x-auto py-4 hide-scrollbar">
+<button class="flex flex-col items-center gap-1 min-w-[64px] border-b-2 border-primary text-primary">
+<span class="material-symbols-outlined" data-icon="garden_cart">garden_cart</span>
+<span class="font-label-bold text-[11px]">Jardin</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+<span class="font-label-bold text-[11px]">Outils</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="camping">camping</span>
+<span class="font-label-bold text-[11px]">Camping</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="kitchen">kitchen</span>
+<span class="font-label-bold text-[11px]">Cuisine</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="celebration">celebration</span>
+<span class="font-label-bold text-[11px]">Fêtes</span>
+</button>
+</div>
+</header>
+<!-- Main Content: Vertical List of Cards -->
+<main class="flex-1 mt-[140px] px-4 pb-24 space-y-6">
+<!-- Listing Card 1 -->
+<div class="bg-surface-card rounded-[20px] overflow-hidden border border-border-subtle shadow-sm active:scale-[0.98] transition-transform">
+<div class="relative h-[240px]">
+<img class="w-full h-full object-cover" data-alt="A professional-grade orange lawn mower sitting on a perfectly manicured green lawn in a bright, sun-drenched suburban backyard in Quebec. The lighting is crisp and natural, highlighting the textures of the grass and the metallic finish of the equipment. The scene exudes a clean, modern aesthetic with high-trust vibes and vibrant greens contrasted with deep corporate blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBifVujf8tJu0E8hbYeW49iBdVuJzrUGdEc2cVCFciT6NlRnH0orXcyr8m2fwETJ7mFcJDxsnVFV0Xa1XRcSfrVKWGOEYMz64Q_NTI_54H48DjwUssxo2yiK8fRqqAJ1tdI08wf8pkLKCW5l-4uw9Oo04oDPIUjQ898v6qr4X5BSYpoJ5uuF1SrFmWA_x_pNatXsX0nNcrfyhMBPOoye_m0GAXffjLCykqpfqLzkfJ2WbbkKyxjpHNlsakNdC3NKjkGN55cABUkWK1"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-text-main" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-text-main">Tondeuse à gazon Honda</h2>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-status-warning text-sm" data-icon="star" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">4.9</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4">Rosemont, Montréal · 1.2 km</p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-[#8BC34A]/10 text-status-success-alt font-label-bold text-xs rounded-full">Disponible aujourd'hui</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary">25$</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ jour</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Listing Card 2 -->
+<div class="bg-surface-card rounded-[20px] overflow-hidden border border-border-subtle shadow-sm active:scale-[0.98] transition-transform">
+<div class="relative h-[240px]">
+<img class="w-full h-full object-cover" data-alt="A heavy-duty high-pressure washer unit positioned on a grey slate patio beside a clean stone wall. The atmosphere is professional and industrious, with soft morning light creating gentle shadows. The color palette is composed of slate greys, metallic silver, and deep navy blue, maintaining a high-end minimalist corporate feel for a rental marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcht1Gskw2EG7rosDiisMYGnIHs89vksdMR4w0PdPevvCZqeVfoTLehwRu-l1aAx-7YXfI_QapS45b_8MxK3ZyjUfjjtxcGqKPqTRUcNflQWzhj1MvRM-6uencjV5DZPw3fIKk0o3dxOnl14MXiF8wNZSngCX8q1HgDK2nddnI4vyI6ZczRcphp9A3w4tvCSLx7NV-_-95O_kwZHR1P7gadQZT7lqMta4xbY5NlTAK3jm3KVCE-sSZvH7J9HGBUu18TBd3al0AI5SN"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-text-main" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-text-main">Nettoyeur haute pression</h2>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-status-warning text-sm" data-icon="star" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">4.7</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4">Plateau, Montréal · 2.5 km</p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-status-warning/10 text-status-warning font-label-bold text-xs rounded-full">Réponse rapide</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary">40$</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ jour</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Listing Card 3 -->
+<div class="bg-surface-card rounded-[20px] overflow-hidden border border-border-subtle shadow-sm active:scale-[0.98] transition-transform">
+<div class="relative h-[240px]">
+<img class="w-full h-full object-cover" data-alt="A high-quality four-season camping tent pitched in a misty coniferous forest in Quebec during twilight. The tent glows softly from an internal light source, creating a warm and inviting focal point against the cool blue and dark green hues of the woods. The photography style is moody yet professional, emphasizing quality and outdoor adventure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrQzH1yTi26QS0OQf3OkC90ZyiouTs2hLu_36bkEQjt05QtUMAvgGRopZrJ-Mc5aRRh0UQGXhvYNL1yDSnGbaZJfuu4f0SqzMnxe8OHcdf19qPJ_NXFdVjUbfTTHTmmSMkL7jMHOY-YFFA6n5EEgcW7NEfiYL8P4B7OwpYoFAoHjoZrjQ8Uz-v6GIGT-pjDYhKDa_ZBkbYFsVx7WTpi9TPg_F3jpnMI_NbRoWjkJv6TffaR_SR3JksaeW6vU-Bvk-iTatXT3DOdLs7"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-text-main" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-text-main">Tente 4 personnes Expédition</h2>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-status-warning text-sm" data-icon="star" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">5.0</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4">Verdun, Montréal · 4.8 km</p>
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-[#8BC34A]/10 text-status-success-alt font-label-bold text-xs rounded-full">Disponible</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary">15$</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ jour</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Filter Button -->
+<button class="fixed bottom-24 left-1/2 -translate-x-1/2 z-30 bg-primary text-on-primary flex items-center gap-2 px-6 py-3 rounded-full shadow-lg active:scale-95 transition-all" onclick="toggleFilters()">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span class="font-button text-button">Filtres</span>
+</button>
+<!-- Filter Drawer (Mobile) -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 transition-opacity opacity-0 pointer-events-none" id="filter-drawer-overlay" onclick="toggleFilters()"></div>
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-[32px] max-h-[795px] overflow-y-auto drawer-closed transition-transform duration-300 ease-in-out p-6 shadow-2xl" id="filter-drawer">
+<div class="w-12 h-1.5 bg-surface-variant rounded-full mx-auto mb-8"></div>
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-lg text-headline-lg text-text-main">Filtres</h3>
+<button class="p-2 bg-surface-container-low rounded-full" onclick="toggleFilters()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="space-y-8">
+<!-- Price Range -->
+<div>
+<p class="font-label-bold text-label-bold mb-4">Fourchette de prix (par jour)</p>
+<div class="flex gap-4 items-center mb-4">
+<div class="flex-1 border border-border-subtle rounded-xl p-3">
+<p class="text-[10px] text-text-muted font-label-bold uppercase">Minimum</p>
+<p class="font-body-md">5 $</p>
+</div>
+<div class="w-4 h-[1px] bg-border-subtle"></div>
+<div class="flex-1 border border-border-subtle rounded-xl p-3">
+<p class="text-[10px] text-text-muted font-label-bold uppercase">Maximum</p>
+<p class="font-body-md">150 $</p>
+</div>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg appearance-none cursor-pointer" type="range"/>
+</div>
+<!-- Categories -->
+<div>
+<p class="font-label-bold text-label-bold mb-4">Catégories populaires</p>
+<div class="grid grid-cols-2 gap-3">
+<button class="border border-primary bg-primary/5 text-primary rounded-xl py-3 px-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-xl" data-icon="grass">grass</span>
+<span class="font-body-md">Jardinage</span>
+</button>
+<button class="border border-border-subtle rounded-xl py-3 px-4 flex items-center gap-2 text-text-main">
+<span class="material-symbols-outlined text-xl" data-icon="build">build</span>
+<span class="font-body-md">Outils</span>
+</button>
+<button class="border border-border-subtle rounded-xl py-3 px-4 flex items-center gap-2 text-text-main">
+<span class="material-symbols-outlined text-xl" data-icon="cleaning_services">cleaning_services</span>
+<span class="font-body-md">Entretien</span>
+</button>
+<button class="border border-border-subtle rounded-xl py-3 px-4 flex items-center gap-2 text-text-main">
+<span class="material-symbols-outlined text-xl" data-icon="kitchen">kitchen</span>
+<span class="font-body-md">Appareils</span>
+</button>
+</div>
+</div>
+<!-- Distance -->
+<div>
+<p class="font-label-bold text-label-bold mb-4">Distance maximale</p>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar">
+<button class="whitespace-nowrap px-6 py-2 border border-border-subtle rounded-full font-label-bold">2 km</button>
+<button class="whitespace-nowrap px-6 py-2 border border-primary bg-primary text-on-primary rounded-full font-label-bold">5 km</button>
+<button class="whitespace-nowrap px-6 py-2 border border-border-subtle rounded-full font-label-bold">10 km</button>
+<button class="whitespace-nowrap px-6 py-2 border border-border-subtle rounded-full font-label-bold">25 km+</button>
+</div>
+</div>
+</div>
+<div class="sticky bottom-0 pt-8 pb-4 bg-white flex items-center gap-4">
+<button class="font-label-bold text-text-main underline decoration-2 underline-offset-4 px-4">Effacer</button>
+<button class="flex-1 bg-primary text-on-primary py-4 rounded-xl font-button text-button shadow-md active:scale-95 transition-transform" onclick="toggleFilters()">
+                Afficher 120 résultats
+            </button>
+</div>
+</div>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-40 bg-surface-container-lowest border-t border-border-subtle h-20 px-6 flex items-center justify-between shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="explore" style="font-variation-settings: &#39;FILL&#39; 1;">explore</span>
+<span class="text-[10px] font-label-bold">Explorer</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="favorite">favorite</span>
+<span class="text-[10px] font-label-bold">Favoris</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="calendar_today">calendar_today</span>
+<span class="text-[10px] font-label-bold">Réservations</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-[10px] font-label-bold">Messages</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="account_circle">account_circle</span>
+<span class="text-[10px] font-label-bold">Profil</span>
+</button>
+</nav>
+<script>
+        function toggleFilters() {
+            const drawer = document.getElementById('filter-drawer');
+            const overlay = document.getElementById('filter-drawer-overlay');
+            
+            if (drawer.classList.contains('drawer-closed')) {
+                drawer.classList.remove('drawer-closed');
+                drawer.classList.add('drawer-open');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100', 'pointer-events-auto');
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.classList.remove('drawer-open');
+                drawer.classList.add('drawer-closed');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100', 'pointer-events-auto');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function toggleSearchFocus() {
+            // Animates a scale effect to show touch response
+            console.log("Search focused");
+        }
+    </script>
+</body></html>

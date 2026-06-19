@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type='text/javascript' nonce='LtDg/vJkJVPvvCzeOkruGg==' src='https://contribution.usercontent.google.com/vEtdzvA4t-3igSdAuN2HSKxPy86jbIj2Nclek5rNEzQgXCoJNQ30byh1r6YxDB8Y0mLcm2HBBXNoDcOlPG0Ma34CSCw4GhqmeNEPDdSxqIELywMZ6WPHbeNnp7yWlXjaqxNH7em7yKQKtzj4SyWFxx3iY4ESK0E96YKarxIBfUGsOIbUxMNNhGybf6kqii-sJJ9GlEWVRfxmIGl_TnmjzlBjBIjfcol5wkaSpbQAANqn7xQifOMr9kzbD7M39BeTBTSEv6YJwVdTmwuxSwQlVV38RDW5cbcaGrHThUb5M5LBJQp5IKjP4lj5Iv5y9iSH_OV6Emoq_0FDVQq7Y6nGOXXNas_b17nHtbCk_5gTsT14aVHliKs1idU3fS4V7rq2JQviXrQuG9xvYGLS27DDItDqETmx_PKukQDezAIeNmM5rL8JAOyPQPTo2mWvVFADpHuMby4qNoyjL55_jbCBs73PnccKjSYbU5arf-J4Hh69L9BfVC9O1OztkFBH_4YV8e3N28vSlZ8NfHRpODdPKaeLlf2vPCbii9-W-i9YJwG5SKZWnIcyCUFa6vuxIx5-e2MTPXFt4gisFzIm22BReVUKc5AdF14PxHtZyKxOsXalSjfujzg9amqibHrWkhvT5w6Hxexjq4-SY3XsfQQW4rQ8bYJ5YjcBOacHdtHvS23sOnBSkh9ZlK8Fa5pb7M2Zh4F8ureisODhIqrOQZZE7t1gsimjeDlu_8ouBVhw0zTMHx6Qr83X1yzEbdlWLy6Ry-xtIzv5J-Q2v-UPARNPYypVKVKA4I5jA42U365-'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#002d70",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0f2000",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#3d5ca2",
+                        "on-tertiary-fixed": "#311300",
+                        "text-muted": "#6B7280",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed": "#001946",
+                        "secondary-fixed": "#b9f474",
+                        "tertiary-fixed": "#ffdcc7",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "outline": "#747782",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "border-subtle": "#E9ECEF",
+                        "text-main": "#1F2937",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#b9f474",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-surface-variant": "#444651",
+                        "secondary-fixed-dim": "#9ed75b",
+                        "error": "#ba1a1a",
+                        "status-warning": "#F59E0B",
+                        "outline-variant": "#c4c6d2",
+                        "tertiary-container": "#723600",
+                        "background": "#f8f9fa",
+                        "on-tertiary-container": "#f7a165",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-variant": "#e1e3e4",
+                        "status-success-alt": "#16A34A",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b1c6ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#437000",
+                        "on-background": "#191c1d",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-secondary-fixed-variant": "#2e4f00",
+                        "surface-card": "#FFFFFF",
+                        "primary-container": "#224489",
+                        "status-error": "#DC2626",
+                        "secondary": "#3e6a00",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-primary-container": "#97b4ff",
+                        "on-primary-fixed-variant": "#224489",
+                        "tertiary": "#502400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "container-max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "button": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-shadow {
+            box-shadow: 0px 4px 20px rgba(34, 68, 137, 0.08);
+        }
+        .glass-header {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .hero-pattern {
+            background-color: #f8f9fa;
+            background-image: radial-gradient(#224489 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            background-opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-background text-text-main font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 glass-header border-b border-border-subtle shadow-sm transition-all duration-300" id="main-nav">
+<div class="flex items-center justify-between px-margin-desktop h-20 max-w-container-max-width mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-headline-md font-headline-md font-bold text-primary" href="#">Loc'Partage</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-primary border-b-2 border-primary hover:text-primary transition-colors duration-200" href="#">Accueil</a>
+<a class="font-label-bold text-label-bold text-text-main hover:text-primary transition-colors duration-200" href="#">Réservations</a>
+<a class="font-label-bold text-label-bold text-text-main hover:text-primary transition-colors duration-200" href="#">Messages</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden md:flex items-center gap-2 px-6 py-2.5 bg-primary text-on-primary rounded-xl font-button active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                    Publier
+                </button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-border-subtle cursor-pointer hover:ring-2 ring-primary transition-all">
+<img alt="Profil" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZn9-samQH4TlZO42lPBp6GI1EvfL1N7pFTbWZX0xwKtsUCmE5wu_A6jtX_ar4WDoRVfcWj8DEwmTavbLDvcS9SMLnoVTps-_5o_QVaItLqHpQdqlzfBU2CKAANs_fJ_XirWe4B-J4COpLeC377vpzqPJrBXKuUBItuAOXu3m8epmmp4VgAcosCd-tGiKMCZvvqBoW-ZeYDZVS1WZxfGQY-PXoGoOshtkHbreXr7Dy9WSnDZD-kC6ynndw2-mJyNlVSGjhXCpdNFN"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden hero-pattern">
+<div class="max-w-container-max-width mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16">
+<div class="z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-bold text-[12px] mb-6 uppercase tracking-wider">
+                        Économie Circulaire au Québec
+                    </span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 max-w-xl">
+                        Louez du matériel près de chez vous
+                    </h1>
+<p class="font-body-lg text-body-lg text-text-muted mb-10 max-w-lg">
+                        Rejoignez une communauté de confiance pour partager vos outils, équipements de jardinage et appareils électroniques. Consommez mieux, dépensez moins.
+                    </p>
+<!-- Premium Search Bar -->
+<div class="bg-surface-card premium-shadow p-2 rounded-[20px] flex flex-col md:flex-row gap-2 max-w-2xl border border-border-subtle">
+<div class="flex-1 flex items-center px-4 gap-3">
+<span class="material-symbols-outlined text-primary">search</span>
+<input class="w-full border-none focus:ring-0 font-body-md text-text-main py-4 bg-transparent" placeholder="Que recherchez-vous ?" type="text"/>
+</div>
+<div class="w-px bg-border-subtle hidden md:block my-2"></div>
+<div class="flex-1 flex items-center px-4 gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<input class="w-full border-none focus:ring-0 font-body-md text-text-main py-4 bg-transparent" placeholder="Ville ou Code Postal" type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-button hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
+                            Rechercher
+                        </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="relative z-10 rounded-[32px] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+<img alt="Matériel en location" class="w-full h-[600px] object-cover" data-alt="A high-quality lifestyle photography of professional gardening tools and electric equipment neatly organized in a bright, modern minimalist garage. The scene is bathed in natural morning light filtering through a side window, emphasizing clean lines and a sense of order. The color palette consists of soft whites, neutral greys, and deep navy blue accents to match the corporate-modern UI style. The mood is productive, trustworthy, and evokes a high-end community service feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeChDcUBengZv4ULsfijfzSAB_QEIPNeZpgbUorCrJrKwwEQtleHxmFHP2ZavNuY6mK5_O8b6rHtDCkZd-qebHkcVUNMV0q95sCxN95Wv1p6p-CTCDTXweaDyMmx4Ka1rxcKltDn5GM6s_xb48_FcV5DL5up9xkmaAUm1QpYV8ESUxLfPS7YXgfMt-vHNr2xjYkyeuyTrUiMzEWzhe2mT_wlwZPHLH6Ds-zPPyldVofZxZj8XmJWuAiK6wTWCuuZ70WZ1RNxvtB4Bj"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-card p-6 rounded-2xl shadow-xl z-20 border border-border-subtle animate-bounce-slow">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">eco</span>
+</div>
+<div>
+<p class="font-label-bold text-primary">12.4kg de CO2</p>
+<p class="text-xs text-text-muted">Économisés ce mois-ci</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Categories -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max-width mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Catégories Populaires</h2>
+<p class="text-text-muted">Explorez les univers de partage les plus actifs</p>
+</div>
+<a class="text-primary font-label-bold flex items-center gap-1 group" href="#">
+                        Voir tout <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Category: Bricolage -->
+<div class="group relative h-80 rounded-[24px] overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Detailed close-up of high-quality woodworking tools and an electric drill on a clean, light oak workbench. The lighting is warm and professional, creating soft shadows. The overall aesthetic is minimalist and premium, with a focus on durability and precision. Colors are predominantly neutral with primary blue highlights in the equipment, fitting a professional rental marketplace environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDRxxomZjlWsXhWyn0rko2UqZfG7hQbETaCcfKW2rPoxiwzq04lJ7Vu71y0e2XkbSpzd9IgcObnbWhmyzjyNBr2nXXCmAgFhfGvfWSs_PZj5lo_ZTJGik7JuOJblN0ZWNiv1Kci6v1DSLvv6UyDshT6y9r38LQ9RSg0Z6-aIFfHVtDtVw8WERx4B1hbwloUbZAYyHouWFqa5EcLAnPs5MDwyB5zGpmso5zsJsb0pI2LdyvyfTHi6ir7rf-KkNplwUAEZRNbYbM_vo1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="font-headline-md text-headline-md mb-1">Bricolage</h3>
+<p class="text-white/80 text-body-sm">450+ articles disponibles</p>
+</div>
+</div>
+<!-- Category: Jardinage -->
+<div class="group relative h-80 rounded-[24px] overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A lush and organized garden scene featuring a high-end electric lawnmower and pruning tools set against a background of neatly trimmed green hedges. The lighting is bright and sunny, characteristic of a clear summer day in Quebec. The visual style is crisp and clean, emphasizing community care and environmental responsibility. The color palette uses vibrant greens and soft sky blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLiYTjg0t16VZXwe5wA05vRzF_14tRsJgPG7D53Vxdzz0c9_LyZtfrtc8-bLOORDXZNkck3jcIil_hScx8hxF1HNqcKl6KoYihVtSDZjYGaU-tokMlP-tUTO3jJYPygXQM1tVzmP1eDj27pGRcLuxgjQri9e_Gv7E1Bb6qe516IJXyl6X2LqMuF5pzpmMpv4My8knkVk81m446zqO69CQY8CQQbuU_kdheuBG5YpsLp8RrGvWx5UpUdD2E40cgyNjQbIgzBTInBuE-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="font-headline-md text-headline-md mb-1">Jardinage</h3>
+<p class="text-white/80 text-body-sm">280+ articles disponibles</p>
+</div>
+</div>
+<!-- Category: Électronique -->
+<div class="group relative h-80 rounded-[24px] overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Premium consumer electronics including a professional camera, a drone, and high-end headphones arranged on a minimalist white desk. The lighting is studio-quality with soft, diffused highlights. The scene conveys technological advancement and careful maintenance. The color palette is modern, featuring greys, whites, and subtle primary blue reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2HWavojSfOAqeUMFICd7uTlAqmDlhw3glW8o-p6sGDcHiOgW8QL2u4I62kk98nJacrkEn4oax5tbWRpls5BR_h-tEHHot96WnX7ORpubjykghsZA19jC-h_paatGCnATIvvVYD3JGHJGgiuYYNDTAPALnVTin9vaZdwXM3LH2PuAsQRsTuu_VzlQgtxeDaz5KMQixJW73aE3rkYHcjE-uHOLoST4jhejKU1hmSpOQnafyQEjRgAenWM2ju3H3Tflqu3Nowd5SncRW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="font-headline-md text-headline-md mb-1">Électronique</h3>
+<p class="text-white/80 text-body-sm">120+ articles disponibles</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommended Ads -->
+<section class="py-24 bg-background">
+<div class="max-w-container-max-width mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+<h2 class="font-headline-lg text-headline-lg text-primary">Recommandations pour vous</h2>
+<div class="flex gap-4 overflow-x-auto pb-2 w-full md:w-auto">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-bold text-sm whitespace-nowrap">Tout</button>
+<button class="bg-surface-card border border-border-subtle text-text-main px-6 py-2 rounded-full font-label-bold text-sm hover:border-primary transition-colors whitespace-nowrap">À proximité</button>
+<button class="bg-surface-card border border-border-subtle text-text-main px-6 py-2 rounded-full font-label-bold text-sm hover:border-primary transition-colors whitespace-nowrap">Prix bas</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Ad Card 1 -->
+<article class="group bg-surface-card rounded-[20px] overflow-hidden premium-shadow border border-border-subtle hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional heavy-duty impact drill placed on a clean grey concrete floor. The lighting is focused and dramatic, highlighting the texture and robust build of the tool. The background is a blurred minimalist industrial setting. Colors include the yellow and black of the tool against a monochromatic grey and white environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYCxo8wgzh-WNn1GcJdgmClgeABsHcsOPMIL_SDZy6Pj8GVHYq_aJ-Cbf5lNBi8zI9Mw7N54VIwjvGkhgc3kQDWfFHYvqdKK58tOcfYy4e5tl2_joBSrihTOYV7nknZ0rjNyV5-YfxpBLL8ZZihCSg44pBnsu2PcGb6wFPGn3ycp9PqxdG1ZE_UJi4xzNFt2mJX4Y3Kv5bf7RLu-crfu_vJDLS1fVN_8egBU1m59FNwPbLrPYr_DaU2_AZY6Pkw9UDRtK0hgziDuuX"/>
+<button class="absolute top-4 right-4 w-9 h-9 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4">
+<span class="bg-status-success-alt/10 text-status-success-alt text-[11px] font-label-bold px-3 py-1 rounded-full backdrop-blur-md">Disponible</span>
+</div>
+</div>
+<div class="p-6">
+<p class="text-xs text-text-muted font-label-bold uppercase tracking-wider mb-2">Bricolage • Montréal</p>
+<h3 class="font-label-bold text-text-main text-lg mb-4 line-clamp-1">Perceuse à percussion Pro</h3>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<img alt="Avatar" class="w-6 h-6 rounded-full border border-border-subtle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjugnEOKvf-RHHXDAORAfttdc_n-nBRAzpTJLRGe5XV3XfVrMhcYvwpSkaQo10R8qMudH8qqcogoWF7gS--VKhbIOA4SH32HROVI6VScQLmsyoT6syoI0HN8rq93hlhF3yFqCRgCTO7O5VDEDSuBHy4vlQDNQg-ACXi34HkGg21dX8CMHbIkq58VFKO5G9If5X42GXKBQTRSeSTDux9coltr1j88y2lswqodRlHEfWu-8Eoa975oESG_fro5xUumilX4_WjjYZaFf5"/>
+<span class="text-sm text-text-muted">Marc A.</span>
+</div>
+<p class="font-headline-md text-primary">15$<span class="text-sm font-normal text-text-muted">/jour</span></p>
+</div>
+</div>
+</article>
+<!-- Ad Card 2 -->
+<article class="group bg-surface-card rounded-[20px] overflow-hidden premium-shadow border border-border-subtle hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern high-end projector displaying a colorful image on a white screen in a cozy, minimalist living room. The room features soft textures, a grey sofa, and clean white walls. The lighting is low and atmospheric, emphasizing the brightness of the projector. The aesthetic is warm and inviting, promoting shared experiences." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDmFIVQMLKJrujQHAKdxflq-OU0yvwRmtEbOXWc6yFY58Eieu4tDTQOv3CXvTRT55hZW-2LfSm7gzSCbLblZuahqBARUh0zg4Yy5r_D_BaL7j_bp0DEUtX641cVdO3XGMvtwP-PQXwajHFnwYJeK8-gCap3ce-jZOc-9vMSTasCf1EGDDUt_R2zj7bVIiufZUOUV-YxknPbSnG_5Pg7UbLbzpHFARMJs5Oc-wPVtMLHGmyvqmOXaaM-PnuW9e7jIZnoQ8GEcQcINx1"/>
+<button class="absolute top-4 right-4 w-9 h-9 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4">
+<span class="bg-status-success-alt/10 text-status-success-alt text-[11px] font-label-bold px-3 py-1 rounded-full backdrop-blur-md">Disponible</span>
+</div>
+</div>
+<div class="p-6">
+<p class="text-xs text-text-muted font-label-bold uppercase tracking-wider mb-2">Électronique • Québec</p>
+<h3 class="font-label-bold text-text-main text-lg mb-4 line-clamp-1">Vidéoprojecteur 4K Cinéma</h3>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<img alt="Avatar" class="w-6 h-6 rounded-full border border-border-subtle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF9cHCqx0Q_9CRFVe6Hc5cw6zcItNxVkgT9tq4agbFRaazlMWCEF_bOXDD7_63_7jCUvCB7mF_sc_d2GkqyQz_21ZKWPnZsNOa34ev2JB4pQqXO6rk2dTn8FRLrYTjdUeNHF5mIcw1wKYMWHRJeoVFmeLWwUjgQt98Bwr-E_Y3nzLrTbG-r6Bogcq2u2RWHmCRPnXU4FK7JVvVhXYUuidWJfeoz33OGlBX3aHOrFgj7STxiKutnW3b2ahNg9Zm_Xz7gpulleyd2zF6"/>
+<span class="text-sm text-text-muted">Julie L.</span>
+</div>
+<p class="font-headline-md text-primary">25$<span class="text-sm font-normal text-text-muted">/jour</span></p>
+</div>
+</div>
+</article>
+<!-- Ad Card 3 -->
+<article class="group bg-surface-card rounded-[20px] overflow-hidden premium-shadow border border-border-subtle hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A compact electric kitchen robot or mixer in a bright, modern white kitchen. The scene is clean and orderly, with fresh ingredients like flour and eggs subtly arranged in the background. High-key lighting makes the white surfaces glow. The aesthetic is professional and domestic, reflecting a high-quality home equipment rental service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsNWMZXTrwylOWVosClmZO3jAg7Bv0JCM1cq0LWEStqi3CZ4PZeXidp9a1i5JUu1rgoY0yKczwPuSUx6a8HTACnl2SGEiRpv9bqSrMGIQck_kde4gkH5yW1Nva9hNodA4g_z8h7Q_k24ZgJWZHUWA_JLdvOEO3Q_yDGifRGi4BUxKgtHEUU4RmaARH1Tq8Zydmp2Us_kKxDZHZtmFjEHfqACWxBVnw-rqLrvMPgmECiutWY8oRK6YkbIDez7_mQK9PzQSvXUbE5xvZ"/>
+<button class="absolute top-4 right-4 w-9 h-9 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4">
+<span class="bg-status-warning/10 text-status-warning text-[11px] font-label-bold px-3 py-1 rounded-full backdrop-blur-md">En attente</span>
+</div>
+</div>
+<div class="p-6">
+<p class="text-xs text-text-muted font-label-bold uppercase tracking-wider mb-2">Cuisine • Laval</p>
+<h3 class="font-label-bold text-text-main text-lg mb-4 line-clamp-1">Robot pâtissier KitchenAid</h3>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<img alt="Avatar" class="w-6 h-6 rounded-full border border-border-subtle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkkyYgLt9jL2p0FPt_6u5jrlDLx5qqGA0US4hD1riVlsjeOGgkG_ocr2uesujk5nnbiSlwj5sa3QdSlUEum_QSNwl0ttvRIV5nci8PcOQYaRMnUU7CLxucxQLb4UWnvWPxLYsFMUCpQvSfnTh97jalNf4E0u7pARJSJXLaZlxIaDp1bn4MuW4WBT7mr7JGlHpMwrE8bzk3Qd0Ij9CtNetmX-CR2Hs1bb9PkQIlr3KeMDF6JI2aVFwC-lBtKrxn-5gCijr6eGxxn3l3"/>
+<span class="text-sm text-text-muted">Thomas D.</span>
+</div>
+<p class="font-headline-md text-primary">12$<span class="text-sm font-normal text-text-muted">/jour</span></p>
+</div>
+</div>
+</article>
+<!-- Ad Card 4 -->
+<article class="group bg-surface-card rounded-[20px] overflow-hidden premium-shadow border border-border-subtle hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional steam cleaner tool being used on a light grey carpet. The image shows the device in action with a subtle steam effect. The background is a clean, contemporary home office with white furniture and a large window. The lighting is natural and bright. The visual style is focused on cleanliness and efficiency, consistent with a premium rental marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgKGASNt3WwUvPzh8poVo81G3L6rTkJ1GnjzffHWCEnMc6IdzGGWJ_xGu1VVrmUtLcU1V2eZATKQvulNiWkBn76ZpzQeoYflVn9pY_WmOteF2yhBQ7zf5DQViuGbRSlP7KUgECgPjvgCD0yMTrF7RL0q6_I6U2n49QfypW8UtwibXxEsP-mKjTb7_QujjWQree4X3Y2FoFjpjJO2kxAWLrgrA2-P5QjKkpMsX9GOJoPb4U_yquWpt4ygIu_hOBmC0mOj6CjBQiAe80"/>
+<button class="absolute top-4 right-4 w-9 h-9 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4">
+<span class="bg-status-success-alt/10 text-status-success-alt text-[11px] font-label-bold px-3 py-1 rounded-full backdrop-blur-md">Disponible</span>
+</div>
+</div>
+<div class="p-6">
+<p class="text-xs text-text-muted font-label-bold uppercase tracking-wider mb-2">Entretien • Longueuil</p>
+<h3 class="font-label-bold text-text-main text-lg mb-4 line-clamp-1">Nettoyeur vapeur Kärcher</h3>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<img alt="Avatar" class="w-6 h-6 rounded-full border border-border-subtle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGRfnV5z7NWG2gCfeTCGnXrDxPecGDpNUTV2SNFGjNzxL0SXyi25NlVNn1U1xv8ldEwuY4dqjZGLtFD9fdyTClTvyiKID7DaSHZe2PRDMBwCNWE2wVxpFX9SCWR3AFsU4en3N21inHinqVkuM9qXbo14ZCPeSW--qlj7ZkA3396uq60_OGF31zWObIXJ143914newD7MvTM0snLTIHXNbBYaU0flFcFLzfLGKiEEFGuQbEKI1NBDBJp5XfUgehGTk5-G2-a6CUSsY-"/>
+<span class="text-sm text-text-muted">Sophie B.</span>
+</div>
+<p class="font-headline-md text-primary">20$<span class="text-sm font-normal text-text-muted">/jour</span></p>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-16 text-center">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-button active:scale-95 transition-all shadow-lg shadow-primary/20">
+                        Parcourir toutes les annonces
+                    </button>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-24 bg-surface-container-low overflow-hidden relative">
+<div class="max-w-container-max-width mx-auto px-margin-desktop relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Comment ça marche ?</h2>
+<p class="text-text-muted max-w-xl mx-auto">Une plateforme sécurisée pour louer et prêter en toute sérénité.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Step 1 -->
+<div class="text-center group">
+<div class="w-20 h-20 bg-primary text-on-primary rounded-2xl flex items-center justify-center mx-auto mb-8 premium-shadow rotate-3 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-4xl">search</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">1. Recherchez</h3>
+<p class="text-text-muted leading-relaxed">Trouvez l'objet dont vous avez besoin près de chez vous grâce à nos filtres avancés.</p>
+</div>
+<!-- Step 2 -->
+<div class="text-center group">
+<div class="w-20 h-20 bg-secondary-container text-on-secondary-container rounded-2xl flex items-center justify-center mx-auto mb-8 premium-shadow -rotate-3 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-4xl">event_available</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">2. Réservez</h3>
+<p class="text-text-muted leading-relaxed">Vérifiez les disponibilités et réservez en quelques clics via notre paiement sécurisé.</p>
+</div>
+<!-- Step 3 -->
+<div class="text-center group">
+<div class="w-20 h-20 bg-primary text-on-primary rounded-2xl flex items-center justify-center mx-auto mb-8 premium-shadow rotate-6 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-4xl">handshake</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">3. Récupérez</h3>
+<p class="text-text-muted leading-relaxed">Rencontrez le propriétaire, validez l'état de l'objet et profitez de votre location.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max-width mx-auto px-margin-desktop">
+<div class="flex flex-col items-center text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Ils nous font confiance</h2>
+<div class="flex gap-1 text-status-warning">
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+</div>
+<p class="text-text-muted mt-2">Plus de 5 000 locations réussies au Québec</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-background p-8 rounded-[24px] border border-border-subtle relative">
+<span class="material-symbols-outlined text-primary/10 text-6xl absolute top-4 right-8">format_quote</span>
+<div class="relative z-10">
+<p class="font-body-lg text-text-main italic mb-8">
+                                "Grâce à Loc'Partage, j'ai pu louer une tondeuse professionnelle pour un week-end à une fraction du prix d'achat. Le propriétaire était charmant et l'outil en parfait état !"
+                            </p>
+<div class="flex items-center gap-4">
+<img alt="Utilisateur" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdJVj6oJntkSQhGWRF1V8aZIxwnnMB6PL3_H7W67QOaMd101xAujpRmHTrmLk-4GK8_mlEIWZsnPxR1JJa9rBZRUNUVBqGbCCS4ReD0wFjXtG7AvstOEnQ7fltot_RYc0vHiMamsI9v17etnwK_DRqvQWTFbweovfXJZ-rPJUEtl67uTiWmBF51_8PpF9T3n839aEfPtiRBLgT87R-XoEH3dlfgndBNEnCZ4FXirjX57NOfwP44QnqV8RZro6cUj8e7ckcORzykFZw"/>
+<div>
+<h4 class="font-label-bold text-primary">Jean-Philippe R.</h4>
+<p class="text-xs text-text-muted">Membre depuis 2023 • 12 locations</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-background p-8 rounded-[24px] border border-border-subtle relative">
+<span class="material-symbols-outlined text-primary/10 text-6xl absolute top-4 right-8">format_quote</span>
+<div class="relative z-10">
+<p class="font-body-lg text-text-main italic mb-8">
+                                "Je rentabilise enfin mon outillage qui dormait au garage. La plateforme est intuitive et l'assurance incluse me rassure énormément. Une vraie belle découverte."
+                            </p>
+<div class="flex items-center gap-4">
+<img alt="Utilisateur" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjdHCU49p_SF3Grd0L11NYzp5bPyy8AyVEobMthQhhxvcqa0fE2Qs27KKTgx2OOJLG0jI9SuwDLiWGeqIkAUYRz8RuESfrlAMdLKUUOUbm74BID6xuzJltO1ZYm5n7DTHKlWkmj7v1duI_S7v-WFiH6g5Px7KZ51gOGZJIitOm5AjYr9YFW6POhV49K2ALQGgVITmK7wtcilcIttE8VOhi0jgfb2l_hweHRIOVxJZP4nuVJB-u3ew5cx7rmXpJtLGKVQknUCfJwAPa"/>
+<div>
+<h4 class="font-label-bold text-primary">Mélanie G.</h4>
+<p class="text-xs text-text-muted">Membre depuis 2022 • 45 locations</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full py-12 border-t border-border-subtle">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<a class="font-headline-md text-headline-md font-bold text-primary mb-6 block" href="#">Loc'Partage</a>
+<p class="text-body-sm text-text-muted mb-6">
+                    La première plateforme québécoise de location entre particuliers dédiée à l'économie circulaire.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">face_nod</span>
+</a>
+<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-bold text-primary uppercase tracking-widest text-[12px] mb-6">Plateforme</h4>
+<ul class="space-y-4">
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Comment ça marche</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">L'assurance Loc'Partage</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Villes desservies</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Tarifs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-primary uppercase tracking-widest text-[12px] mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Centre d'aide</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Contactez-nous</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Signaler un abus</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-primary uppercase tracking-widest text-[12px] mb-6">Légal</h4>
+<ul class="space-y-4">
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Conditions d'utilisation</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Mentions légales</a></li>
+<li><a class="text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max-width mx-auto px-margin-desktop mt-12 pt-8 border-t border-border-subtle/50 text-center">
+<p class="font-body-sm text-body-sm text-text-muted">
+                © 2024 Loc'Partage. Tous droits réservés. Fait au Québec.
+            </p>
+</div>
+</footer>
+<!-- FAB for Mobile Publication (Contextual) -->
+<button class="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+<script>
+        // Simple micro-interaction for the navigation on scroll
+        const header = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('h-20');
+                header.classList.add('h-16');
+            } else {
+                header.classList.remove('py-2');
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+    </script>
+</body></html>

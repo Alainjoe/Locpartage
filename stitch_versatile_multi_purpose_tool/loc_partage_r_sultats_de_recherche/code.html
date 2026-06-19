@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Résultats de recherche | Loc'Partage</title>
+<script type='text/javascript' nonce='z+gjUqbIPxw0Xk2nxjIqMA==' src='https://contribution.usercontent.google.com/CxCydxaMSVzDZ2Pnk9D6ODcC7ApQ8imrjPXZ4c16eBQ3y6HQtEULgvu4K6wFvQTbEZ0GS4dCBX8lItkW_WzIRh7LL-z-CEtXzc8D9IjC0wexJmVXyJm_7o55u-hh1GKpzNo9VIM7-fR0hXpexak38UYsFZHMjLIm5tU8j3KkIHTZCuwyZN1i8J3FHwYoL4aJekwj7sHGgS2fMRo6PEpU7NJbbU3iRnlKlBRm2N7mjvosZNFNNRv3e5v-hPhLBSfhtMmUwlg3n_qcyrzhsKPXI4EoZG7bFQTisz8RDPTSZ6CMT8KTJga3hs3SJYtqSXYEbU-LFkOnSlulhSCMawffY5rnNLAZ0tD3dQKAguO5wAKoyDkiMX2Ey4WFhLNw4AaoRyJhPHEqBNFXAuML-6PUIKunImsNPql3GVCUzuUuQX1_5swqSTaBIcBFxPr5gbrscDLtnokQ70xwQ7cKKmolPNiG-QlTlH01JJYXsbZnUM_tLsU8CNyaIil3BKr2otmKdGZmt53Tek6VSOYBXyzdRyz264YWukuGtDKLTdr0ZHJQ9tjZwcAJ_dKFmSgktxk31zSdnSlkB3W4s_VV9WaVxX-Q8Kv8pYIdbbBojrSYrpuwH9S6Oi1F1srLa61SPaiA9JHSCa5w4gHDxk-_OCMWLdV8L1JUieeWpY9cFdA2sPpOY9WzmW51rHFo-cm14x73Ul4p9Tvqq4Rhb38sUG0KovFWC0RyR-UCJv0euCAyQfd8wWxtNj7fpjGhi1Y9EsNYyLn7PkI49I4inXWSCdA98dXXoaSlZSNKYEOgFAy_'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#002d70",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0f2000",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#3d5ca2",
+                        "on-tertiary-fixed": "#311300",
+                        "text-muted": "#6B7280",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed": "#001946",
+                        "secondary-fixed": "#b9f474",
+                        "tertiary-fixed": "#ffdcc7",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "outline": "#747782",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "border-subtle": "#E9ECEF",
+                        "text-main": "#1F2937",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#b9f474",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-surface-variant": "#444651",
+                        "secondary-fixed-dim": "#9ed75b",
+                        "error": "#ba1a1a",
+                        "status-warning": "#F59E0B",
+                        "outline-variant": "#c4c6d2",
+                        "tertiary-container": "#723600",
+                        "background": "#f8f9fa",
+                        "on-tertiary-container": "#f7a165",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-variant": "#e1e3e4",
+                        "status-success-alt": "#16A34A",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b1c6ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#437000",
+                        "on-background": "#191c1d",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-secondary-fixed-variant": "#2e4f00",
+                        "surface-card": "#FFFFFF",
+                        "primary-container": "#224489",
+                        "status-error": "#DC2626",
+                        "secondary": "#3e6a00",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-primary-container": "#97b4ff",
+                        "on-primary-fixed-variant": "#224489",
+                        "tertiary": "#502400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "container-max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "button": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #1F2937;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-filter {
+            background-color: #002d70;
+            color: white;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #E9ECEF;
+            border-radius: 10px;
+        }
+        .card-hover:hover {
+            box-shadow: 0px 4px 20px rgba(34, 68, 137, 0.08);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-dim border-b border-border-subtle dark:border-outline-variant shadow-sm dark:shadow-none h-20">
+<div class="flex items-center justify-between px-margin-desktop h-full max-w-container-max-width mx-auto gap-gutter">
+<div class="flex items-center gap-8">
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">Loc'Partage</a>
+<!-- Search Bar Active -->
+<div class="hidden md:flex items-center bg-surface-container-low rounded-full px-4 py-2 w-96 border border-border-subtle focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-outline mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-md font-body-md" placeholder="Rechercher un outil, un vélo..." type="text" value="Perceuse à percussion"/>
+</div>
+</div>
+<nav class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-6">
+<a class="font-label-bold text-label-bold text-text-main dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Réservations</a>
+<a class="font-label-bold text-label-bold text-text-main dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Messages</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-button text-button active:scale-95 transition-transform">Publier</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-border-subtle cursor-pointer active:scale-95 transition-transform">
+<img alt="Photo de profil utilisateur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBozzthXmOdnUyWmFQG108fXH9p3juBVnS_i8-_49R7g-t8jbJUnAYP-8kf7ch7yCntSdwRDRfMezkUnO3xS_4hdEGqPBM8vTTyU1s5HLr-cJg9z-oTEGcf3TrF-ezsFzEuArk14hqoBgQP-GsDpNTsLxU3VEMpmrrhaQgI44o3Os3-fsN9T0AdB2ZNPaR845GTU6vYhGVzjd5ifvRDWlrGei50Rrct2YeK7daVQNDhOszqYw7XGzHCnF1YI-ehkwiw2Cz0mHdIgQz"/>
+</div>
+</nav>
+</div>
+</header>
+<main class="pt-28 pb-12 px-margin-desktop max-w-container-max-width mx-auto min-h-screen">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-72 flex-shrink-0">
+<div class="sticky top-28 space-y-8">
+<div>
+<h2 class="font-label-bold text-label-bold uppercase tracking-wider text-text-muted mb-4">Filtres</h2>
+<!-- Filter Group: Prix -->
+<div class="mb-6">
+<label class="block font-label-bold text-label-bold mb-3">Prix par jour</label>
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<input class="w-full accent-primary" max="500" min="0" type="range"/>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-text-muted">
+<span>0$</span>
+<span>500$+</span>
+</div>
+</div>
+</div>
+<!-- Filter Group: Distance -->
+<div class="mb-6">
+<label class="block font-label-bold text-label-bold mb-3">Distance</label>
+<select class="w-full bg-white border-border-subtle rounded-xl px-4 py-2 font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+<option>Moins de 5 km</option>
+<option>Moins de 10 km</option>
+<option selected="">Moins de 25 km</option>
+<option>Toute la ville</option>
+</select>
+</div>
+<!-- Filter Group: Catégorie -->
+<div class="mb-6">
+<label class="block font-label-bold text-label-bold mb-3">Catégorie</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-border-subtle text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-text-main group-hover:text-primary transition-colors">Outils</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-border-subtle text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-text-main group-hover:text-primary transition-colors">Électronique</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-border-subtle text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-text-main group-hover:text-primary transition-colors">Sport &amp; Loisirs</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-border-subtle text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-text-main group-hover:text-primary transition-colors">Jardinage</span>
+</label>
+</div>
+</div>
+<!-- Filter Group: État -->
+<div class="mb-6">
+<label class="block font-label-bold text-label-bold mb-3">État du produit</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 rounded-full border border-border-subtle bg-white text-body-sm font-body-sm hover:border-primary transition-colors active-filter">Neuf</button>
+<button class="px-3 py-1.5 rounded-full border border-border-subtle bg-white text-body-sm font-body-sm hover:border-primary transition-colors">Excellent</button>
+<button class="px-3 py-1.5 rounded-full border border-border-subtle bg-white text-body-sm font-body-sm hover:border-primary transition-colors">Bon</button>
+</div>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container-high text-primary font-button text-button rounded-xl hover:bg-primary hover:text-white transition-all">
+                        Réinitialiser
+                    </button>
+</div>
+</aside>
+<!-- Main Content: Results Grid -->
+<section class="flex-1">
+<!-- Header Results -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg mb-1">128 résultats pour "Perceuse"</h1>
+<p class="font-body-md text-body-md text-text-muted">À Montréal, QC dans un rayon de 25 km</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-bold text-label-bold text-text-muted whitespace-nowrap">Trier par :</span>
+<select class="bg-white border-border-subtle rounded-full px-4 py-2 font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none min-w-[160px]">
+<option>Pertinence</option>
+<option>Prix croissant</option>
+<option>Prix décroissant</option>
+<option>Nouveautés</option>
+</select>
+</div>
+</div>
+<!-- Bento-like Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Listing Card 1 -->
+<div class="group bg-white rounded-[20px] overflow-hidden border border-border-subtle card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-quality close-up photo of a professional-grade yellow impact drill resting on a weathered wooden workbench. The lighting is warm and natural, suggesting a well-used but clean workshop environment. The background is softly blurred with hints of other tools and dust motes dancing in the light. The overall mood is reliable and professional, matching a premium rental service aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAINnXIcuNWj8gBNId1ASTDuAHTYrH3nUmO4Vpje7RWcKuWTyg7q-QyEIBu_LtzZFO8VlK1boKpYEkgOSEIubTfjQCEleQPK0jNyvm1svUOqskjuUVtD3l-n8XJBytGQx0J-0YMhXd5jvtUKoazBvHcjJZ8jR5feGvLRpODH8Q-DK_8GItI2WsuEgVmE1jzV3J0i-C7pV53czbJsNU1DEXhLUtsCrVXl0bBH3_Hyi2oGoEq8n7OuEOhu73qqkkM7DAuZ8g68cpPEV7H"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-[12px]">Disponible</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-text-main line-clamp-1">Perceuse à percussion Bosch</h3>
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">4.9</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Plateau Mont-Royal, QC
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="text-text-muted text-body-sm font-body-sm">Propriétaire: <span class="font-medium text-text-main">Marc-Antoine</span></div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary">15$ <span class="text-body-sm font-normal text-text-muted">/ jour</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Listing Card 2 -->
+<div class="group bg-white rounded-[20px] overflow-hidden border border-border-subtle card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean, minimalist studio shot of a heavy-duty cordless drill in teal and black, standing upright on a grey surface. The lighting is crisp and cool, creating subtle shadows and highlighting the metallic textures of the tool. The composition is modern and balanced, appealing to DIY enthusiasts who value precision and quality. The atmosphere is professional and organized." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLMMP4BQMZ7riotAlmtVw3l7bzEpWwmNvHNSNzAnsNbdLSxzwewRz59In4nUUUGWlaeheAth6ykAQ73D3RdBsF3ymN_dYlmYrKA7j7EKtgnjrK6knOjpBD-B46OO4EsQXWSkGU9xI5ytElrqT9D1Zvj7FX1jRrMNVfNVevImgIrYH-0RTrJahBe5xQHTMwhbKLnLzglNg4QtjYHBTtq9_kyGeCjoNSqHc2xwEI6AaD5zamTi1YNcoLN4x2XX5x5d6oznWmbF_Asyqo"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-[12px]">Disponible</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-text-main line-clamp-1">Perceuse Milwaukee Fuel M18</h3>
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">5.0</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Rosemont, QC
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="text-text-muted text-body-sm font-body-sm">Propriétaire: <span class="font-medium text-text-main">Sophie L.</span></div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary">22$ <span class="text-body-sm font-normal text-text-muted">/ jour</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Listing Card 3 -->
+<div class="group bg-white rounded-[20px] overflow-hidden border border-border-subtle card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional electric screwdriver kit presented in its sturdy black carrying case, open to reveal neatly organized batteries and drill bits. The lighting is bright and even, showcasing the cleanliness and completeness of the toolset. The setting is a bright modern garage with a minimalist aesthetic. This image conveys a sense of readiness and thorough maintenance, ideal for a high-trust rental marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwoPUVOCzYCr1SthoyOauBu1VDa_TNWxk0yW2I57CrpW1mrmWwQsjNBt3xsUA2xT2CcrWz9a9mUovWHlaPhiij5emUK72Hcl5m8Cc7Ctdi1YryMKa-a-4f17MXLc_fBOm8M9sGjQ19rNcAjfdWec6s3D8W6xBQqCvumca64ssY4Rt6IM4bq7ob1UDGxxoFHDsc0Wu7xlCL2kBDH0a1484srX7vK9mzP6eFa_q5kZAdjnWuOCNtQUVCByBA6wDIiqI4sElWDw1xDf_N"/>
+<div class="absolute top-4 left-4">
+<span class="bg-status-warning/10 text-status-warning px-3 py-1 rounded-full font-label-bold text-[12px]">Bientôt libre</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-text-main line-clamp-1">Kit DeWalt 20V complet</h3>
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">4.8</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Verdun, QC
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="text-text-muted text-body-sm font-body-sm">Propriétaire: <span class="font-medium text-text-main">Jean-François</span></div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary">25$ <span class="text-body-sm font-normal text-text-muted">/ jour</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Listing Card 4 -->
+<div class="group bg-white rounded-[20px] overflow-hidden border border-border-subtle card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A vintage-style hammer drill with an industrial orange casing, positioned against a stark white wall with soft ambient daylight. The shadows are long and gentle, creating a modern architectural feel. The tool looks robust and powerful, perfectly suited for heavy renovation work. The minimalist background focuses all attention on the product&#39;s solid build and functional design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSdQK9uniiOgbuR8S7Pvjr5PMnQ_zqCBOn78FVEGcKm82pWMfNrMHC_a_ubIogEmZ-EUj_NVEZkKuPE2ZeYJ_Acp0hxbcTY0_BUDgkOx_ZjQtsWxBuum71MTj-s_zrdzobLe9svzrIBHt6cpC3HwOmGEebXeyaLI-qs3hykSRhSCe-_iXWQYgESCNNkTnHJlzmb5jC0Zhd7J8rIa1-NjJ-wE4yxnqXxc-WvKp82UA2eiGY2ZbRGhOrQ4i7f9tJPbwQqzLBeor9rQxp"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-[12px]">Disponible</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-text-main line-clamp-1">Perceuse filaire Makita</h3>
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">4.7</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Côte-des-Neiges, QC
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="text-text-muted text-body-sm font-body-sm">Propriétaire: <span class="font-medium text-text-main">Isabelle B.</span></div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary">12$ <span class="text-body-sm font-normal text-text-muted">/ jour</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Listing Card 5 -->
+<div class="group bg-white rounded-[20px] overflow-hidden border border-border-subtle card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A macro shot of various drill bits neatly lined up on a dark metallic surface. The focus is sharp on the foreground bit, with a beautiful bokeh effect blurring the background bits. The color palette is composed of steely greys and deep blacks, punctuated by the metallic sheen of the drill heads. This artistic imagery suggests a high level of detail and quality, suitable for a professional peer-to-peer rental app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbFzR1cgJ1n57Ta1XSya4-hk7SjKT0UMBngmlT6LiR1Z6Pc04Oyb2s-iy-jHIwYeP24w6WmZWvfuCF8D14HJnMaj9_1y2dJVIPMqi614Jql4qAietrd-BdlleYqCyUbJBmf5dQwFuqgdxYfrXYUzEqN2ZW8hIaNAjXzfOHEM0lIm4xnPnp67KFoF8IK-FtLerrjWsMYp_7ycrlUWe9Sa5f7Dc-QOfYllW2P6MibEwBUfCktHVq2JrCF2_ZtuP1UNi22zMqwXPJfMgI"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-[12px]">Disponible</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-text-main line-clamp-1">Ensemble de mèches béton</h3>
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">4.9</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Westmount, QC
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="text-text-muted text-body-sm font-body-sm">Propriétaire: <span class="font-medium text-text-main">David T.</span></div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary">5$ <span class="text-body-sm font-normal text-text-muted">/ jour</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Listing Card 6 -->
+<div class="group bg-white rounded-[20px] overflow-hidden border border-border-subtle card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern hammer drill lying on a stack of blueprints in a sunlit architectural office. The desk is white and minimalist, with a single green plant in the corner. The image suggests planning and professional execution. The sunlight creates a warm, inviting atmosphere, blending the industrial nature of the tool with a refined, community-focused workspace environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP1phmxP2RTgyMmuW_TuABZDpGJvqHgKnS_ejmoWEUeC3FL2gqOhwJX0B5Ld5yv4p7gJ9rF_84Lgxbp4r06IPwEidIWC2-Gp1cZyzlScHsT5HpGT09ZThjbd4K6d57TQUZmiEPNn2hQ-_fBRTBzYaS92zNjJOBykAEMV7fFYhvQNO4PRFcWbLopg9PUMGelXaNBS_UOrl6QEkvb2hqDrVVETWV3x6UtONT_eVwkgOo_WOgbPD_Vll-NVrcAs9e3ip1aMtVT6iRUUUR"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-[12px]">Disponible</span>
+</div>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-text-main line-clamp-1">Perceuse Ryobi 18V One+</h3>
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">4.6</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-muted mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Ahuntsic, QC
+                            </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="text-text-muted text-body-sm font-body-sm">Propriétaire: <span class="font-medium text-text-main">Marie-Eve</span></div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary">10$ <span class="text-body-sm font-normal text-text-muted">/ jour</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center items-center gap-2">
+<button class="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary font-label-bold">1</button>
+<button class="w-10 h-10 rounded-full border border-border-subtle font-label-bold hover:bg-surface-container transition-colors">2</button>
+<button class="w-10 h-10 rounded-full border border-border-subtle font-label-bold hover:bg-surface-container transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 rounded-full border border-border-subtle font-label-bold hover:bg-surface-container transition-colors">12</button>
+<button class="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-highest dark:bg-surface-container-low border-t border-border-subtle dark:border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max-width mx-auto">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Loc'Partage</div>
+<p class="font-body-sm text-body-sm text-text-muted">La plateforme de partage d'objets préférée des Québécois. Louez local, économisez et bâtissez votre communauté.</p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary mb-4">Navigation</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Comment ça marche</a></li>
+<li><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Catégories</a></li>
+<li><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Aide</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary mb-4">Légal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Conditions d'utilisation</a></li>
+<li><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
+<li><a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary mb-4">Newsletter</h4>
+<div class="flex">
+<input class="bg-white border border-border-subtle rounded-l-lg px-4 py-2 w-full font-body-sm outline-none focus:border-primary" placeholder="Votre email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-r-lg font-button text-button">Ok</button>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-border-subtle/50 text-center px-margin-desktop max-w-container-max-width mx-auto">
+<p class="font-body-sm text-body-sm text-text-muted">© 2024 Loc'Partage. Tous droits réservés. Fait au Québec.</p>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-border-subtle grid grid-cols-4 h-16 z-50">
+<button class="flex flex-col items-center justify-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="search" style="font-variation-settings: &#39;FILL&#39; 1;">search</span>
+<span class="text-[10px] font-bold">Explorer</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-text-muted">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-[10px]">Favoris</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-text-muted">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="text-[10px]">Messages</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-text-muted">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px]">Profil</span>
+</button>
+</div>
+<script>
+        // Simple interactivity for demonstration
+        document.querySelectorAll('input[type="range"]').forEach(range => {
+            range.addEventListener('input', (e) => {
+                const val = e.target.value;
+                // Update label logic could go here
+            });
+        });
+
+        // Filter button toggles
+        const filterButtons = document.querySelectorAll('.mb-6 button');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // If it's single choice, remove from others
+                if (btn.parentElement.classList.contains('flex-wrap')) {
+                    btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active-filter'));
+                }
+                btn.classList.toggle('active-filter');
+            });
+        });
+    </script>
+</body></html>

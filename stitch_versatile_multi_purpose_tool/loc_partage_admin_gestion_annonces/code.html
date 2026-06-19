@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type='text/javascript' nonce='b/wEYoYKHc/MGsNF5j0Fog==' src='https://contribution.usercontent.google.com/m-_SwfnpWA9pWUmwX3ZXcc-9h-bBhrRTjtE0rGrJLu2pxYxj4zaEvyI7xFyDTMB4YrB8FKHsgZqBncX2AwRrHTJXC4uvgyeArsneAslSWsZOqlHaobtUvESPxiNJVCLkKL-t6ShIcFRFX2b0mug5-jB0lg1zOmxMNPm_ZgEs9roRjevamjc5iin9GAruiP0IdGXdBX_WbjssITNH_C6aU4OP4pkDwyF92RHoremOhqWNdHEPS64j6h_K84FRGw7oYIe0nzXAcUfmne4wVzLYuYYfh4BBnIi8i9twpqxzM2Z2DD39T7Gtq6K6H6OjwADToD_4ZPQ0NCvW3VJ0ggYitmBimqYGug3y7uhE6in4hnyP9T0m6cD-iAYjEaOcnzh8-XTvlzu8eK0vco-wmX8B4y-2I5h6gmJ3UcxDFGLpL-uHfEIfCJxo7tsNjifssyNTfcZjuUUxRmUtvXAn4roeqw6X23z5xS9nEWSUZwNSGJGaPgZoBknuWpzn_OMk8wihPT2fKRneJDwv-qrnvUgsrf9No8eDs8yRVhem81r3LwWtcAJUDDcgKRs05dkWX_DFlJJ9tCqHunde9r3WX9MnLR5hCzcx9I8PeiNQ0R0DyOsoFrNHbRt_OKwF7fLgGn3MwfsaiBgl1E_4WK8uIiMbVBNspYRJFJG3IkHzNaEowUI2sFUybJkO-bX40AgB6v83yPQla2TkLyR_3CxhoTDVcQXmsNJJoRLR6yK7j8mJqJJANbqrTgVB3pxuQVX5cv9A48eYgo7L8QcggVLBp_PGdHPvalhX5TzzqkCvwmCD'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-link {
+            border-bottom-width: 2px;
+        }
+        /* Custom Scrollbar for modern look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#002d70",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0f2000",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#3d5ca2",
+                        "on-tertiary-fixed": "#311300",
+                        "text-muted": "#6B7280",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed": "#001946",
+                        "secondary-fixed": "#b9f474",
+                        "tertiary-fixed": "#ffdcc7",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "outline": "#747782",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "border-subtle": "#E9ECEF",
+                        "text-main": "#1F2937",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#b9f474",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-surface-variant": "#444651",
+                        "secondary-fixed-dim": "#9ed75b",
+                        "error": "#ba1a1a",
+                        "status-warning": "#F59E0B",
+                        "outline-variant": "#c4c6d2",
+                        "tertiary-container": "#723600",
+                        "background": "#f8f9fa",
+                        "on-tertiary-container": "#f7a165",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-variant": "#e1e3e4",
+                        "status-success-alt": "#16A34A",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b1c6ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#437000",
+                        "on-background": "#191c1d",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-secondary-fixed-variant": "#2e4f00",
+                        "surface-card": "#FFFFFF",
+                        "primary-container": "#224489",
+                        "status-error": "#DC2626",
+                        "secondary": "#3e6a00",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-primary-container": "#97b4ff",
+                        "on-primary-fixed-variant": "#224489",
+                        "tertiary": "#502400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "container-max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "button": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background font-body-md text-text-main antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-border-subtle shadow-sm h-20 flex items-center">
+<div class="flex items-center justify-between px-margin-desktop h-full w-full max-w-container-max-width mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-headline-md font-headline-md font-bold text-primary">Loc'Partage</span>
+<nav class="hidden md:flex items-center gap-6 h-full pt-1">
+<a class="text-text-main font-body-md transition-colors duration-200 hover:text-primary" href="#">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary py-2 h-full flex items-center" href="#">Résevations</a>
+<a class="text-text-main font-body-md transition-colors duration-200 hover:text-primary" href="#">Messages</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-2xl font-button text-button active:scale-95 transition-transform">
+                    Publier
+                </button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container border border-border-subtle cursor-pointer hover:shadow-md transition-shadow">
+<img alt="Utilisateur" class="w-full h-full object-cover" data-alt="A professional headshot of a smiling male administrator with short dark hair, wearing a navy blue polo shirt. The background is a soft, out-of-focus modern office setting with bright natural light coming from large windows. The overall aesthetic is clean, professional, and corporate, aligning with the primary blue and white color scheme of the platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_7UvdXa9K3etwwjJGu37Dx50bWo4OQutH8AQc2RAmVXHIR-e0tJhO2n45EiP3xrwpvUk5nNKPe7CCvgUfWBh5YW_ooZFTnsdcDNfw1Gm17VbVTOrG29sp4-8a_WOll1THfoiVgorxzTpf0xOW9oiOykNtDtE7vzTFaIAbHZC93NbavoerWHoOphpKNXbYbi77RJUrQenRqnTh83u4Suqg34OHHBhIBKBYjwRvh6F9SJwC1QHigfaIfkHaY0IVOxqPdbCxgMCQWxL"/>
+</div>
+</div>
+</div>
+</header>
+<main class="mt-20 flex-grow px-margin-desktop py-12 max-w-container-max-width mx-auto w-full">
+<div class="flex flex-col gap-10">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<h1 class="font-headline-lg text-headline-lg text-primary">Gestion des annonces</h1>
+<p class="text-text-muted font-body-md">Modérez, approuvez ou signalez les nouvelles publications de la plateforme.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex bg-surface-container-high p-1 rounded-xl">
+<button class="px-4 py-2 rounded-lg text-primary font-label-bold bg-surface-container-lowest shadow-sm transition-all">Annonces</button>
+<button class="px-4 py-2 rounded-lg text-text-muted font-label-bold hover:text-primary transition-all">Utilisateurs</button>
+</div>
+</div>
+</div>
+<!-- Filters Section -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-surface-card p-6 rounded-3xl border border-border-subtle shadow-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-background border border-border-subtle rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Rechercher un titre..." type="text"/>
+</div>
+<div class="relative">
+<select class="w-full px-4 py-3 bg-background border border-border-subtle rounded-2xl appearance-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+<option value="">Tous les statuts</option>
+<option value="approuve">Approuvé</option>
+<option value="attente">En attente</option>
+<option value="signale">Signalé</option>
+</select>
+</div>
+<div class="relative">
+<select class="w-full px-4 py-3 bg-background border border-border-subtle rounded-2xl appearance-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+<option value="">Toutes les catégories</option>
+<option value="outils">Outils</option>
+<option value="jardin">Jardin</option>
+<option value="sport">Sport</option>
+<option value="electronique">Électronique</option>
+</select>
+</div>
+<button class="flex items-center justify-center gap-2 px-4 py-3 border border-border-subtle rounded-2xl text-text-main font-label-bold hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-xl">filter_list</span>
+                    Plus de filtres
+                </button>
+</div>
+<!-- Table Section -->
+<div class="bg-surface-card rounded-3xl border border-border-subtle shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 font-label-bold text-text-muted uppercase text-[12px] tracking-wider border-b border-border-subtle">Image</th>
+<th class="px-6 py-4 font-label-bold text-text-muted uppercase text-[12px] tracking-wider border-b border-border-subtle">Titre</th>
+<th class="px-6 py-4 font-label-bold text-text-muted uppercase text-[12px] tracking-wider border-b border-border-subtle">Propriétaire</th>
+<th class="px-6 py-4 font-label-bold text-text-muted uppercase text-[12px] tracking-wider border-b border-border-subtle">Catégorie</th>
+<th class="px-6 py-4 font-label-bold text-text-muted uppercase text-[12px] tracking-wider border-b border-border-subtle">Prix</th>
+<th class="px-6 py-4 font-label-bold text-text-muted uppercase text-[12px] tracking-wider border-b border-border-subtle">Statut</th>
+<th class="px-6 py-4 font-label-bold text-text-muted uppercase text-[12px] tracking-wider border-b border-border-subtle text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle">
+<!-- Row 1: Approuvé -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="w-16 h-12 rounded-lg overflow-hidden bg-surface-container">
+<img alt="Tondeuse" class="w-full h-full object-cover" data-alt="A high-end, modern cordless electric lawn mower standing on a lush green Quebec backyard lawn during a bright summer afternoon. The image is crisp with vibrant green tones and professional product photography lighting, emphasizing reliability and eco-friendliness. The style is clean and minimalist, fitting a premium rental marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuE-kXBZASGZ_DEOrGnkUn29p8igWgX3u9UxS-_Gc7h4-s24184Gz_t1hWo-op4_W-7R-Wp497dkq3UWsFC5ZUwuKwjEzheQBLxi9Ey7UzV9V70M4ZaV4UFRPgKoSn-twfQwU8GJib3zsgY0x00p_p4aL4Ig50ELE9SbawyO3X8-MV6UdPkEPaxV1jkWPHah5-kFygrbehcTiL1RbZ0rF2_Rww73z3BHnZ2oyeaPWTEqGYwnEhBMmGZqouS-ZRk3E1ZeFvmUqzb2Vp"/>
+</div>
+</td>
+<td class="px-6 py-4 font-body-md font-semibold text-text-main">Tondeuse Électrique EGO</td>
+<td class="px-6 py-4 font-body-sm text-text-main">Jean-Sébastien M.</td>
+<td class="px-6 py-4 font-body-sm text-text-muted">Jardinage</td>
+<td class="px-6 py-4 font-body-md font-bold text-primary">25$ / jour</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[12px] font-label-bold bg-secondary-container/20 text-status-success-alt">
+                                        Approuvé
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-text-muted hover:text-primary hover:bg-primary/5 rounded-xl transition-all" title="Masquer">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+<button class="p-2 text-text-muted hover:text-status-error hover:bg-error/5 rounded-xl transition-all" title="Supprimer">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: En attente -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="w-16 h-12 rounded-lg overflow-hidden bg-surface-container">
+<img alt="Casque" class="w-full h-full object-cover" data-alt="Close-up studio shot of professional noise-canceling headphones in matte black finish, resting on a polished white surface. Soft ambient blue lighting highlights the sleek curves and high-quality materials. The mood is modern, technical, and premium, representing high-value consumer electronics for rent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-_WcDA5MW9BFVsFk9xSzjIVNxSdjYUHQ7SqZGiCvThpjS8ckYb2IrgGzY9sGLkLHsQmadJf-_Xjp9IMaaUEhGj5l84XfB_7TWMhMA0-3oSMAH4IXrJSUMEMuebLyD86vsD5D5q-nJLpOe4jlbaJXBknR_4JL2z7rGEYso6QbCSCYqGtKheIoCfcyO2fKk3Qt9EgU4zeuLaXm-8qhKo-DUlrpeWXJu-60whqZVAnpz5brM7df31vaZDoLVwu0-U-rsoK6fO2mVFHAG"/>
+</div>
+</td>
+<td class="px-6 py-4 font-body-md font-semibold text-text-main">Casque Sony WH-1000XM4</td>
+<td class="px-6 py-4 font-body-sm text-text-main">Marie-Pier L.</td>
+<td class="px-6 py-4 font-body-sm text-text-muted">Électronique</td>
+<td class="px-6 py-4 font-body-md font-bold text-primary">15$ / jour</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[12px] font-label-bold bg-status-warning/10 text-status-warning">
+                                        En attente
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-4 py-1.5 bg-secondary text-on-primary rounded-xl font-label-bold text-sm active:scale-95 transition-transform">
+                                            Approuver
+                                        </button>
+<button class="p-2 text-text-muted hover:text-status-error hover:bg-error/5 rounded-xl transition-all" title="Refuser">
+<span class="material-symbols-outlined">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Signalé -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="w-16 h-12 rounded-lg overflow-hidden bg-surface-container">
+<img alt="Vélo" class="w-full h-full object-cover" data-alt="A rugged mountain bike leaning against a brick wall in an urban Montreal setting. The bike has some visible mud splatters, suggesting recent use. The lighting is overcast, creating a realistic, high-trust atmosphere. The focus is sharp on the bike&#39;s frame and gears, illustrating the quality of items shared on the platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Ud0Pqi4YE_c1QW9lTDCA-OShAvQd4MVMoXz9MVqgP82q02xGEohnRIFrPinUbok1BdvYw7mt9rreGaXp5TgIBDp1LLu7fomKG-8QwOoWJFvlRqRVVv4fIWfOkKALmDRIAYj-iCU05R6zU50POK32ae4Obm_3aV6F_pb_CJK-PdcdoWjAkl0O0iJmfFb5_st3qXtI58SJ_BVEe5hQN61tcYOdELRORMkCfjqGlV82LhH1Xf0-tCnaA1SxYZGhimOLcYBE92-Vywda"/>
+</div>
+</td>
+<td class="px-6 py-4 font-body-md font-semibold text-text-main">Vélo de Montagne Trek</td>
+<td class="px-6 py-4 font-body-sm text-text-main">Luc B.</td>
+<td class="px-6 py-4 font-body-sm text-text-muted">Sport</td>
+<td class="px-6 py-4 font-body-md font-bold text-primary">40$ / jour</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[12px] font-label-bold bg-error-container text-status-error">
+                                        Signalé
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-4 py-1.5 bg-status-error text-on-primary rounded-xl font-label-bold text-sm active:scale-95 transition-transform">
+                                            Réviser
+                                        </button>
+<button class="p-2 text-text-muted hover:text-primary hover:bg-primary/5 rounded-xl transition-all">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Approuvé -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="w-16 h-12 rounded-lg overflow-hidden bg-surface-container">
+<img alt="Perceuse" class="w-full h-full object-cover" data-alt="A professional-grade yellow and black power drill set arranged neatly in its hard plastic carrying case on a wooden workbench. Bright, clear workshop lighting highlights the texture of the tools and the durability of the equipment. The aesthetic is practical yet high-quality, appealing to DIY enthusiasts and professionals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtA4U_vwysf5OrcxYkk1mo2ae0ZyLNlyPKphT2ZQBC_54hyL1yaijcaFli6EhW8NSPbAZjvhEdvv-rbmecUaPfciTZ7t3-ofOCSIhbo-yJQ3_y-A842PE3vdMN43tU3v9UGqKMutYQsWY6BXypuwVMUoKZFRBVYEf_9wzocTnWCA35EhWL0ZEmbvHpeI3JVUF_N-R_-gktQpMigzcl7Do-ahc93yt3Yrx-8pJ3DNjHj-wXylwnq-brb8S-Xp7TvdmnT36TFAmTvwRo"/>
+</div>
+</td>
+<td class="px-6 py-4 font-body-md font-semibold text-text-main">Set Perceuse DeWalt 20V</td>
+<td class="px-6 py-4 font-body-sm text-text-main">Isabelle G.</td>
+<td class="px-6 py-4 font-body-sm text-text-muted">Outils</td>
+<td class="px-6 py-4 font-body-md font-bold text-primary">12$ / jour</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[12px] font-label-bold bg-secondary-container/20 text-status-success-alt">
+                                        Approuvé
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-text-muted hover:text-primary hover:bg-primary/5 rounded-xl transition-all" title="Masquer">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+<button class="p-2 text-text-muted hover:text-status-error hover:bg-error/5 rounded-xl transition-all" title="Supprimer">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-6 border-t border-border-subtle bg-surface-container-lowest flex items-center justify-between">
+<p class="text-body-sm text-text-muted">Affichage de <span class="font-bold text-text-main">1-4</span> sur <span class="font-bold text-text-main">128</span> annonces</p>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-xl border border-border-subtle text-text-muted hover:bg-surface-container transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary font-label-bold">1</button>
+<button class="w-10 h-10 rounded-xl hover:bg-surface-container transition-colors text-text-main font-label-bold">2</button>
+<button class="w-10 h-10 rounded-xl hover:bg-surface-container transition-colors text-text-main font-label-bold">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 rounded-xl hover:bg-surface-container transition-colors text-text-main font-label-bold">32</button>
+</div>
+<button class="p-2 rounded-xl border border-border-subtle text-text-muted hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-highest border-t border-border-subtle mt-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max-width mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary">Loc'Partage</span>
+<p class="font-body-sm text-body-sm text-text-muted max-w-xs">La première plateforme québécoise de location entre particuliers, basée sur la confiance et la durabilité.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wider">Plateforme</h4>
+<div class="flex flex-col gap-2">
+<a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">FAQ</a>
+<a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Aide</a>
+<a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wider">Légal</h4>
+<div class="flex flex-col gap-2">
+<a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Conditions d'utilisation</a>
+<a class="font-body-sm text-body-sm text-text-muted hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wider">Social</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.27 20.1H3.65V9.24h3.62V20.1zM5.47 7.76c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm14.83 12.34h-3.62v-5.61c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96v5.71h-3.62V9.24h3.48v1.49h.05c.48-.92 1.67-1.89 3.44-1.89 3.68 0 4.36 2.42 4.36 5.57v5.69z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max-width mx-auto px-margin-desktop mt-12 pt-8 border-t border-border-subtle">
+<p class="font-body-sm text-body-sm text-text-muted text-center">© 2024 Loc'Partage. Tous droits réservés. Fait au Québec.</p>
+</div>
+</footer>
+<script>
+        // Simple interactive feedback
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if(this.title === "Supprimer") {
+                    if(confirm("Êtes-vous sûr de vouloir supprimer cette annonce ?")) {
+                        this.closest('tr').style.opacity = '0.5';
+                        this.closest('tr').style.pointerEvents = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type='text/javascript' nonce='y8AhwYhc1Z8e1tFxKongEA==' src='https://contribution.usercontent.google.com/u5wExd3fGerHF8JzdewkJbVeL1YLzHRtg2wIdYAb0ewEIpBdDWsy2VzsUITDDSl7h3IuHt_fiT-X2bY9RMhSuqKNwMxry7srePJgiIuufzFkVvHxsmRlth3-9JIZttNP3lfk9eFGWN2Tq91b8LHQiE2znWd1deXoxTnoUwq5dpeYrVeYwPveWukerinxSgWCupMiSSHDkJVYWTeIXVtexghihIE0L5ZzBtke8-6ZKJt3iAvsd4xB_oVfUifp4HZqp9xKk4xjlx2NTwQkhz6bj-Xxv0a7-Oy9nDTyh7qLtMInHkTEQLksCpdB7bkb_m9Q5bL9YiOHezk2-btIG58_inetqRVXtr6j0KwRfYJrvXfFKZ7Rchl4EniaYjVv94KKRTpkMf9IKU29dgM6dREP4EQoXWCEEZLHTHdGtVuAniTudSgX3P-Pe5KGeffO8TbLCaY8TSlAUA4CE5cSEY7CyteKP31XDjMW88ARLEPCZvIGBOIQGpgl-39uD1qIBQMlYptaEiMyoOBqHuk0wamywIMZRRO8KslvhpZj2mBtyoBmkS2IlP_gEAB7h3bfJCG6FHPHCCmYh5Ln3lindG5R6iXMUwY8n7pfhAVxTAuSEbGhHQ6uDE1qukxDsp4CxgnqUX5zzCPxnjqENqNsBO8cCDdi-g6qxdEmRALhq74Xo1kCd1zhKfIDXv5YgNxyOgz3pUYHEpg8eO-iv-GE_vAJlSwX--0YzlJzH9wRddZgOpjKtKYhQ9YJHCcNYs5kEEJxuJ1iULet6kXFnPeprSEdPiIUBc6toGe-6hmTS7cu'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .active-dot {
+            width: 12px;
+            background-color: white;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#9ed75b",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-container": "#b9f474",
+                        "status-error": "#DC2626",
+                        "on-tertiary-container": "#f7a165",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#444651",
+                        "inverse-primary": "#b1c6ff",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "on-secondary-container": "#437000",
+                        "primary": "#002d70",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-container": "#723600",
+                        "text-muted": "#6B7280",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "primary-container": "#224489",
+                        "surface-tint": "#3d5ca2",
+                        "on-primary-container": "#97b4ff",
+                        "surface-container-highest": "#e1e3e4",
+                        "outline": "#747782",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#d9e2ff",
+                        "on-primary-fixed": "#001946",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#2e4f00",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#311300",
+                        "on-secondary-fixed": "#0f2000",
+                        "surface-card": "#FFFFFF",
+                        "background": "#f8f9fa",
+                        "tertiary": "#502400",
+                        "status-success-alt": "#16A34A",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1d",
+                        "border-subtle": "#E9ECEF",
+                        "status-warning": "#F59E0B",
+                        "tertiary-fixed": "#ffdcc7",
+                        "on-surface": "#191c1d",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed-variant": "#224489",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "secondary-fixed": "#b9f474",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#c4c6d2",
+                        "secondary": "#3e6a00",
+                        "text-main": "#1F2937",
+                        "surface-container": "#edeeef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "button": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-text-main font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<main class="pb-32 min-h-screen">
+<!-- Floating Navigation Over Image -->
+<div class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 pointer-events-none">
+<button class="pointer-events-auto flex items-center justify-center w-10 h-10 rounded-full bg-white/90 shadow-md active:scale-95 transition-transform" onclick="history.back()">
+<span class="material-symbols-outlined text-text-main">arrow_back</span>
+</button>
+<div class="flex gap-2 pointer-events-auto">
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-white/90 shadow-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-text-main">share</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-white/90 shadow-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-text-main">favorite</span>
+</button>
+</div>
+</div>
+<!-- Carousel Gallery Section -->
+<section class="relative w-full aspect-[4/3] bg-surface-dim overflow-hidden">
+<div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" id="carousel">
+<div class="min-w-full h-full snap-center relative">
+<img class="w-full h-full object-cover" data-alt="A luxurious modern kitchen with dark blue cabinetry and marble countertops, captured in soft natural morning light. The professional interior photography style emphasizes a clean, minimalist aesthetic consistent with high-end Quebec properties. The atmosphere is warm, inviting, and meticulously organized, reflecting a premium rental service experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0VUhrk-dC8Xuj3iQUEs55-raUnX7zM7VVYi4PyG_eleDua0xcC4Y02Il-yzgEKytPAfE1a-SBpM8KQO7AyGWKXv_Mxo-hCwFX0NN8fW8lHTobq4u9ugMguEH25L1NnjBeaNxFTTfN8_xE33gNiJEv1S-ejtoxOaV9EOqaj_z8EqYIWw_gMi9ZEp7xxtTWvqW6cqFFol0UHjYbEIeG_dqANMLUcM98njSS85okSZJCGaCdh6XYiS4IRLYHdxPPn9pur_JsSOeriyJp"/>
+</div>
+<div class="min-w-full h-full snap-center relative">
+<img class="w-full h-full object-cover" data-alt="Detailed close-up of a high-end stand mixer and professional baking equipment on a white marble surface. The lighting is crisp and bright, highlighting the metallic textures and premium build quality. This shot captures the functional yet aesthetic appeal of high-quality tools available in a community-driven sharing marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJEFh5SfoF-BnhxBmZ0RD0Wzy4U0WB5I3prx848AHUkRtaNM-br8M6NvWl8iZxMqe9eoVwIgO7ISrL6YiItrJdknzOD8-V6oanFSGJ3O5kCpEdL5z5cfoxJmmWENEcsSuklbAzlRaT_x5kWVj1vdcLraTfS00Bj4xnLg9DFYl-RpfkQWrT3GRORUgC1h4LHzDwUbvMegM1gYnPj6psPVGK7CGho7-KhndIh4ECp6NBzfY5qQXUJowM-0xMDsP0m8Zi3PnTXIIV_eq"/>
+</div>
+<div class="min-w-full h-full snap-center relative">
+<img class="w-full h-full object-cover" data-alt="An expansive living area of a modern penthouse featuring floor-to-ceiling windows with a view of the Montreal skyline at dusk. The interior is styled with minimalist furniture, a neutral color palette, and subtle blue accents. The mood is sophisticated and peaceful, showcasing a high-trust peer-to-peer rental environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY8RkeRnJiiOZpYbvcoZWsLpOtewA85AkaStLepvAC_R3_ctYoXA80BajNPY9_siue75wMeHtw68GzVwTKFYvKsWrx2o6TQ5PRdtb3qIlRTWr45Ev4-KWtcI07GnThC8kcvARga9PtWBQ8IK5FgUVa3Da7qRNAYlxY3QVXYhIYxL9gZkLXSZ3PZlsILtq4Bb-228_cl2suDhIZfTnUaQgDLDIJZrPSF2dz9SqgHy4ZSEvd2exYCRD_FZUZnVaJcw-yD9oMTpR4AulB"/>
+</div>
+</div>
+<!-- Indicator Dots -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-black/20 backdrop-blur-sm">
+<div class="carousel-dot h-1.5 w-1.5 rounded-full bg-white/50 transition-all duration-300 active-dot"></div>
+<div class="carousel-dot h-1.5 w-1.5 rounded-full bg-white/50 transition-all duration-300"></div>
+<div class="carousel-dot h-1.5 w-1.5 rounded-full bg-white/50 transition-all duration-300"></div>
+</div>
+<!-- Image Counter Badge -->
+<div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg text-white font-label-bold text-label-bold">
+                1 / 3
+            </div>
+</section>
+<!-- Listing Content -->
+<div class="px-margin-mobile -mt-4 relative z-10">
+<div class="bg-white rounded-t-3xl pt-6 pb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-bold text-[12px] uppercase tracking-wider">
+                        Disponible maintenant
+                    </span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+<span class="font-label-bold text-label-bold">4.9</span>
+<span class="text-text-muted font-body-sm text-body-sm">(24 avis)</span>
+</div>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Robot Culinaire Professionnel KitchenAid 7qt</h1>
+<p class="text-text-muted flex items-center gap-1 font-body-sm text-body-sm mb-6">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                    Plateau-Mont-Royal, Montréal
+                </p>
+<!-- Key Attributes Grid -->
+<div class="grid grid-cols-3 gap-3 mb-8">
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl border border-border-subtle bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary mb-1">speed</span>
+<span class="font-label-bold text-[12px]">10 Vitesses</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl border border-border-subtle bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary mb-1">restaurant</span>
+<span class="font-label-bold text-[12px]">Acc. Inclus</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-2xl border border-border-subtle bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary mb-1">handyman</span>
+<span class="font-label-bold text-[12px]">Propre</span>
+</div>
+</div>
+<!-- Host Profile Section -->
+<div class="flex items-center justify-between p-4 rounded-2xl bg-surface-container-low mb-8 border border-border-subtle/50">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm">
+<img alt="Photo de profil utilisateur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1MM6o9CAuga3-pr0lOOfCZJqkcgXTOns_U9rs4PFmzmkmcdEqPRdwRqmB1MSyzE9HvsqQ2SMPMEklGqh4b0WSH2be4LgmhMxC6VD8nbC3oIg1ZfCbbHmZs9fl5xoMCczd0STrXdfp8KlTNpDoZirhBGi4l0l20fTYdShg-2JxMZI2gK9h9DGjj61V8aak8gsiX6CjaIDXH6pwZtXzhCkAqlxsx_19vTHhtCsk4S5RKJ6RQFYmWpYA8Jx-c4TYEKFj6g_iEu21CrPX"/>
+</div>
+<div>
+<p class="font-label-bold text-label-bold">Proposé par Marc-Antoine</p>
+<p class="text-text-muted font-body-sm text-body-sm">Hôte vérifié • 3 ans d'expérience</p>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-border-subtle shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">chat</span>
+</button>
+</div>
+<!-- Description -->
+<div class="mb-8">
+<h2 class="font-label-bold text-label-bold uppercase tracking-widest text-primary mb-3">À propos de cet objet</h2>
+<p class="text-text-main font-body-md text-body-md leading-relaxed">
+                        Parfait pour vos grands projets de pâtisserie du dimanche ou pour préparer des pâtes à pain artisanales. Ce modèle professionnel est robuste, silencieux et ultra-performant. Inclus : bol 7qt, crochet pétrisseur, fouet et batteur plat.
+                    </p>
+<button class="mt-2 text-primary font-label-bold text-label-bold flex items-center gap-1">
+                        Lire la suite <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<!-- Safety Guidelines -->
+<div class="p-5 rounded-2xl border-2 border-primary/5 bg-primary/5 mb-8">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<div>
+<p class="font-label-bold text-label-bold mb-1">Garantie Loc'Partage</p>
+<p class="text-text-main font-body-sm text-body-sm">Votre location est protégée contre les dommages accidentels et les vols. Louez l'esprit tranquille.</p>
+</div>
+</div>
+</div>
+<!-- Location Preview -->
+<div class="mb-8">
+<h2 class="font-label-bold text-label-bold uppercase tracking-widest text-primary mb-4">Emplacement approximatif</h2>
+<div class="h-48 rounded-2xl overflow-hidden relative border border-border-subtle">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="A stylized map layout of a city neighborhood featuring clean streets and green park areas. The map uses a soft, minimalist color scheme with a subtle blue marker indicating the property location. The visual style is professional, modern, and high-trust, designed for a premium user interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7cHXTBWFZPwIa0Xf_ycDT7f7Y_06RI8Makvcwht5c0_Ac29yagmvRB6b9-qgUjCR8KIUBdcY-GEfYglhzC4MAMfJxB-klY2fb7pV5JcDuyYP7YUMevP8cwQXPYKLsQ1mam5ut1M_JDcXNatMeDxxArZDG10ZL7iB0A3DIEwtufLiUCFgU8AIcFXNdWlNkJgSI6onY9c8fjZns9_ZV3RvdV4gst_8KaDuGeHIcTDl3_2B2f8Qd0neOx2u7SbKD7zZnrAfMCDs26ls2"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+<div class="w-4 h-4 rounded-full bg-primary"></div>
+</div>
+</div>
+<div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-primary font-label-bold text-[12px] shadow-sm">
+                            Montréal, H2H 2L1
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Booking Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-t border-border-subtle p-4 pb-8 md:hidden">
+<div class="max-w-container-max-width mx-auto flex items-center justify-between gap-4">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary">15$</span>
+<span class="text-text-muted font-body-sm text-body-sm">/ jour</span>
+</div>
+<button class="text-primary font-label-bold text-[12px] underline active:opacity-70">
+                    Détails du prix
+                </button>
+</div>
+<button class="flex-1 bg-primary text-on-primary h-14 rounded-2xl font-label-bold text-button shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Réserver maintenant
+                <span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+</div>
+<script>
+        // Simple Carousel Logic
+        const carousel = document.getElementById('carousel');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const counter = document.querySelector('.font-label-bold.text-label-bold');
+
+        carousel.addEventListener('scroll', () => {
+            const index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active-dot', 'w-3');
+                    dot.classList.remove('w-1.5', 'bg-white/50');
+                    dot.classList.add('bg-white');
+                } else {
+                    dot.classList.remove('active-dot', 'w-3', 'bg-white');
+                    dot.classList.add('w-1.5', 'bg-white/50');
+                }
+            });
+
+            // Update counter
+            if (counter) {
+                counter.innerText = `${index + 1} / 3`;
+            }
+        });
+
+        // Pull to refresh effect (visual only)
+        let touchStartY = 0;
+        document.body.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].pageY;
+        });
+
+        document.body.addEventListener('touchmove', (e) => {
+            const touchY = e.touches[0].pageY;
+            if (window.scrollY === 0 && touchY > touchStartY) {
+                // Potential pull-to-refresh visual could be added here
+            }
+        });
+    </script>
+</body></html>

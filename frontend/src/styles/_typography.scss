@@ -1,0 +1,69 @@
+/* ============================================================
+   Échelle typographique Material 3 (Stitch)
+   Utilise classes .font-{role} + .text-{role} pour mimer Tailwind
+   ============================================================ */
+
+.font-display-lg,
+.text-display-lg {
+  font-size: var(--fs-display-lg);
+  line-height: var(--lh-display-lg);
+  letter-spacing: 0;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .font-display-lg,
+  .text-display-lg {
+    font-size: var(--fs-display-lg-mobile);
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+}
+
+.font-headline-lg,
+.text-headline-lg {
+  font-size: var(--fs-headline-lg);
+  line-height: var(--lh-headline-lg);
+  font-weight: 600;
+}
+
+.font-headline-md,
+.text-headline-md {
+  font-size: var(--fs-headline-md);
+  line-height: var(--lh-headline-md);
+  font-weight: 600;
+}
+
+.font-body-lg,
+.text-body-lg {
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-body-lg);
+  font-weight: 400;
+}
+
+.font-body-md,
+.text-body-md {
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body-md);
+  font-weight: 400;
+}
+
+.font-body-sm,
+.text-body-sm {
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.font-label-bold,
+.text-label-bold {
+  font-size: var(--fs-label-bold);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.font-button {
+  font-size: var(--fs-button);
+  line-height: 1;
+  font-weight: 500;
+}

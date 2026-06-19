@@ -1,0 +1,162 @@
+﻿CAHIER DES CHARGES
+Locâ€™Partage
+Plateforme de location de matÃ©riel entre particuliers
+Projet 3 â€“ DÃ©veloppement web full stack
+Document de cadrage projet
+
+Table des matiÃ¨res
+
+
+
+1. PrÃ©sentation du projet
+Nom du projet : Locâ€™Partage
+Contexte
+Locâ€™Partage est une plateforme web fondÃ©e par quatre jeunes entrepreneurs souhaitant favoriser lâ€™Ã©conomie circulaire Ã  travers la location de matÃ©riel entre particuliers (bricolage, sport, jardinage, etc.). Le projet vise Ã  offrir une alternative Ã©conomique et Ã©cologique Ã  lâ€™achat de matÃ©riel utilisÃ© ponctuellement, en mettant en relation propriÃ©taires et locataires dâ€™une mÃªme rÃ©gion.
+Objectif gÃ©nÃ©ral
+CrÃ©er un site transactionnel simplifiÃ©, ergonomique et responsive permettant Ã  tout utilisateur de publier, rechercher et rÃ©server du matÃ©riel dans sa rÃ©gion, avec une expÃ©rience utilisateur fluide aussi bien sur ordinateur que sur mobile.
+Objectifs spÃ©cifiques
+CrÃ©er une expÃ©rience utilisateur intuitive et fluide.
+GÃ©rer un cycle complet de rÃ©servation, de la publication de lâ€™annonce jusquâ€™Ã  la remise du matÃ©riel.
+Offrir un tableau de bord dÃ©diÃ© aux utilisateurs et aux administrateurs.
+Concevoir une version mobile-first du site.
+Objectifs quantitatifs (aprÃ¨s 6 mois de simulation)
+500 utilisateurs inscrits.
+100 annonces actives.
+Taux de rÃ©servation supÃ©rieur Ã  20 %.
+2. Ã‰quipe projet
+Lâ€™Ã©quipe est composÃ©e de quatre membres organisÃ©s selon les rÃ´les de la mÃ©thode Scrum (Product Owner, Scrum Master et dÃ©veloppeurs).
+PrÃ©nom et nom
+NumÃ©ro d'Ã©tudiant
+RÃ´le principal
+ Alain Joseph Camara
+ 2410451
+ 
+Dor Djoollany
+ 
+ 
+ Adam Aougar
+ 
+ 
+ 
+ 
+ 
+RÃ´les suggÃ©rÃ©s : Product Owner, Scrum Master, DÃ©veloppeur back-end, DÃ©veloppeur front-end / UX.
+3. Public cible
+Le public visÃ© regroupe principalement :
+Jeunes adultes et familles cherchant Ã  rÃ©duire leurs dÃ©penses.
+Ã‰tudiants bricoleurs souhaitant emprunter du matÃ©riel ponctuellement.
+Sportifs amateurs voulant Ã©viter lâ€™achat coÃ»teux dâ€™Ã©quipements peu utilisÃ©s.
+Utilisateurs technophiles habituÃ©s aux applications web et mobiles.
+Le pÃ©rimÃ¨tre gÃ©ographique de la dÃ©monstration est limitÃ© au QuÃ©bec.
+4. Charte graphique et design
+Ã‰lÃ©ment
+SpÃ©cification
+Couleur principale
+Bleu foncÃ© (#224489)
+Couleur secondaire
+Vert doux (#8bc34a)
+Police
+Roboto / Open Sans
+Logo
+Ã€ crÃ©er dans le cadre du projet ou proposÃ© par une IA de design
+Style gÃ©nÃ©ral
+Design moderne et aÃ©rÃ©, inspirÃ© de leboncoin.fr et fatllama.com
+5. FonctionnalitÃ©s attendues
+FonctionnalitÃ©s principales
+Authentification utilisateur (inscription, connexion, gestion de session).
+CrÃ©ation et gestion dâ€™annonces de location (photos, description, calendrier de disponibilitÃ©).
+Moteur de recherche avec filtres dynamiques (catÃ©gorie, localisation, prix, disponibilitÃ©).
+RÃ©servation et annulation avec gestion du cycle complet.
+Messagerie interne entre loueurs et locataires.
+Tableau de bord utilisateur (annonces, rÃ©servations, messages) et tableau de bord administrateur.
+Responsive design selon une approche mobile-first.
+FonctionnalitÃ©s secondaires ou bonus
+Paiement simulÃ© / en ligne.
+GÃ©olocalisation des annonces.
+SystÃ¨me dâ€™Ã©valuation des utilisateurs.
+Gestion de litiges.
+Export PDF des rÃ©servations.
+6. ModÃ¨le conceptuel de donnÃ©es
+Le modÃ¨le de donnÃ©es sâ€™articule autour des entitÃ©s principales suivantes :
+Utilisateur
+Annonce
+RÃ©servation
+Paiement
+CatÃ©gorie
+Message
+7. Contraintes techniques
+Domaine
+Technologie / Choix
+Framework back-end
+JAVA(Spring Boot)
+Front-end
+Bootstrap / JavaScript
+Base de donnÃ©es
+MySQL
+Architecture
+Client-serveur (MVC / REST)
+UX/UI
+Figma (ou autre outil de maquettage)
+DÃ©ploiement
+Firebase / Render / hÃ©bergement local
+PÃ©rimÃ¨tre
+QuÃ©bec uniquement (pour la dÃ©mo)
+8. Maquettes attendues
+Page dâ€™accueil avec filtre dynamique.
+Page dâ€™annonce dÃ©taillÃ©e (photos, description, calendrier).
+Tableau de bord utilisateur (vos annonces, rÃ©servations, messages).
+Interface de rÃ©servation.
+9. DÃ©coupage du projet (sprints Scrum)
+Le projet est menÃ© selon la mÃ©thode Scrum, organisÃ©e en 4 sprints de 2 semaines chacun.
+Sprint
+DurÃ©e estimÃ©e
+Objectifs
+1
+2 semaines
+Authentification, crÃ©ation dâ€™annonces
+2
+2 semaines
+RÃ©servation, messagerie
+3
+2 semaines
+Tableau de bord, back-office admin
+4
+2 semaines
+Optimisation mobile, tests, responsive, dÃ©ploiement
+10. Suivi et outils utilisÃ©s
+Zoho desk : gestion des tÃ¢ches (board avec backlog et suivi).
+GitHub : code source et versioning, avec README.
+RÃ©unions dâ€™Ã©quipe hebdomadaires (PO + Scrum Master + dÃ©veloppeurs).
+Journal de bord collectif.
+Suivi des tÃ¢ches et des bugs en continu.
+11. Tests et validation
+ScÃ©narios de tests manuels (rÃ©servation, validation, annulation, messagerie).
+Validation par un panel de testeurs.
+12. Livrables prÃ©vus
+Site fonctionnel (en ligne ou dÃ©mo locale).
+Code source hÃ©bergÃ© sur GitHub
+Cahier des charges (PDF).
+Rapport final structurÃ© et illustrÃ©.
+Maquettes UX/UI.
+PrÃ©sentation finale (PowerPoint ou Canva, environ 10 minutes).
+13. Annexe â€“ Calendrier de travail
+Jalon
+Date
+Date de dÃ©but
+ 
+Date de fin estimÃ©e
+ 
+Revue de sprint 1
+ 
+Revue de sprint 2
+ 
+Revue de sprint 3
+ 
+Revue de sprint 4
+ 
+Rencontre avec lâ€™enseignante
+ 
+PrÃ©sentation finale
+ 
+
+

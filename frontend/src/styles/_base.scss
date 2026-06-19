@@ -1,0 +1,80 @@
+/* Reset léger + éléments natifs (Inter, Material Symbols) */
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--c-background);
+  color: var(--c-text-main);
+  line-height: var(--lh-body-md);
+  font-size: var(--fs-body-md);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--c-primary-fixed);
+  color: var(--c-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+a:hover { text-decoration: underline; }
+
+/* Hiérarchie titres alignée Material 3 */
+h1, h2, h3, h4 {
+  margin: 0 0 var(--space-3);
+  color: var(--c-primary);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+h1 {
+  font-size: var(--fs-display-lg-mobile);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+h2 {
+  font-size: var(--fs-headline-lg);
+  line-height: var(--lh-headline-lg);
+}
+h3 {
+  font-size: var(--fs-headline-md);
+  line-height: var(--lh-headline-md);
+}
+h4 {
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-body-lg);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--fs-display-lg);
+    line-height: var(--lh-display-lg);
+  }
+}
+
+/* Material Symbols Outlined — paramétrage par défaut */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  user-select: none;
+}
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}

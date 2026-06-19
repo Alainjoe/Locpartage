@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Administrateur | Loc'Partage</title>
+<script type='text/javascript' nonce='Nvsfg4qkDUAnLXjmRdITpg==' src='https://contribution.usercontent.google.com/-_FkwvGbLhXHzox-rftN5JCLSHdvtqRr37t2jmCabeO8zPc_x1-xFwFFSZfNKecaktUPusRc5pxKo-yKWT5_Qzjc3sx_0seUGmi6vi4IWCTtOeGwZEg_fgZXCF9w4kEEHh35kfu0sU61boXnqxXz21r7MsO5JGIp8B2FnF8TiyfJ5YJv1Dr9WliEaGecfBkMNjsRwJWcOKUfoMK3Jn3-ueEx_u80VfDuqzM6ZTBSfZAjxyflN7Uuqtnnz4cT8OGmIYton7c97UJitct-rwZlestfnj4kfvJiU3sWoloKMhAx8urFxLE57xMUAsPHwvVTQHCWtP7TrgOrIjBeB22BiEyg5RCVVfgK-6-dnJOZQN6zAwqYJizmrNoEA4R7ob6ehoImr8EetygzBh4vydC71yoI_YkI-KlJ7SQ_aY9F7m2OVQG5nzEER0fOn_5MkKH6Y7iZxv7ysO7MYrWqGFMWKyEPw6LhccPT7cd5diAoSTrMy428xhXV8BKObO41Zt7IMP7dKEafqrYRcsq6KoyFVibRYq_5KVxaui-E_phUhRvrOBBmpSRf5nSZk5sUmRpKVUp28RrIcJrOXku5xZdW6XKYdwskWes1AiBDLJOFoVvS7jBNnHGypCqiCwXGG35Ua0ULbuGDHEFXZQkhYCOx7-laY_R0SL9RnvGkNrWMoWKI6c5yihzRYE9HZ0YLJg3bV16hcRVnC4qp5FizB6qvPsHL_de7RuesNBoITvj0VvKi4gBndwFTvGH5OdHcKeyFSiPckO-WUsGu9x8u4eYxh_X1lLAv8oCx5aXhboE-'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: #224489;
+            color: white;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(233, 236, 239, 1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#002d70",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#0f2000",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#3d5ca2",
+                      "on-tertiary-fixed": "#311300",
+                      "text-muted": "#6B7280",
+                      "surface-container": "#edeeef",
+                      "surface-container-high": "#e7e8e9",
+                      "on-primary-fixed": "#001946",
+                      "secondary-fixed": "#b9f474",
+                      "tertiary-fixed": "#ffdcc7",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-bright": "#f8f9fa",
+                      "outline": "#747782",
+                      "tertiary-fixed-dim": "#ffb787",
+                      "border-subtle": "#E9ECEF",
+                      "text-main": "#1F2937",
+                      "surface-dim": "#d9dadb",
+                      "primary-fixed": "#d9e2ff",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#b9f474",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-surface-variant": "#444651",
+                      "secondary-fixed-dim": "#9ed75b",
+                      "error": "#ba1a1a",
+                      "status-warning": "#F59E0B",
+                      "outline-variant": "#c4c6d2",
+                      "tertiary-container": "#723600",
+                      "background": "#f8f9fa",
+                      "on-tertiary-container": "#f7a165",
+                      "primary-fixed-dim": "#b1c6ff",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f3f4f5",
+                      "surface-variant": "#e1e3e4",
+                      "status-success-alt": "#16A34A",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#b1c6ff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#437000",
+                      "on-background": "#191c1d",
+                      "inverse-surface": "#2e3132",
+                      "on-tertiary-fixed-variant": "#723600",
+                      "on-secondary-fixed-variant": "#2e4f00",
+                      "surface-card": "#FFFFFF",
+                      "primary-container": "#224489",
+                      "status-error": "#DC2626",
+                      "secondary": "#3e6a00",
+                      "surface": "#f8f9fa",
+                      "on-surface": "#191c1d",
+                      "on-primary-container": "#97b4ff",
+                      "on-primary-fixed-variant": "#224489",
+                      "tertiary": "#502400"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "container-max-width": "1280px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "button": ["Inter"],
+                      "display-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-text-main font-body-md min-h-screen flex overflow-hidden">
+<!-- Admin Sidebar -->
+<aside class="w-72 bg-surface-container-lowest border-r border-border-subtle flex flex-col h-screen z-50">
+<div class="p-8 flex items-center gap-3">
+<span class="text-primary font-headline-md font-bold tracking-tight">Loc'Partage</span>
+<span class="bg-secondary/10 text-secondary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest border border-secondary/20">Admin</span>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl sidebar-active group transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<span class="font-label-bold text-label-bold">Vue d'ensemble</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-text-muted hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">group</span>
+<span class="font-label-bold text-label-bold">Utilisateurs</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-text-muted hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">list_alt</span>
+<span class="font-label-bold text-label-bold">Annonces</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-text-muted hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+<span class="font-label-bold text-label-bold">Litiges</span>
+<span class="ml-auto bg-error text-on-error text-[10px] w-5 h-5 flex items-center justify-center rounded-full">4</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-text-muted hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+<span class="font-label-bold text-label-bold">Transactions</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-text-muted hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+<span class="font-label-bold text-label-bold">Rapports</span>
+</a>
+</nav>
+<div class="p-6 border-t border-border-subtle bg-surface-container-low/50">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img alt="Admin" class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged male administrator in a corporate setting. He is wearing a crisp white shirt and a dark blue blazer, projecting confidence and expertise. The lighting is soft and directional, typical of a modern office environment, with a clean and neutral background that emphasizes clarity and authority in a professional interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyEYsXohr-AQBxL9n_N9PIdJwWYSn1sLuB3Y6tZuNKBo_i_KTZmhxKTaoNIHlvD_zXP3zTXnaUmNwsb4jBxUac3WcLD62EpWJRnlaReMuI-JCyjryoa-GvjogZRH61S9p6sBN1NCAo7yLZWblq5cHeNdza7wyUMDwZwKtRHHcOGKU8hv-bWtxIOAqvTOSl8si-LGuTU73zG1LUPflgsojKe65BII59-zTRuK2yjXuObzRzJToISd-ApwmxPybQ3Y1fjcjJvrsn3Ax"/>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="font-label-bold text-text-main truncate">Marc-André B.</p>
+<p class="text-[12px] text-text-muted truncate">Admin Principal</p>
+</div>
+<button class="text-text-muted hover:text-error transition-colors">
+<span class="material-symbols-outlined">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-screen overflow-y-auto">
+<!-- Header -->
+<header class="h-20 bg-surface-container-lowest border-b border-border-subtle px-margin-desktop flex items-center justify-between sticky top-0 z-40">
+<div>
+<h1 class="font-headline-md text-headline-md text-primary">Tableau de bord</h1>
+<p class="text-body-sm text-text-muted">Dernière mise à jour : il y a 2 minutes</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-text-main hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<span class="absolute top-0 right-0 w-3 h-3 bg-error border-2 border-surface-container-lowest rounded-full"></span>
+</div>
+<button class="px-6 py-2.5 bg-primary text-on-primary rounded-xl font-label-bold text-label-bold flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                    Générer Rapport
+                </button>
+</div>
+</header>
+<!-- Canvas -->
+<div class="p-margin-desktop space-y-10 max-w-container-max-width">
+<!-- Global Stats (High-level) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">person_add</span>
+</span>
+<span class="text-status-success-alt font-label-bold text-[12px] bg-status-success-alt/10 px-2 py-1 rounded-full">+12.5%</span>
+</div>
+<p class="text-text-muted text-body-sm mb-1 uppercase tracking-wider font-bold">Nouveaux Inscrits</p>
+<p class="text-headline-md font-headline-md text-text-main">1,248</p>
+</div>
+<div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">inventory_2</span>
+</span>
+<span class="text-status-success-alt font-label-bold text-[12px] bg-status-success-alt/10 px-2 py-1 rounded-full">+8.2%</span>
+</div>
+<p class="text-text-muted text-body-sm mb-1 uppercase tracking-wider font-bold">Annonces Actives</p>
+<p class="text-headline-md font-headline-md text-text-main">4,892</p>
+</div>
+<div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-status-warning/30">
+<div class="flex items-center justify-between mb-4">
+<span class="w-12 h-12 rounded-xl bg-status-warning/10 text-status-warning flex items-center justify-center">
+<span class="material-symbols-outlined">warning</span>
+</span>
+<span class="text-status-warning font-label-bold text-[12px] bg-status-warning/10 px-2 py-1 rounded-full">8 En attente</span>
+</div>
+<p class="text-text-muted text-body-sm mb-1 uppercase tracking-wider font-bold">Litiges Ouverts</p>
+<p class="text-headline-md font-headline-md text-text-main">24</p>
+</div>
+<div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<span class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">savings</span>
+</span>
+<span class="text-status-success-alt font-label-bold text-[12px] bg-status-success-alt/10 px-2 py-1 rounded-full">+15.7%</span>
+</div>
+<p class="text-text-muted text-body-sm mb-1 uppercase tracking-wider font-bold">Revenu Brut (MTD)</p>
+<p class="text-headline-md font-headline-md text-text-main">124,500$</p>
+</div>
+</div>
+<!-- Main Analytics Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Growth Chart (Faked with SVG) -->
+<div class="lg:col-span-2 glass-card rounded-2xl p-8 flex flex-col h-[400px]">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="font-headline-md text-headline-md text-text-main">Croissance de la Plateforme</h3>
+<p class="text-text-muted text-body-sm">Évolution des locations confirmées sur les 6 derniers mois</p>
+</div>
+<select class="bg-surface-container-low border-none rounded-lg text-body-sm focus:ring-primary">
+<option>Derniers 6 mois</option>
+<option>Dernière année</option>
+</select>
+</div>
+<div class="flex-1 relative flex items-end justify-between px-2">
+<!-- Simplified Visual Chart Representation -->
+<div class="w-12 bg-primary/20 hover:bg-primary/40 transition-all rounded-t-lg h-1/4 group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">12k</span>
+</div>
+<div class="w-12 bg-primary/20 hover:bg-primary/40 transition-all rounded-t-lg h-2/5 group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">18k</span>
+</div>
+<div class="w-12 bg-primary/20 hover:bg-primary/40 transition-all rounded-t-lg h-1/2 group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">22k</span>
+</div>
+<div class="w-12 bg-primary/20 hover:bg-primary/40 transition-all rounded-t-lg h-3/5 group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">26k</span>
+</div>
+<div class="w-12 bg-primary/20 hover:bg-primary/40 transition-all rounded-t-lg h-4/5 group relative">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">35k</span>
+</div>
+<div class="w-12 bg-primary/80 hover:bg-primary transition-all rounded-t-lg h-full group relative shadow-lg">
+<span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded opacity-100">42k</span>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-text-muted text-[12px] font-label-bold">
+<span>JAN</span><span>FEV</span><span>MAR</span><span>AVR</span><span>MAI</span><span>JUIN</span>
+</div>
+</div>
+<!-- Moderation Alerts -->
+<div class="glass-card rounded-2xl p-8 flex flex-col border-status-error/20">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline-md text-headline-md text-text-main">Alertes Modération</h3>
+<span class="material-symbols-outlined text-error">priority_high</span>
+</div>
+<div class="space-y-6 overflow-y-auto max-h-[300px] pr-2 custom-scrollbar">
+<div class="flex gap-4 p-4 bg-error/5 rounded-xl border border-error/10">
+<div class="w-10 h-10 rounded-lg bg-error/10 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">report</span>
+</div>
+<div>
+<p class="text-body-sm font-label-bold text-text-main">Annonce Suspecte #4920</p>
+<p class="text-[12px] text-text-muted mt-0.5">Signalé pour contenu inapproprié par 3 utilisateurs.</p>
+<div class="flex gap-2 mt-3">
+<button class="text-[11px] font-bold text-error uppercase hover:underline">Bloquer</button>
+<button class="text-[11px] font-bold text-text-muted uppercase hover:underline">Voir</button>
+</div>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-status-warning/5 rounded-xl border border-status-warning/10">
+<div class="w-10 h-10 rounded-lg bg-status-warning/10 text-status-warning flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<p class="text-body-sm font-label-bold text-text-main">Vérification ID</p>
+<p class="text-[12px] text-text-muted mt-0.5">Sophie L. attend une validation manuelle de pièce d'identité.</p>
+<div class="flex gap-2 mt-3">
+<button class="text-[11px] font-bold text-status-success-alt uppercase hover:underline">Valider</button>
+<button class="text-[11px] font-bold text-text-muted uppercase hover:underline">Rejeter</button>
+</div>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<p class="text-body-sm font-label-bold text-text-main">Mots-clés Détectés</p>
+<p class="text-[12px] text-text-muted mt-0.5">Tentative d'échange de coordonnées hors plateforme (ID #3821).</p>
+<div class="flex gap-2 mt-3">
+<button class="text-[11px] font-bold text-primary uppercase hover:underline">Avertir</button>
+<button class="text-[11px] font-bold text-text-muted uppercase hover:underline">Détails</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Transactions Table -->
+<div class="glass-card rounded-2xl overflow-hidden shadow-sm">
+<div class="p-8 border-b border-border-subtle flex items-center justify-between bg-surface-container-low/30">
+<h3 class="font-headline-md text-headline-md text-text-main">Transactions Récentes</h3>
+<button class="text-primary font-label-bold text-label-bold flex items-center gap-1 hover:gap-2 transition-all">
+                        Tout voir <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-text-muted uppercase text-[12px] tracking-wider font-bold">
+<tr>
+<th class="px-8 py-4">Utilisateur</th>
+<th class="px-8 py-4">Article</th>
+<th class="px-8 py-4">Date</th>
+<th class="px-8 py-4">Montant</th>
+<th class="px-8 py-4">Status</th>
+<th class="px-8 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle">
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-[12px]">JL</div>
+<span class="text-body-sm font-label-bold">Jean-Luc Tremblay</span>
+</div>
+</td>
+<td class="px-8 py-4 text-body-sm">Remorque 12ft</td>
+<td class="px-8 py-4 text-body-sm">24 Juin 2024</td>
+<td class="px-8 py-4 text-body-sm font-bold">85,00$</td>
+<td class="px-8 py-4">
+<span class="bg-status-success-alt/10 text-status-success-alt text-[11px] font-bold px-2 py-1 rounded-full">Complété</span>
+</td>
+<td class="px-8 py-4 text-right">
+<button class="text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary font-bold text-[12px]">MG</div>
+<span class="text-body-sm font-label-bold">Mélanie Gagnon</span>
+</div>
+</td>
+<td class="px-8 py-4 text-body-sm">Perceuse Industrielle</td>
+<td class="px-8 py-4 text-body-sm">23 Juin 2024</td>
+<td class="px-8 py-4 text-body-sm font-bold">45,00$</td>
+<td class="px-8 py-4">
+<span class="bg-status-warning/10 text-status-warning text-[11px] font-bold px-2 py-1 rounded-full">En cours</span>
+</td>
+<td class="px-8 py-4 text-right">
+<button class="text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-[12px]">DR</div>
+<span class="text-body-sm font-label-bold">David Roy</span>
+</div>
+</td>
+<td class="px-8 py-4 text-body-sm">Tente de toit</td>
+<td class="px-8 py-4 text-body-sm">23 Juin 2024</td>
+<td class="px-8 py-4 text-body-sm font-bold">120,00$</td>
+<td class="px-8 py-4">
+<span class="bg-status-success-alt/10 text-status-success-alt text-[11px] font-bold px-2 py-1 rounded-full">Complété</span>
+</td>
+<td class="px-8 py-4 text-right">
+<button class="text-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Admin Footer (Simplified for Dash) -->
+<footer class="mt-auto py-8 border-t border-border-subtle bg-surface-container-lowest px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-body-sm text-text-muted">© 2024 Loc'Partage. Système d'administration interne v4.2.1</p>
+<div class="flex gap-6 text-body-sm text-text-muted">
+<a class="hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="hover:text-primary transition-colors" href="#">Support Technique</a>
+<a class="hover:text-primary transition-colors" href="#">Journal des Logs</a>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        // Simple interactivity for the dashboard
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hover effect on bars
+            const bars = document.querySelectorAll('.group');
+            bars.forEach(bar => {
+                bar.addEventListener('mouseenter', () => {
+                    // Logic for custom tooltip if needed
+                });
+            });
+
+            // Notification toggle animation
+            const notifBtn = document.querySelector('.group button');
+            notifBtn.addEventListener('click', () => {
+                const dot = document.querySelector('.group span.bg-error');
+                if(dot) dot.classList.add('hidden');
+            });
+        });
+    </script>
+</body></html>

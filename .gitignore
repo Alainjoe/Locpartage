@@ -3,5 +3,13 @@
 *.log
 target/
 node_modules/
+dist/
 .idea/
 .vscode/
+*.iml
+data/
+uploads/
+application-local.properties
+HELP.md
+.chrome-check/
+

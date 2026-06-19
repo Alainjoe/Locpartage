@@ -1,0 +1,17 @@
+/* ============================================================
+   Loc'Partage — entrée design system
+   Aligné maquettes Stitch (Material 3 + Inter + palette navy/lime)
+   Ordre = cascade : tokens d'abord, utilities en dernier
+   ============================================================ */
+
+@use 'styles/tokens';
+@use 'styles/base';
+@use 'styles/typography';
+@use 'styles/layout';
+@use 'styles/buttons';
+@use 'styles/forms';
+@use 'styles/cards';
+@use 'styles/badges';
+@use 'styles/alerts';
+@use 'styles/spinner';
+@use 'styles/utilities';

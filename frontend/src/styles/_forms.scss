@@ -1,0 +1,46 @@
+/* Champs formulaire alignés Stitch : radius lg, focus ring primary */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+.form-group label {
+  font-size: var(--fs-label-bold);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--c-text-main);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--c-outline-variant);
+  border-radius: var(--radius-lg);
+  font: inherit;
+  font-size: var(--fs-body-md);
+  background: var(--c-surface-card);
+  color: var(--c-text-main);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.input::placeholder,
+.textarea::placeholder { color: var(--c-text-muted); }
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(0, 45, 112, 0.15);
+}
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-error   { color: var(--c-error);  font-size: var(--fs-body-sm); margin-top: var(--space-1); }
+.form-success { color: var(--c-status-success); font-size: var(--fs-body-sm); }
+.form-hint    { color: var(--c-text-muted); font-size: var(--fs-body-sm); }

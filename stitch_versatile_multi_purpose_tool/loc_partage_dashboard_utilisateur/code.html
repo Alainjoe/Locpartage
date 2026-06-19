@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard - Loc'Partage</title>
+<script type='text/javascript' nonce='A2a4n4ripxMTzVwu/qXbzg==' src='https://contribution.usercontent.google.com/X6j3RvLvy63-U1WiXiDyOqX0Hdf69pJDFv00rKy6zI8NoR_efGRUtkjDB5FE9mDB06q_uOe4uZRGjpTzbpqHD2QcwPk2tmaHybdnP4ZPi7TDFOelII2UN4J6_EQ-l6HiYTdcf8FxHsnG9THkTJK-0oVd6V5vyto3SNz3D8mZi4iJHyouD_HHzjWD__3THtiTmByK_vQnJcJhrG47d-g3XLxksgTGZkUAjSsCfaDx0oEfo2wMk6LCr-JeNsjxqRKJHhCB5WfH2J6titgmHwFA5YKbmCFIjuhq6kK1q5HNYwTJrkTBXwY11HVQ-50UeQDWQ0pNurpU1UHtw8mOqdSTS81wslJTonNEFF-g_a2r_6O8yKoR_fSFemompsdXUABMJKPvhfMyXaZ9D-GgG1tE3w6bhauUG4tqqJuV7_UWOFof5vaTRPTUkd6Weqm3E4useCoaxF8CA6Clfg_r5HfIoe10XtzJ0qLOZlIoGq9eLxbjmU3GrzoG7STasUdu6JyhNF1AFHs6zonYYQQrPkgPlKhsQctdOd21Efdb5X9X5ho97Lp4MpbNUJGNNkAHndFU-64uHokbBZs2S-S6Qj5P9KtkTtIP_dyGgiVPvdxlQ_eTtyFtSp-NiefwQtLZZdgem2bl9AKus6yqY1QKq2JtgZz3n7siFmXtchdAPZm8_Uflu2YM7HnQJ_NzZUZbSDa5yvSbb0Y3NRusPIUVxB0QFBNTGEG7VCSuwWbT7OiOzA2865bFoW2fi2k_YzE12Kw2d-GZuyJ94b6z6NEq-v5Cj1G0StOE5VPPU0e1L1jt'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-indicator {
+            position: absolute;
+            left: 0;
+            width: 4px;
+            height: 24px;
+            background-color: #002d70;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#002d70",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0f2000",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#3d5ca2",
+                        "on-tertiary-fixed": "#311300",
+                        "text-muted": "#6B7280",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed": "#001946",
+                        "secondary-fixed": "#b9f474",
+                        "tertiary-fixed": "#ffdcc7",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "outline": "#747782",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "border-subtle": "#E9ECEF",
+                        "text-main": "#1F2937",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#b9f474",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-surface-variant": "#444651",
+                        "secondary-fixed-dim": "#9ed75b",
+                        "error": "#ba1a1a",
+                        "status-warning": "#F59E0B",
+                        "outline-variant": "#c4c6d2",
+                        "tertiary-container": "#723600",
+                        "background": "#f8f9fa",
+                        "on-tertiary-container": "#f7a165",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-variant": "#e1e3e4",
+                        "status-success-alt": "#16A34A",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b1c6ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#437000",
+                        "on-background": "#191c1d",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-secondary-fixed-variant": "#2e4f00",
+                        "surface-card": "#FFFFFF",
+                        "primary-container": "#224489",
+                        "status-error": "#DC2626",
+                        "secondary": "#3e6a00",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-primary-container": "#97b4ff",
+                        "on-primary-fixed-variant": "#224489",
+                        "tertiary": "#502400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "container-max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "button": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background font-body-md text-text-main overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest shadow-sm h-20 border-b border-border-subtle">
+<div class="flex items-center justify-between px-6 md:px-margin-desktop h-full max-w-container-max-width mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-headline-md font-headline-md font-bold text-primary">Loc'Partage</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label-bold text-label-bold text-primary font-bold border-b-2 border-primary py-2 h-20 flex items-center" href="#">Tableau de bord</a>
+<a class="font-label-bold text-label-bold text-text-main hover:text-primary transition-colors duration-200 py-2" href="#">Réservations</a>
+<a class="font-label-bold text-label-bold text-text-main hover:text-primary transition-colors duration-200 py-2" href="#">Messages</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 bg-primary text-on-primary px-6 py-2.5 rounded-xl font-button active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                    Publier
+                </button>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-fixed bg-surface-container-high cursor-pointer">
+<img alt="Photo de profil utilisateur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhS8LXxbbyJpjCBtzO6cJJRmyPF9RipBJSqFlOI8nDLYQ3prnUvmxOdVEIjZ4OZgsDVZNzGXcKrupc4LQNDdvfEO7rEwjB0ayEtFXeM5PvMbdHk8kFEYlTbVIaRLh-tavnkctySrjDq_fcyM6znIE0D1MTwulH6R7Q45vhpvLaZJ-jfKXyiBwt_yWTkEk_OVRNUT0Nr3_yHGvsNsgdVIpejze7AgzyJCFpRLKHonM5v6PPZtDRIRp7aKCXcXEGxqFE4yisUBdOPTV4"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen pt-20">
+<!-- Sidebar Navigation -->
+<aside class="hidden md:flex flex-col w-64 bg-surface-container-lowest border-r border-border-subtle fixed h-[calc(100vh-80px)] overflow-y-auto">
+<div class="p-6 space-y-2">
+<p class="text-[11px] font-bold text-text-muted uppercase tracking-wider mb-4 px-3">Menu principal</p>
+<a class="relative flex items-center gap-3 px-3 py-3 rounded-xl bg-primary-fixed text-primary font-semibold transition-all" href="#">
+<div class="active-nav-indicator"></div>
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-label-bold">Vue d'ensemble</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-main hover:bg-surface-container-low hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-label-bold">Mes annonces</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-main hover:bg-surface-container-low hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-label-bold">Mes réservations</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-main hover:bg-surface-container-low hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-label-bold">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-main hover:bg-surface-container-low hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-label-bold">Favoris</span>
+</a>
+</div>
+<div class="mt-auto p-6 border-t border-border-subtle">
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-main hover:bg-surface-container-low hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-bold">Paramètres</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-xl text-status-error hover:bg-error-container/10 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-label-bold">Déconnexion</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 md:ml-64 p-6 md:p-12">
+<div class="max-w-6xl mx-auto space-y-10">
+<!-- Welcome Section -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary">Bonjour, Jean-Philippe 👋</h1>
+<p class="text-body-md text-text-muted mt-1">Voici ce qui se passe avec vos locations aujourd'hui.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-surface-container-lowest border border-border-subtle px-4 py-2 rounded-xl text-label-bold flex items-center gap-2 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="file_download">file_download</span>
+                            Exporter
+                        </button>
+</div>
+</header>
+<!-- Statistics Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Stats Card 1 -->
+<div class="md:col-span-1 bg-surface-container-lowest p-6 rounded-[20px] border border-border-subtle shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="p-2 bg-primary-fixed rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<span class="text-status-success-alt font-label-bold text-xs bg-status-success-alt/10 px-2 py-1 rounded-full">+12%</span>
+</div>
+<p class="text-body-sm text-text-muted">Gains totaux</p>
+<p class="font-headline-md text-headline-md mt-1">2 450,00 $</p>
+</div>
+<!-- Stats Card 2 -->
+<div class="md:col-span-1 bg-surface-container-lowest p-6 rounded-[20px] border border-border-subtle shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="p-2 bg-secondary-fixed text-on-secondary-container rounded-lg">
+<span class="material-symbols-outlined" data-icon="sync_alt">sync_alt</span>
+</div>
+<span class="text-text-muted font-label-bold text-xs">Actuel</span>
+</div>
+<p class="text-body-sm text-text-muted">Locations en cours</p>
+<p class="font-headline-md text-headline-md mt-1">4</p>
+</div>
+<!-- Stats Card 3 (Bento Wide) -->
+<div class="md:col-span-2 bg-primary text-on-primary p-6 rounded-[20px] relative overflow-hidden group">
+<div class="relative z-10 flex flex-col justify-between h-full">
+<div>
+<h3 class="font-headline-md text-headline-md">Boostez vos revenus</h3>
+<p class="text-primary-fixed-dim text-body-sm mt-2 max-w-[240px]">Améliorez vos photos pour augmenter vos réservations de 30%.</p>
+</div>
+<button class="w-fit bg-secondary-fixed text-on-secondary-fixed px-6 py-2 rounded-xl font-button mt-4 hover:scale-105 transition-transform">
+                                Optimiser mes annonces
+                            </button>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-20 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[180px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Recent Activity / Upcoming Bookings -->
+<section class="lg:col-span-2 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md">Réservations à venir</h2>
+<a class="text-primary text-label-bold hover:underline" href="#">Voir tout</a>
+</div>
+<div class="space-y-4">
+<!-- Booking Card 1 -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-lowest rounded-[20px] border border-border-subtle hover:border-primary/30 transition-all cursor-pointer group">
+<div class="h-20 w-20 rounded-xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A close-up photograph of a professional orange pressure washer and industrial equipment on a clean concrete garage floor. The lighting is bright and architectural, reflecting a premium service environment. The composition focuses on the high-quality materials and professional-grade durability of the machine, emphasizing trust and reliability in the Quebec rental market." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARU-g-P7vvusFTo9nqLLvsyPp4kzmlqRpQ5IK6iCUfdCWG2FaRaymGageZVD0QBWp0rdOPLYAWev4-E_n7iZJvr9OAovqPfBTelDb4q_dOr1I1NXOs9ZChBT7VhoSIj3hFtVIfm8op0X3mr3I-aiqNZEcEmoJfzjIGH5DhipILdU_0n3XjkvRTLVQ5XoZdsXI3EroiqsnrKX_OYx88tpnklUOoUEsxdYHzJWt33ARJ2rUObxZsB9r9PyCSGxZRQYLZf-L_IGKp6tSb"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-status-success-alt/10 text-status-success-alt text-[10px] font-bold uppercase">Confirmé</span>
+<span class="text-text-muted text-[12px] font-medium">Ref: #LP-2983</span>
+</div>
+<h4 class="font-label-bold text-text-main truncate">Nettoyeur haute pression 3000 PSI</h4>
+<p class="text-body-sm text-text-muted">Par <span class="font-semibold text-text-main">Marc-André L.</span></p>
+</div>
+<div class="text-right shrink-0">
+<p class="font-label-bold text-text-main">12 - 14 Mai</p>
+<p class="text-status-success-alt font-headline-md">85,00 $</p>
+</div>
+<div class="p-2 text-text-muted opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- Booking Card 2 -->
+<div class="flex items-center gap-4 p-4 bg-surface-container-lowest rounded-[20px] border border-border-subtle hover:border-primary/30 transition-all cursor-pointer group">
+<div class="h-20 w-20 rounded-xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A minimalist professional studio photography of high-end art tools, including brushes and palette knives arranged neatly on a pristine white oak table. Soft daylight from a side window creates delicate, tinted shadows. The aesthetic is clean, corporate, and modern, conveying a sense of curated quality for a creative rental service in Montreal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUnuBhOkfBjm07OAhGhUCVglIsWtk4sTREGcc-2VbnVQMv3AbCbQ2W1XXBm7zp-gQVfPpVbrFdn8q72YFwDCYWujUk5Ln-3_16kZ5rg0IxRB2_ziKdIbttBaZR5jLE9zp7-EPKtoSMTgTKw0FFGWDiEYzrMDxkbt7yeDll_OGpIjyxoE9oUpswz66El5vV6cDTobRVhLqgw7xEk60-5ljuMhFhrS0iwge05rMyrPxwf6ilikjWecTNwGE2G6kVz8sixzeenwVia4wo"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-status-warning/10 text-status-warning text-[10px] font-bold uppercase">En attente</span>
+<span class="text-text-muted text-[12px] font-medium">Ref: #LP-3012</span>
+</div>
+<h4 class="font-label-bold text-text-main truncate">Kit de peinture chevalet pro</h4>
+<p class="text-body-sm text-text-muted">Par <span class="font-semibold text-text-main">Sophie Tremblay</span></p>
+</div>
+<div class="text-right shrink-0">
+<p class="font-label-bold text-text-main">18 - 19 Mai</p>
+<p class="text-text-muted font-headline-md">45,00 $</p>
+</div>
+<div class="p-2 text-text-muted opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Stats / Quick Actions -->
+<aside class="space-y-gutter">
+<div class="bg-surface-container-low p-6 rounded-[20px] border border-border-subtle">
+<h3 class="font-label-bold text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+                                Performance
+                            </h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="text-text-muted">Taux de réponse</span>
+<span class="font-bold">98%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-status-success-alt h-full w-[98%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="text-text-muted">Évaluation moyenne</span>
+<div class="flex items-center gap-1">
+<span class="font-bold">4.9</span>
+<span class="material-symbols-outlined text-status-warning text-[14px]" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[94%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-[20px] border border-border-subtle shadow-sm">
+<h3 class="font-label-bold text-text-main mb-4">Messages récents</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-surface-container-high shrink-0 overflow-hidden">
+<img alt="Avatar" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsq-BywF7ajdt5zbcQulGXWy0H5luwy_cAeF0JIzgrcak7nf4LuhxZZ5t2QJfgxdWlL3udh_IPPHcq5V_wVEqRJ_DPgH7mZp81q_AzlNjMf5_uRxlpVxbVp0X_n_vnAG0u5ptpXY1NmYr4y7RMbJI5qw_uyjfAAu-1ksPasRXQG9yLfcUYMrrg2zwsGDl1dIhh0j7Vy-94GDrq9h0663QlOx9uHVzHmGaAZnu8YW6zpom7cv_EPc6nHczdgu1KlIgXFejmaEnzXITg"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-label-bold text-text-main">Sophie T.</p>
+<p class="text-body-sm text-text-muted truncate">Est-ce que l'équipement est disponible...</p>
+</div>
+<div class="h-2 w-2 rounded-full bg-primary shrink-0"></div>
+</div>
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-surface-container-high shrink-0 overflow-hidden">
+<img alt="Avatar" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt_Ecl7TEyGfb21_mtjsxLCVwI56MnO6A5g4koj9RRxbPSLsIr1D_Ob7DTWo-llQF5bSfWLUvBcX1Ur7sIoKQfErl1aGBOtKfv_YdY4-C0wSC5Badx2kQk8cg8Y9QK3ADkCinLqmRF46cHHZTsnoEnGKsnQoHXKY1Icss1cV1pyVFUtz4QnYF8RfnTfl4qtjIBJlRr7cCYPUL69CySiiVUAC9Ap3zD1v5a2Fgew50mCVoQ-hgW1EPPPqH0Z_tzwKcfGwxcJRn7MC1w"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-label-bold text-text-main">Marc-André L.</p>
+<p class="text-body-sm text-text-muted truncate">Merci beaucoup pour la location !</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 text-primary font-label-bold text-center hover:bg-primary-fixed py-2 rounded-lg transition-colors">
+                                Ouvrir la messagerie
+                            </button>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</div>
+<!-- Mobile Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-lowest h-16 flex items-center justify-around border-t border-border-subtle z-50">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center text-text-muted" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-[10px]">Annonces</span>
+</a>
+<div class="relative -top-6">
+<button class="bg-primary text-on-primary h-14 w-14 rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center text-text-muted" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px]">Messages</span>
+</a>
+<a class="flex flex-col items-center text-text-muted" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px]">Profil</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-highest mt-20 border-t border-border-subtle">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-6 md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="space-y-4">
+<span class="font-headline-md text-headline-md font-bold text-primary">Loc'Partage</span>
+<p class="text-body-sm text-text-muted">La plateforme de confiance pour la location entre Québécois.</p>
+</div>
+<div class="space-y-4">
+<p class="font-label-bold text-label-bold text-text-main">Communauté</p>
+<ul class="space-y-2 text-body-sm text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">Aide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="font-label-bold text-label-bold text-text-main">Légal</p>
+<ul class="space-y-2 text-body-sm text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">Conditions d'utilisation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Politique de confidentialité</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-end justify-between">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-text-muted cursor-pointer hover:text-primary">public</span>
+<span class="material-symbols-outlined text-text-muted cursor-pointer hover:text-primary">share</span>
+</div>
+<p class="text-body-sm text-text-muted mt-8">© 2024 Loc'Partage. Tous droits réservés.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and Tab Logic
+        document.querySelectorAll('aside a, nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Simplified UI only interaction
+                if (this.getAttribute('href') === '#') e.preventDefault();
+            });
+        });
+
+        // Simple visibility effect for cards on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('section > div');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(10px)';
+                card.style.transition = 'all 0.4s ease-out ' + (index * 0.1) + 's';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body></html>

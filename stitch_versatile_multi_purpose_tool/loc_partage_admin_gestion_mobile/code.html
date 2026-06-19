@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestion des Annonces - Loc'Partage Admin</title>
+<script type='text/javascript' nonce='I/pY6NE3MRwSeUiswEm+rg==' src='https://contribution.usercontent.google.com/E4cO_AsoZ3upPiLKsIW4KLVvKlQPlktZQAjs94WG4uo7omYiLwTppcWHR4IvUCwJxGQHIjTNiA30ztDU64Oxi-_MWkR_-gJHEIpthBK_e1xUwaZIyc-ym3k__0GIf45mgaH0NvaFklBKKgNO5W6kYEjoxt6RzE9zYotVFhpxHk-ACifhLr8TIGail5hmzUYCsFvU_XPLrWLmLVJ2PMcMPKfP-fRCPHV8_44qCgXg8-NNbN-0oxGdlZfRNHzjW-cb_im6bZdQNXso-YxajOTrCrbmMz2vnlzP33NW5OuIH08DBBe-jz-FtIMq9ETOzrB7kaBadw9KzSSFccBNo_gQHpYfxFf5DZUD97ezpjRuillXodyiKgz4SI5E3hxtOEpFdAp0Vz597hMrIXJCns2VVVmhkwBEdae6qrlF1MBfsbeDEPNVG59JEwzpIQA79FicR2K8IX_xxnFhbeLow7IMXZnlTN9nGSaWFlAaAn-1XPF0crN7PMLipyHw1EweeInfK2iQlyihrhqa3NtcSRQs-Bq1q2q8A4q9p_Mm23soVDKXpoBv_DvV7IwcRnCJo9QZqPTTOuKZeuGnQ-xc2rObmKq0V_fNuijGfcu5YHt2H0jTggkl1jPN-hYwt9U2rDV0fTAvzGCATKZrBP_De_EiPjcIxluTOJJGTyC51d6kiyLy2H7BiVy0-2MlHA8gHd267rvJz7B_shI1bwgvAl0MApRgG7Ivi53KKTC6k_IjB2Gw6P-YEdpM37_-N98dReE7VVPwgkAV4vC_4NWyb5_vNM1E_7lEUnNU1XKtO1dW'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab-indicator {
+            height: 3px;
+            background-color: #002d70;
+            border-radius: 99px;
+        }
+        /* Micro-interactions */
+        .card-press:active {
+            transform: scale(0.98);
+            transition: transform 0.1s ease;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e1e3e4",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#9ed75b",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#f3f4f5",
+                      "inverse-on-surface": "#f0f1f2",
+                      "secondary-container": "#b9f474",
+                      "status-error": "#DC2626",
+                      "on-tertiary-container": "#f7a165",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#444651",
+                      "inverse-primary": "#b1c6ff",
+                      "primary-fixed-dim": "#b1c6ff",
+                      "on-secondary-container": "#437000",
+                      "primary": "#002d70",
+                      "inverse-surface": "#2e3132",
+                      "tertiary-container": "#723600",
+                      "text-muted": "#6B7280",
+                      "tertiary-fixed-dim": "#ffb787",
+                      "primary-container": "#224489",
+                      "surface-tint": "#3d5ca2",
+                      "on-primary-container": "#97b4ff",
+                      "surface-container-highest": "#e1e3e4",
+                      "outline": "#747782",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#d9dadb",
+                      "primary-fixed": "#d9e2ff",
+                      "on-primary-fixed": "#001946",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#2e4f00",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#311300",
+                      "on-secondary-fixed": "#0f2000",
+                      "surface-card": "#FFFFFF",
+                      "background": "#f8f9fa",
+                      "tertiary": "#502400",
+                      "status-success-alt": "#16A34A",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#191c1d",
+                      "border-subtle": "#E9ECEF",
+                      "status-warning": "#F59E0B",
+                      "tertiary-fixed": "#ffdcc7",
+                      "on-surface": "#191c1d",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f8f9fa",
+                      "on-primary-fixed-variant": "#224489",
+                      "on-tertiary-fixed-variant": "#723600",
+                      "secondary-fixed": "#b9f474",
+                      "surface": "#f8f9fa",
+                      "outline-variant": "#c4c6d2",
+                      "secondary": "#3e6a00",
+                      "text-main": "#1F2937",
+                      "surface-container": "#edeeef"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max-width": "1280px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "button": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "display-lg-mobile": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-text-main font-body-md min-h-screen">
+<!-- Header / TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-border-subtle shadow-sm flex items-center justify-between px-margin-mobile h-16">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="admin_panel_settings">admin_panel_settings</span>
+<h1 class="font-headline-md text-headline-md-mobile font-bold text-primary">Modération</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 rounded-full hover:bg-surface-container-high active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Photo de profil utilisateur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZPOPYvVSiv4WiJuEMcgK2lkqum_60xBo4vITQo7DkvMMck4Qm7bxBfilJSoEkUx5paPf3nSyH4IVDsnFTVfM3QmAnRxiMv-X5qoCjUOlX_tr6--ROsSGToax1m-Wls0SUrhRmwFT1_7ASObG1padQvPV5ygfM4LcUMY4r5U8CTLh_1U89a20iK-HNVtI8GOl9y-dA_ncIxepa967Y7p2pDvuwBZdc_GsGgcLCauSPjOnIsOKo5cDSXcx69nscdjhEk_AdK8xxHWnE"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<main class="pt-20 pb-24 px-margin-mobile max-w-container-max-width mx-auto">
+<!-- Filters / Stats Summary -->
+<section class="mb-8 overflow-x-auto no-scrollbar flex gap-3 py-2">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full font-label-bold text-label-bold flex items-center gap-2 whitespace-nowrap shadow-md">
+                En attente (12)
+            </button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full font-label-bold text-label-bold flex items-center gap-2 whitespace-nowrap">
+                Approuvées
+            </button>
+<button class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full font-label-bold text-label-bold flex items-center gap-2 whitespace-nowrap">
+                Signalées
+            </button>
+</section>
+<!-- Search Bar -->
+<div class="relative mb-6">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border border-border-subtle bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-transparent outline-none shadow-sm transition-all text-body-md" placeholder="Rechercher une annonce ou un utilisateur..." type="text"/>
+</div>
+<!-- Ads List -->
+<div class="space-y-4">
+<!-- Card 1: Pending -->
+<div class="bg-surface-card rounded-[20px] overflow-hidden border border-border-subtle shadow-sm card-press">
+<div class="flex h-32">
+<div class="w-32 h-full flex-shrink-0">
+<img alt="Annonce" class="w-full h-full object-cover" data-alt="A professional, crisp photograph of a high-end mountain bike leaning against a minimalist white brick wall. The lighting is bright and clean, emphasizing the bike&#39;s metallic blue frame and premium components. The overall aesthetic is modern, commercial, and airy, fitting a high-trust marketplace for quality equipment in Quebec." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD48YL8oupZxmrQvzKXoKJyQ24CyWFE_SqqumL6YvApeA2-k2Empb837jlj-8K1lGXaDd2JMgS2FG4sjCznaGu9fY5wWXMUjc4o85HSD4TevsaPVaoWcDH4z9wivJYU-OE31inEBcgtevDNBEjapdPN1xA_ECJZOyeEFalQEff-h7vZEIuATqu4HFSzbWxpeDZ6ZpPgr9m9_wFwIgc0odw6fteGbk1LImSr_NQYOWeQ4dFW11IW3o4s_gLTNWbHeh27v18TSrMI557t"/>
+</div>
+<div class="p-4 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="bg-status-warning/10 text-status-warning px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">En attente</span>
+<span class="text-primary font-headline-md text-body-md font-bold">45$ / jour</span>
+</div>
+<h3 class="font-label-bold text-label-bold line-clamp-1">Velo de montagne Trek Fuel EX</h3>
+<p class="text-body-sm text-text-muted flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="person">person</span> Marc-André G.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Quick Actions Bar (Accessible for thumb) -->
+<div class="flex border-t border-border-subtle">
+<button class="flex-1 py-4 flex items-center justify-center gap-2 text-status-error font-label-bold text-label-bold hover:bg-error-container/20 active:bg-error-container/30 transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+                        Rejeter
+                    </button>
+<div class="w-[1px] bg-border-subtle"></div>
+<button class="flex-1 py-4 flex items-center justify-center gap-2 text-status-success-alt font-label-bold text-label-bold hover:bg-secondary-container/20 active:bg-secondary-container/30 transition-colors">
+<span class="material-symbols-outlined" data-icon="check" data-weight="fill">check</span>
+                        Approuver
+                    </button>
+</div>
+</div>
+<!-- Card 2: Pending -->
+<div class="bg-surface-card rounded-[20px] overflow-hidden border border-border-subtle shadow-sm card-press">
+<div class="flex h-32">
+<div class="w-32 h-full flex-shrink-0">
+<img alt="Annonce" class="w-full h-full object-cover" data-alt="A detailed, close-up shot of professional power tools, specifically a high-quality cordless drill resting on a natural wood workbench in a well-lit workshop. The image features soft, warm lighting that highlights the textures of the tool and the grain of the wood. The scene conveys reliability and craftsmanship, presented in a clean, professional photography style suitable for a premium tool rental platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGbJDFfX6AqTc7_-MdXyCMMB_33YRsSEPvGrggPJjdJgq5NN5CheCD17vw1AdqE2M5JLDSGR3ukOPCsPaKVy-f-47NZg_ZozS1OCWdJxKGSjvgnjSaZlzcWa27um_nFK1yYk39TgHSWkXTlUxSPBEeCkIAIDNxkPO10yi_SFpt8CVVyXsYhCc5lD1jpMzp0Jz6ulCcMvtNywTSwWXTzfl-BRf6nXCSO25u-ow5dfbRK3K9SUzfyQDdCm0h6ICQ3JGlcWnEvUWVG-oH"/>
+</div>
+<div class="p-4 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="bg-status-warning/10 text-status-warning px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">En attente</span>
+<span class="text-primary font-headline-md text-body-md font-bold">25$ / jour</span>
+</div>
+<h3 class="font-label-bold text-label-bold line-clamp-1">Perceuse à percussion Makita</h3>
+<p class="text-body-sm text-text-muted flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="person">person</span> Sarah L.
+                            </p>
+</div>
+</div>
+</div>
+<div class="flex border-t border-border-subtle">
+<button class="flex-1 py-4 flex items-center justify-center gap-2 text-status-error font-label-bold text-label-bold hover:bg-error-container/20 active:bg-error-container/30 transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+                        Rejeter
+                    </button>
+<div class="w-[1px] bg-border-subtle"></div>
+<button class="flex-1 py-4 flex items-center justify-center gap-2 text-status-success-alt font-label-bold text-label-bold hover:bg-secondary-container/20 active:bg-secondary-container/30 transition-colors">
+<span class="material-symbols-outlined" data-icon="check" data-weight="fill">check</span>
+                        Approuver
+                    </button>
+</div>
+</div>
+<!-- Card 3: Pending -->
+<div class="bg-surface-card rounded-[20px] overflow-hidden border border-border-subtle shadow-sm card-press">
+<div class="flex h-32">
+<div class="w-32 h-full flex-shrink-0">
+<img alt="Annonce" class="w-full h-full object-cover" data-alt="A stylish, mid-century modern leather lounge chair set in a bright, minimalist apartment living room with large windows. The lighting is natural and soft, creating long, gentle shadows on the polished light-wood floor. The aesthetic is sophisticated and high-end, using a neutral color palette of whites, creams, and warm tan leathers, emphasizing the quality and design of the furniture item for rent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9QRNC1k_MpoH3LCBKPcHzT5E71Ya5wUbRBo7Pc_s-cGvw0lZzjVQ3oENR-Yy_tAYRWRoU8xxgWuXArTglUwgiQ16Og-1BSOuMK4y3CaRRJ31QWxG0yex0phk7mywCPs3eEkdeTafoMSckS2e1iiL2ssrxjD5H4sMIXvXilzXQr-bUQDK1puOuZo7f2P_ro0nEJlM2vplnmcL6rJW6os75kPsWX6bRu4X6YX-P75gJFUIPkk3GCbRCjHtwrmruSAgWkfP0UDlYy2u4"/>
+</div>
+<div class="p-4 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="bg-status-warning/10 text-status-warning px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">En attente</span>
+<span class="text-primary font-headline-md text-body-md font-bold">120$ / sem.</span>
+</div>
+<h3 class="font-label-bold text-label-bold line-clamp-1">Fauteuil de designer Scandinave</h3>
+<p class="text-body-sm text-text-muted flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="person">person</span> Julie M.
+                            </p>
+</div>
+</div>
+</div>
+<div class="flex border-t border-border-subtle">
+<button class="flex-1 py-4 flex items-center justify-center gap-2 text-status-error font-label-bold text-label-bold hover:bg-error-container/20 active:bg-error-container/30 transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+                        Rejeter
+                    </button>
+<div class="w-[1px] bg-border-subtle"></div>
+<button class="flex-1 py-4 flex items-center justify-center gap-2 text-status-success-alt font-label-bold text-label-bold hover:bg-secondary-container/20 active:bg-secondary-container/30 transition-colors">
+<span class="material-symbols-outlined" data-icon="check" data-weight="fill">check</span>
+                        Approuver
+                    </button>
+</div>
+</div>
+</div>
+<!-- Floating Refresh Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+</button>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 w-full bg-surface-container-lowest h-20 px-6 flex items-center justify-between shadow-[0_-2px_10px_rgba(0,0,0,0.05)] md:hidden">
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-outline group-active:text-primary" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-label-bold text-outline">Dashboard</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary" data-icon="fact_check" style="font-variation-settings: &#39;FILL&#39; 1;">fact_check</span>
+<span class="text-[10px] font-label-bold text-primary">Annonces</span>
+<div class="active-tab-indicator w-8 mt-[-2px]"></div>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-outline group-active:text-primary" data-icon="group">group</span>
+<span class="text-[10px] font-label-bold text-outline">Membres</span>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-outline group-active:text-primary" data-icon="settings">settings</span>
+<span class="text-[10px] font-label-bold text-outline">Système</span>
+</div>
+</nav>
+<script>
+        // Simple rejection animation/logic
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const text = btn.innerText.toLowerCase();
+                if (text.includes('approuver') || text.includes('rejeter')) {
+                    const card = btn.closest('.bg-surface-card');
+                    card.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                    card.style.opacity = '0';
+                    card.style.transform = text.includes('approuver') ? 'translateX(100px)' : 'translateX(-100px)';
+                    
+                    setTimeout(() => {
+                        card.remove();
+                        // Check if list is empty to show empty state
+                        if (document.querySelectorAll('.bg-surface-card').length === 0) {
+                            const main = document.querySelector('main .space-y-4');
+                            main.innerHTML = `
+                                <div class="flex flex-col items-center justify-center py-20 text-center opacity-0 animate-in fade-in duration-500 fill-mode-forwards">
+                                    <span class="material-symbols-outlined text-6xl text-outline/30 mb-4" data-icon="done_all">done_all</span>
+                                    <h2 class="font-headline-md text-text-muted">Toutes les annonces sont traitées</h2>
+                                    <p class="text-body-sm text-text-muted mt-2">Beau travail ! Revenez plus tard pour de nouvelles validations.</p>
+                                </div>
+                            `;
+                        }
+                    }, 400);
+                }
+            });
+        });
+    </script>
+</body></html>

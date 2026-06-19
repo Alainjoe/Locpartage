@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type='text/javascript' nonce='0oObbKfcLJMZ2NFdUcIRQQ==' src='https://contribution.usercontent.google.com/sTQtDi4mElp6eu49Sv5Vqt3aUbTiPv6HcCQ6621Qf-G3QHWqOEDb_--174RrbqPotAgkHAJxKeps4PyBfAxRI_8jpmDmlKHxghbkKRoErbgOh1CwtzKRv8tBuMPwRMurR_5qX-hRm0mP3XuCT4lOEr5AutJExv8RUyUI2fpk8NzjRPHjvyZqh6JoEZTtaiZw4rGD3za7g7qJd6UH1VxRQYPrDl3E3vPikdxYcR-SOktS5opAlJ580xCXmOsuZIhJm5H9jtgXwu4wCMggg-xDk-8Hfe5A8sw6a66U9J3RKQ_SvK0wzVbySuOrUUsSK1Mj8LQEQsUsIwphn79LKklTurpNQfTZVDHR46JaxrTrrEswy2P8bOQboSxz0UMMwNG7yFcV5jeQX8_nI-7bXXBk2euCtqrTv9iLzFkLAmdi9jukEfFhQzNotWnZNljssOfKDWbtdzy-flxg2RNX5cTRaDWZc4_9FdRiNlicloFnTf8ev5uTP_eHcDCiJncsZ_TOiOeIXNfKbFijEN4qKOoXr0d7ZPnYEMXkdWsitc6PfCucEhZmQ5lHBUyCiMXShi8x9f70FG398Y3Akbejidypi-Ntq2LNfUlhGCEm0hvXOmyUeyvVk3Z566Kght2g_6FqDIoOtZizD_WlIO2X80G_wtP_HDrTW4rB2A6fPIixbDgT-4UdwbZl5uBit2XxO5gWw4YRmzw5mXWHIAfRytFAIOnhVpk8gsaplAk7-M8PDDKTg0PDdmOEJTswt0HEIVhh9UdIGiNM7myTSscwIxvnGPzpT5g6cAkSLzrUn9fK'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom Scrollbar for Clean UI */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #E9ECEF; border-radius: 10px; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e1e3e4",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#9ed75b",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#f3f4f5",
+                      "inverse-on-surface": "#f0f1f2",
+                      "secondary-container": "#b9f474",
+                      "status-error": "#DC2626",
+                      "on-tertiary-container": "#f7a165",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#444651",
+                      "inverse-primary": "#b1c6ff",
+                      "primary-fixed-dim": "#b1c6ff",
+                      "on-secondary-container": "#437000",
+                      "primary": "#002d70",
+                      "inverse-surface": "#2e3132",
+                      "tertiary-container": "#723600",
+                      "text-muted": "#6B7280",
+                      "tertiary-fixed-dim": "#ffb787",
+                      "primary-container": "#224489",
+                      "surface-tint": "#3d5ca2",
+                      "on-primary-container": "#97b4ff",
+                      "surface-container-highest": "#e1e3e4",
+                      "outline": "#747782",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#d9dadb",
+                      "primary-fixed": "#d9e2ff",
+                      "on-primary-fixed": "#001946",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#2e4f00",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#311300",
+                      "on-secondary-fixed": "#0f2000",
+                      "surface-card": "#FFFFFF",
+                      "background": "#f8f9fa",
+                      "tertiary": "#502400",
+                      "status-success-alt": "#16A34A",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#191c1d",
+                      "border-subtle": "#E9ECEF",
+                      "status-warning": "#F59E0B",
+                      "tertiary-fixed": "#ffdcc7",
+                      "on-surface": "#191c1d",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f8f9fa",
+                      "on-primary-fixed-variant": "#224489",
+                      "on-tertiary-fixed-variant": "#723600",
+                      "secondary-fixed": "#b9f474",
+                      "surface": "#f8f9fa",
+                      "outline-variant": "#c4c6d2",
+                      "secondary": "#3e6a00",
+                      "text-main": "#1F2937",
+                      "surface-container": "#edeeef"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max-width": "1280px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "button": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "display-lg-mobile": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "button": ["16px", { "lineHeight": "1", "fontWeight": "500" }],
+                      "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                      "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                      "display-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                      "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "headline-lg": ["30px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                      "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-text-main antialiased min-h-screen flex flex-col">
+<!-- Top Mobile Header -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest shadow-sm h-16 flex items-center justify-between px-margin-mobile">
+<div class="flex items-center gap-3">
+<span class="text-primary font-headline-md font-bold">Loc'Partage</span>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">Admin</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-on-surface-variant active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-status-error rounded-full border-2 border-surface-container-lowest"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-border-subtle">
+<img alt="Admin" class="w-full h-full object-cover" data-alt="A professional close-up headshot of a senior administrator in a modern office environment. The person wears a minimalist charcoal blazer against a blurred architectural background with clean lines and soft, natural morning light. The overall mood is professional, reliable, and sophisticated, matching the Corporate Modern aesthetic of the Loc&#39;Partage platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCakxOGBk_hhi4ZJG-k1ixwNHwq2A8PhlXW62Lxy3LX6hip_sh__3x4xj18uLORrVbcoWJNOm4q3QbVhA6ERTV5PZnIfzKq1py6rbcqqv6S5P1YhOLL_fKIBVA5KrJgsiieiMZP7t9vSER_JQHBnCybeOTDWrkz0J3cSnFBDOKiHR452Mozh4xNrrSNO2_ns-kj4GAgHFtfxDsx_kPjfgmw0eLOsKBOFV5QJFRKH1PRVEp-1JU_JJvwDLeEhacFGmjOpPMn_iFGLqEN"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-20 pb-24 px-margin-mobile overflow-y-auto">
+<!-- Welcome Summary -->
+<section class="mb-6">
+<h1 class="font-headline-md text-headline-md mb-1">Tableau de bord</h1>
+<p class="font-body-sm text-body-sm text-text-muted">Aujourd'hui, 24 Octobre 2024</p>
+</section>
+<!-- Rapid KPIs Bento Grid (Mobile Optimized) -->
+<div class="grid grid-cols-2 gap-3 mb-8">
+<div class="bg-surface-card p-4 rounded-xl border border-border-subtle shadow-sm flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary bg-primary/5 w-10 h-10 flex items-center justify-center rounded-lg" data-icon="trending_up">trending_up</span>
+<div>
+<p class="font-label-bold text-label-bold text-text-muted uppercase">Revenus</p>
+<p class="font-headline-md text-headline-md">14 280$</p>
+</div>
+<span class="text-status-success-alt font-label-bold text-[12px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_upward">arrow_upward</span> +12%
+                </span>
+</div>
+<div class="bg-surface-card p-4 rounded-xl border border-border-subtle shadow-sm flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary bg-secondary/5 w-10 h-10 flex items-center justify-center rounded-lg" data-icon="group">group</span>
+<div>
+<p class="font-label-bold text-label-bold text-text-muted uppercase">Utilisateurs</p>
+<p class="font-headline-md text-headline-md">1 450</p>
+</div>
+<span class="text-status-success-alt font-label-bold text-[12px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_upward">arrow_upward</span> +5%
+                </span>
+</div>
+</div>
+<!-- High Priority Moderation Alerts -->
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md flex items-center gap-2 text-[20px]">
+<span class="material-symbols-outlined text-status-error" data-icon="gavel">gavel</span>
+                    Modération
+                </h2>
+<span class="bg-status-error text-white text-[12px] font-bold px-2 py-1 rounded-full">3 Urgents</span>
+</div>
+<div class="space-y-3">
+<!-- Alert Card 1 -->
+<div class="bg-surface-card p-4 rounded-xl border border-border-subtle shadow-sm flex items-start gap-4">
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-error-container text-on-error-container font-label-bold text-[10px] px-2 py-0.5 rounded uppercase">Arnaque suspectée</span>
+<span class="text-text-muted text-[12px]">Il y a 5 min</span>
+</div>
+<h3 class="font-label-bold text-label-bold">Annonce: "MacBook Pro 2023"</h3>
+<p class="text-body-sm text-body-sm text-text-muted mt-1">Utilisateur: Marc-André L. (Nouveau compte)</p>
+</div>
+<button class="bg-primary text-white p-2 rounded-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+<!-- Alert Card 2 -->
+<div class="bg-surface-card p-4 rounded-xl border border-border-subtle shadow-sm flex items-start gap-4">
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-status-warning/20 text-status-warning font-label-bold text-[10px] px-2 py-0.5 rounded uppercase">Contenu inapproprié</span>
+<span class="text-text-muted text-[12px]">Il y a 2h</span>
+</div>
+<h3 class="font-label-bold text-label-bold">Message signalé par Julie R.</h3>
+<p class="text-body-sm text-body-sm text-text-muted mt-1">Mots-clés interdits détectés.</p>
+</div>
+<button class="bg-primary text-white p-2 rounded-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Simplified Performance Chart Area -->
+<section class="mb-8">
+<div class="bg-surface-card p-5 rounded-2xl border border-border-subtle shadow-sm overflow-hidden relative">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="font-headline-md text-headline-md text-[18px]">Activité Hebdo</h2>
+<p class="text-body-sm text-text-muted">Nombre de locations</p>
+</div>
+<div class="bg-surface-container text-text-main text-[12px] font-label-bold px-3 py-1 rounded-full">7 derniers jours</div>
+</div>
+<!-- Abstract Chart Mockup -->
+<div class="h-40 flex items-end justify-between gap-2 px-1">
+<div class="w-full bg-primary/10 rounded-t-md h-[40%]"></div>
+<div class="w-full bg-primary/10 rounded-t-md h-[60%]"></div>
+<div class="w-full bg-primary/10 rounded-t-md h-[30%]"></div>
+<div class="w-full bg-primary/10 rounded-t-md h-[80%]"></div>
+<div class="w-full bg-primary/10 rounded-t-md h-[55%]"></div>
+<div class="w-full bg-primary rounded-t-md h-[95%] relative group">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded whitespace-nowrap">Peak: 142</div>
+</div>
+<div class="w-full bg-primary/10 rounded-t-md h-[65%]"></div>
+</div>
+<div class="flex justify-between mt-4 px-1 text-[10px] font-label-bold text-text-muted uppercase tracking-tighter">
+<span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span class="text-primary font-bold">Sam</span><span>Dim</span>
+</div>
+</div>
+</section>
+<!-- Quick Actions Grid -->
+<section class="mb-8">
+<h2 class="font-headline-md text-headline-md text-[18px] mb-4">Actions Rapides</h2>
+<div class="grid grid-cols-2 gap-4">
+<button class="bg-surface-container-highest/30 p-4 rounded-xl flex flex-col items-center gap-2 active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="add_moderator">add_moderator</span>
+<span class="font-label-bold text-[12px]">Nouvel Admin</span>
+</button>
+<button class="bg-surface-container-highest/30 p-4 rounded-xl flex flex-col items-center gap-2 active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="analytics">analytics</span>
+<span class="font-label-bold text-[12px]">Rapport CSV</span>
+</button>
+<button class="bg-surface-container-highest/30 p-4 rounded-xl flex flex-col items-center gap-2 active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="campaign">campaign</span>
+<span class="font-label-bold text-[12px]">Push Notification</span>
+</button>
+<button class="bg-surface-container-highest/30 p-4 rounded-xl flex flex-col items-center gap-2 active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="settings">settings</span>
+<span class="font-label-bold text-[12px]">Paramètres</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Navigation Shell (Bottom NavBar Mobile) -->
+<nav class="fixed bottom-0 w-full bg-surface-container-lowest border-t border-border-subtle h-20 flex items-center justify-around px-margin-mobile z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined active-tab" data-icon="dashboard">dashboard</span>
+<span class="font-label-bold text-[11px]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-muted" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="font-label-bold text-[11px]">Modération</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-muted" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-bold text-[11px]">Annonces</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-muted" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-[11px]">Membres</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-text-muted" href="#">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<span class="font-label-bold text-[11px]">Plus</span>
+</a>
+</nav>
+<!-- Notification Toast Micro-interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Minimalist active state toggle logic for the demo
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navLinks.forEach(l => {
+                        l.classList.remove('text-primary');
+                        l.classList.add('text-text-muted');
+                        l.querySelector('.material-symbols-outlined').classList.remove('active-tab');
+                    });
+                    link.classList.add('text-primary');
+                    link.classList.remove('text-text-muted');
+                    link.querySelector('.material-symbols-outlined').classList.add('active-tab');
+                });
+            });
+
+            // Smooth visual interaction for cards
+            const cards = document.querySelectorAll('.bg-surface-card');
+            cards.forEach(card => {
+                card.addEventListener('touchstart', () => {
+                    card.classList.add('scale-[0.98]');
+                });
+                card.addEventListener('touchend', () => {
+                    card.classList.remove('scale-[0.98]');
+                });
+            });
+        });
+    </script>
+</body></html>
