@@ -83,15 +83,23 @@ import { AnnonceCardComponent } from '../../shared/annonce-card.component';
             }
           </div>
 
-          <nav class="pagination" aria-label="Pagination">
-            <button type="button" aria-label="Page précédente"><span class="material-symbols-outlined">chevron_left</span></button>
-            <button class="active" type="button">1</button>
-            <button type="button">2</button>
-            <button type="button">3</button>
-            <span>...</span>
-            <button type="button">12</button>
-            <button type="button" aria-label="Page suivante"><span class="material-symbols-outlined">chevron_right</span></button>
-          </nav>
+          @if (totalPages() > 1) {
+            <nav class="pagination" aria-label="Pagination">
+              <button type="button" aria-label="Page précédente" [disabled]="page() === 0" (click)="goTo(page() - 1)">
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+              @for (n of pageList(); track $index) {
+                @if (n === -1) {
+                  <span>...</span>
+                } @else {
+                  <button type="button" [class.active]="n === page()" (click)="goTo(n)">{{ n + 1 }}</button>
+                }
+              }
+              <button type="button" aria-label="Page suivante" [disabled]="page() >= totalPages() - 1" (click)="goTo(page() + 1)">
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+            </nav>
+          }
         }
       </main>
     </section>
@@ -295,6 +303,8 @@ export class AnnonceListComponent implements OnInit {
   categories = signal<Categorie[]>([]);
   annonces = signal<Annonce[]>([]);
   total = signal(0);
+  totalPages = signal(0);
+  page = signal(0);
   loading = signal(true);
   q = '';
   ville = '';
@@ -302,6 +312,8 @@ export class AnnonceListComponent implements OnInit {
   sort = 'Pertinence';
   prixMax: number | null = 500;
   categorieId: number | null = null;
+
+  readonly pageSize = 12;
 
   constructor(private api: ApiService, private route: ActivatedRoute, private router: Router) {}
 
@@ -312,6 +324,7 @@ export class AnnonceListComponent implements OnInit {
       this.ville = p['ville'] || '';
       this.categorieId = p['categorieId'] ? Number(p['categorieId']) : null;
       this.prixMax = p['prixMax'] ? Number(p['prixMax']) : 500;
+      this.page.set(p['page'] ? Number(p['page']) : 0);
       this.load();
     });
   }
@@ -323,9 +336,15 @@ export class AnnonceListComponent implements OnInit {
       ville: this.ville,
       prixMax: this.prixMax && this.prixMax < 500 ? this.prixMax : null,
       categorieId: this.categorieId,
-      size: 30
+      page: this.page(),
+      size: this.pageSize
     }).subscribe({
-      next: p => { this.annonces.set(p.content); this.total.set(p.totalElements); this.loading.set(false); },
+      next: p => {
+        this.annonces.set(p.content);
+        this.total.set(p.totalElements);
+        this.totalPages.set(p.totalPages);
+        this.loading.set(false);
+      },
       error: () => this.loading.set(false)
     });
   }
@@ -336,7 +355,8 @@ export class AnnonceListComponent implements OnInit {
         q: this.q || null,
         ville: this.ville || null,
         categorieId: this.categorieId,
-        prixMax: this.prixMax && this.prixMax < 500 ? this.prixMax : null
+        prixMax: this.prixMax && this.prixMax < 500 ? this.prixMax : null,
+        page: null
       }
     });
   }
@@ -347,5 +367,29 @@ export class AnnonceListComponent implements OnInit {
     this.prixMax = 500;
     this.categorieId = null;
     this.router.navigate(['/annonces']);
+  }
+
+  goTo(p: number) {
+    if (p < 0 || p >= this.totalPages() || p === this.page()) return;
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { page: p === 0 ? null : p },
+      queryParamsHandling: 'merge'
+    });
+    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  pageList(): number[] {
+    const tp = this.totalPages();
+    const cur = this.page();
+    if (tp <= 7) return Array.from({ length: tp }, (_, i) => i);
+    const pages = new Set<number>([0, tp - 1, cur, cur - 1, cur + 1]);
+    const sorted = [...pages].filter(n => n >= 0 && n < tp).sort((a, b) => a - b);
+    const out: number[] = [];
+    for (let i = 0; i < sorted.length; i++) {
+      if (i > 0 && sorted[i] - sorted[i - 1] > 1) out.push(-1);
+      out.push(sorted[i]);
+    }
+    return out;
   }
 }
