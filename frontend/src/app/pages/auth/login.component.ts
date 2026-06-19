@@ -53,10 +53,6 @@ import { AuthService } from '../../core/auth.service';
         </div>
 
         <p class="switch">Pas encore de compte ? <a routerLink="/register">S'inscrire</a></p>
-
-        <div class="hint">
-          <strong>Démo :</strong> demo&#64;locpartage.qc / demo1234
-        </div>
       </div>
     </section>
   `,
